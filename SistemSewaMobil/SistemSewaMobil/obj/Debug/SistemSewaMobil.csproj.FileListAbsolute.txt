@@ -1,0 +1,13 @@
+C:\Users\emmah\OneDrive\AMIKOM\Sem 3\ST122 - PEMROGRAMAN LANJUT\UTS\SistemSewaMobil\SistemSewaMobil\bin\Debug\SistemSewaMobil.exe.config
+C:\Users\emmah\OneDrive\AMIKOM\Sem 3\ST122 - PEMROGRAMAN LANJUT\UTS\SistemSewaMobil\SistemSewaMobil\bin\Debug\SistemSewaMobil.exe
+C:\Users\emmah\OneDrive\AMIKOM\Sem 3\ST122 - PEMROGRAMAN LANJUT\UTS\SistemSewaMobil\SistemSewaMobil\bin\Debug\SistemSewaMobil.pdb
+C:\Users\emmah\OneDrive\AMIKOM\Sem 3\ST122 - PEMROGRAMAN LANJUT\UTS\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.csproj.AssemblyReference.cache
+C:\Users\emmah\OneDrive\AMIKOM\Sem 3\ST122 - PEMROGRAMAN LANJUT\UTS\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.Form1.resources
+C:\Users\emmah\OneDrive\AMIKOM\Sem 3\ST122 - PEMROGRAMAN LANJUT\UTS\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.Properties.Resources.resources
+C:\Users\emmah\OneDrive\AMIKOM\Sem 3\ST122 - PEMROGRAMAN LANJUT\UTS\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.csproj.GenerateResource.cache
+C:\Users\emmah\OneDrive\AMIKOM\Sem 3\ST122 - PEMROGRAMAN LANJUT\UTS\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.csproj.CoreCompileInputs.cache
+C:\Users\emmah\OneDrive\AMIKOM\Sem 3\ST122 - PEMROGRAMAN LANJUT\UTS\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.exe
+C:\Users\emmah\OneDrive\AMIKOM\Sem 3\ST122 - PEMROGRAMAN LANJUT\UTS\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.pdb
+C:\Users\emmah\OneDrive\AMIKOM\Sem 3\ST122 - PEMROGRAMAN LANJUT\UTS\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.exe.config
+C:\Users\emmah\OneDrive\AMIKOM\Sem 3\ST122 - PEMROGRAMAN LANJUT\UTS\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.formInfoPenyewa.resources
+C:\Users\emmah\OneDrive\AMIKOM\Sem 3\ST122 - PEMROGRAMAN LANJUT\UTS\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.infoMobilTersedia.resources
