@@ -29,7 +29,7 @@ namespace SistemSewaMobil
             infoMobil.Columns.Add("No Polisi", 100, HorizontalAlignment.Center);
             infoMobil.Columns.Add("Tahun", 50, HorizontalAlignment.Center);
             infoMobil.Columns.Add("Status sedia", 70, HorizontalAlignment.Center);
-            infoMobil.Columns.Add("Harga Sewa/hari", 100, HorizontalAlignment.Center);
+            infoMobil.Columns.Add("Harga Sewa/hari", 145, HorizontalAlignment.Center);
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
