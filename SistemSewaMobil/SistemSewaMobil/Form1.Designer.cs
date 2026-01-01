@@ -95,9 +95,9 @@
             this.label1.Font = new System.Drawing.Font("DejaVu Sans Mono", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(213, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(220, 24);
+            this.label1.Size = new System.Drawing.Size(234, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Selamat Datang!";
+            this.label1.Text = "Selamat Datang!!";
             // 
             // radioButton2
             // 
