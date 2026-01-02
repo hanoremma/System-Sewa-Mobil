@@ -14,5 +14,7 @@ namespace SistemSewaMobil
         public string Plat { get; set; }
         public int Tahun { get; set; }
         //tambahan
+        //test2
+        //test3
     }
 }
