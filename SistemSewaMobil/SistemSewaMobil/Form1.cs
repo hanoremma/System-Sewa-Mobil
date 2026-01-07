@@ -16,7 +16,6 @@ namespace SistemSewaMobil
         {
             InitializeComponent();
             InisialisasiListView();
-            //tambahan1
         }
         private void InisialisasiListView()
         {
@@ -37,7 +36,7 @@ namespace SistemSewaMobil
             new Mobil(){ No=1, Merk="Toyota Avanza", Kategori="MPV", Plat="B 1234 ABC", Tahun=2020 },
             new Mobil(){ No=2, Merk="Honda Brio", Kategori="Hatchback", Plat="B 5678 DEF", Tahun=2019 },
             new Mobil(){ No=3, Merk="Suzuki Ertiga", Kategori="MPV", Plat="B 9999 XYZ", Tahun=2021 },
-            new Mobil(){ No=4, Merk="Toyota Innova", Kategori="MPV", Plat="D 1111 CCC", Tahun=2018 }
+            new Mobil(){ No=4, Merk="Toyota Innova", Kategori="MPV", Plat="D 1111 CCC", Tahun=2018 },
         };
         private void Form1_Load(object sender, EventArgs e)
         {

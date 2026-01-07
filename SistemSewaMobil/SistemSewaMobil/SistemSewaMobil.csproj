@@ -65,7 +65,7 @@
     <Compile Include="infoMobilTersedia.Designer.cs">
       <DependentUpon>infoMobilTersedia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mobil.cs" />
+    <Compile Include="Model\Entity\Mobil.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -98,6 +98,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controller\" />
+    <Folder Include="Model\Context\" />
+    <Folder Include="Model\Repository\" />
+    <Folder Include="View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
