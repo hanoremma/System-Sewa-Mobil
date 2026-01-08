@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SistemSewaMobil.Model.Entity;
 using SistemSewaMobil.Controller;
+using SistemSewaMobil.View;
 
 namespace SistemSewaMobil
 {
@@ -41,7 +42,7 @@ namespace SistemSewaMobil
         private void LoadMobilData()
         {
             infoMobil.Items.Clear();
-            listMobil = controller.ReadAll();
+            listMobil = controller.GetAllMobil();
 
             // This method should load data into the infoMobil ListView
             // Implementation depends on how data is stored/retrieved
@@ -73,7 +74,13 @@ namespace SistemSewaMobil
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            using (FormEntryMobil formEntryMobil = new FormEntryMobil())
+            {
+                if (formEntryMobil.ShowDialog() == DialogResult.OK)
+                {
+                    LoadMobilData(); // ⬅️ REFRESH LIST
+                }
+            }
         }
     }
 }

@@ -2,6 +2,7 @@ using SistemSewaMobil.Model.Context;
 using SistemSewaMobil.Model.Entity;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient; // Ganti SQLite jadi SqlClient
 
 namespace SistemSewaMobil.Model.Repository
@@ -98,49 +99,37 @@ tahunMobil =@tahunMobil, statusKetersediaan = @statusKetersediaan, hargaSewa = @
             }
             return result;
         }
-        // 4. READ ALL: Get All Car Data
+
         public List<Mobil> ReadAll()
         {
-            // Create a list to hold the results
             List<Mobil> list = new List<Mobil>();
 
-            try
-            {
-                // SQL to select all columns
-                string sql = @"SELECT idMobil, noPolisi, merkMobil, tahunMobil, statusKetersediaan, hargaSewa 
-                               FROM mobil ORDER BY merkMobil";
+            string sql = @"SELECT idMobil, noPolisi, merkMobil, tahunMobil, 
+                              statusKetersediaan, hargaSewa
+                       FROM mobil
+                       ORDER BY merkMobil";
 
-                using (SqlCommand cmd = new SqlCommand(sql, _conn))
+            using (SqlCommand cmd = new SqlCommand(sql, _conn))
+            using (SqlDataReader dtr = cmd.ExecuteReader())
+            {
+                while (dtr.Read())
                 {
-                    // ExecuteReader is used for SELECT queries
-                    using (SqlDataReader dtr = cmd.ExecuteReader())
+                    list.Add(new Mobil
                     {
-                        // Loop through each row of the result
-                        while (dtr.Read())
-                        {
-                            Mobil m = new Mobil();
-                            // Map database columns to object properties
-                            // Ensure the casting (ToInt32) matches your database data types!
-                            m.idMobil = dtr["idMobil"].ToString();
-                            m.noPolisi = dtr["noPolisi"].ToString();
-                            m.merkMobil = dtr["merkMobil"].ToString();
-                            m.tahunMobil = dtr["tahunMobil"].ToString();
-                            m.statusKetersediaan = dtr["statusKetersediaan"].ToString();
-                            m.hargaSewa = Convert.ToInt32(dtr["hargaSewa"]);
-
-                            // Add the object to the list
-                            list.Add(m);
-                        }
-                    }
+                        idMobil = dtr["idMobil"].ToString(),
+                        noPolisi = dtr["noPolisi"].ToString(),
+                        merkMobil = dtr["merkMobil"].ToString(),
+                        tahunMobil = dtr["tahunMobil"].ToString(),
+                        statusKetersediaan = dtr["statusKetersediaan"].ToString(),
+                        hargaSewa = Convert.ToInt32(dtr["hargaSewa"])
+                    });
                 }
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.Print("ReadAll Error: {0}", ex.Message);
             }
 
             return list;
         }
+
+
 
         // 5. READ BY MERK: Search Car by Name/Brand
         public List<Mobil> ReadByMerk(string merk)

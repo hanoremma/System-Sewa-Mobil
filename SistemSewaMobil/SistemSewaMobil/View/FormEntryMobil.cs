@@ -1,14 +1,7 @@
-﻿using SistemSewaMobil.Model.Entity;
+﻿using SistemSewaMobil.Controller;
+using SistemSewaMobil.Model.Entity;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using SistemSewaMobil.Controller;
 
 namespace SistemSewaMobil.View
 {
@@ -18,24 +11,26 @@ namespace SistemSewaMobil.View
         public FormEntryMobil()
         {
             InitializeComponent();
+            controller = new MobilController(); 
+            isNewData = true;
         }
         public event CreateUpdateEventHandler OnCreate;
 
         public event CreateUpdateEventHandler OnUpdate;
         // deklarasi objek controller 
         private MobilController controller;
-    
-    // deklarasi field untuk menyimpan status entry data (input baru atau update) 
+
+        // deklarasi field untuk menyimpan status entry data (input baru atau update) 
         private bool isNewData = true;
-    // deklarasi field untuk meyimpan objek mahasiswa 
+        // deklarasi field untuk meyimpan objek mahasiswa 
         private Mobil mobil;
-    // constructor default 
+        // constructor default 
         public FormEntryMobil(string title, MobilController controller) : this()
         {
             this.Text = title;
             this.controller = controller;
         }
-        public FormEntryMobil(string title, Mobil obj, MobilController controller) 
+        public FormEntryMobil(string title, Mobil obj, MobilController controller)
             : this()
         {
             this.Text = title;
@@ -59,7 +54,9 @@ namespace SistemSewaMobil.View
             mobil.merkMobil = txtMerkMobil.Text;
             mobil.tahunMobil = txtTahunMobil.Text;
             mobil.statusKetersediaan = cmbStatusTersedia.Text;
-            mobil.hargaSewa = (int)decimal.Parse(txtHargaSewa.Text);
+            //mobil.hargaSewa = (int)decimal.Parse(txtHargaSewa.Text);
+            mobil.hargaSewa = int.TryParse(txtHargaSewa.Text, out int harga) ? harga : 0;
+
 
             int result = 0;
 
@@ -67,20 +64,25 @@ namespace SistemSewaMobil.View
             {
                 if (isNewData)
                 {
+
                     result = controller.Create(mobil);
 
                     if (result > 0)
                     {
-                        OnCreate(mobil);
+                        //OnCreate(mobil);
+                        MessageBox.Show("Data berhasil disimpan");
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
 
-                        txtIdMobil.Clear();
-                        txtNoPolisi.Clear();
-                        txtMerkMobil.Clear();
-                        txtTahunMobil.Clear();
-                        cmbStatusTersedia.SelectedIndex = -1;
-                        txtHargaSewa.Clear();
 
-                        txtIdMobil.Focus();
+                        //txtIdMobil.Clear();
+                        //txtNoPolisi.Clear();
+                        //txtMerkMobil.Clear();
+                        //txtTahunMobil.Clear();
+                        //cmbStatusTersedia.SelectedIndex = -1;
+                        //txtHargaSewa.Clear();
+
+                        //txtIdMobil.Focus();
                     }
                 }
                 else

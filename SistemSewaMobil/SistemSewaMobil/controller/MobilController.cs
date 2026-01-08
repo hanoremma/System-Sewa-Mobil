@@ -10,37 +10,45 @@ namespace SistemSewaMobil.Controller
     public class MobilController
     {
         // 1. CREATE: Add New Car
+        //public int Create(Mobil mobil)
+        //{
+        //    int result = 0;
+
+        //    // Validation: Ensure mandatory fields are not empty
+        //    if (string.IsNullOrEmpty(mobil.merkMobil) || string.IsNullOrEmpty(mobil.noPolisi))
+        //    {
+        //        MessageBox.Show("Merk Mobil dan No Polisi harus diisi!", "Peringatan",
+        //            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //        return 0;
+        //    }
+
+        //    // Create Context and Repository, then execute
+        //    using (DbContext context = new DbContext())
+        //    {
+        //        var repo = new MobilRepository(context);
+        //        result = repo.Create(mobil);
+        //    }
+
+        //    if (result > 0)
+        //    {
+        //        MessageBox.Show("Data mobil berhasil disimpan!", "Informasi",
+        //            MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Data mobil gagal disimpan!", "Peringatan",
+        //            MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        //    }
+
+        //    return result;
+        //}
         public int Create(Mobil mobil)
         {
-            int result = 0;
-
-            // Validation: Ensure mandatory fields are not empty
-            if (string.IsNullOrEmpty(mobil.merkMobil) || string.IsNullOrEmpty(mobil.noPolisi))
-            {
-                MessageBox.Show("Merk Mobil dan No Polisi harus diisi!", "Peringatan",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return 0;
-            }
-
-            // Create Context and Repository, then execute
             using (DbContext context = new DbContext())
             {
-                var repo = new MobilRepository(context);
-                result = repo.Create(mobil);
+                MobilRepository repo = new MobilRepository(context);
+                return repo.Create(mobil);
             }
-
-            if (result > 0)
-            {
-                MessageBox.Show("Data mobil berhasil disimpan!", "Informasi",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Data mobil gagal disimpan!", "Peringatan",
-                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-
-            return result;
         }
 
         // 2. UPDATE: Edit Car Data
@@ -108,19 +116,15 @@ namespace SistemSewaMobil.Controller
             return result;
         }
 
-        // 4. READ ALL: Get All Cars
-        public List<Mobil> ReadAll()
+        public List<Mobil> GetAllMobil()
         {
-            List<Mobil> list = new List<Mobil>();
-
             using (DbContext context = new DbContext())
             {
-                var repo = new MobilRepository(context);
-                list = repo.ReadAll();
+                MobilRepository repo = new MobilRepository(context);
+                return repo.ReadAll();
             }
-
-            return list;
         }
+
 
         // 5. READ BY MERK: Search Cars
         public List<Mobil> ReadByMerk(string nama)
