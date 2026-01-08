@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace SistemSewaMobil
 {
-    public partial class formInfoPenyewa : Form
+    public partial class FormPenyewa : Form
     {
-        public formInfoPenyewa()
+        public FormPenyewa()
         {
             InitializeComponent();
             InisialisasiListPenyewaView();
         }
         private void InisialisasiListPenyewaView()
         {
-            infoPenyewa.View = View.Details;
+            infoPenyewa.View = System.Windows.Forms.View.Details;
             infoPenyewa.FullRowSelect = true;
             infoPenyewa.GridLines = true;
 
@@ -37,14 +37,24 @@ namespace SistemSewaMobil
 
         private void dataMobilTersediaToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            infoMobilTersedia menuInfo = new infoMobilTersedia();
+            FormMobil menuInfo = new FormMobil();
             menuInfo.Show();
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form1 menuInfo = new Form1();
+            FormMain menuInfo = new FormMain();
             menuInfo.Show();
+        }
+
+        private void infoPenyewa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

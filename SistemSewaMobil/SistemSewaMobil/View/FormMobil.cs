@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace SistemSewaMobil
 {
-    public partial class infoMobilTersedia : Form
+    public partial class FormMobil : Form
     {
-        public infoMobilTersedia()
+        public FormMobil()
         {
             InitializeComponent();
             InisialisasiListMobilView();
         }
         private void InisialisasiListMobilView()
         {
-            infoMobil.View = View.Details;
+            infoMobil.View = System.Windows.Forms.View.Details; // FIX: Use fully qualified enum
             infoMobil.FullRowSelect = true;
             infoMobil.GridLines = true;
 
@@ -34,8 +34,13 @@ namespace SistemSewaMobil
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form1 menuInfo = new Form1();
+            FormMain menuInfo = new FormMain();
             menuInfo.Show();
+        }
+
+        private void infoMobilTersedia_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

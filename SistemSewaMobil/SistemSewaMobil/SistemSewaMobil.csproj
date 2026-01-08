@@ -47,23 +47,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="View\Form1.cs">
+    <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="View\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\formInfoPenyewa.cs">
+    <Compile Include="View\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\formInfoPenyewa.Designer.cs">
-      <DependentUpon>formInfoPenyewa.cs</DependentUpon>
+    <Compile Include="View\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\infoMobilTersedia.cs">
+    <Compile Include="View\FormPenyewa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\infoMobilTersedia.Designer.cs">
-      <DependentUpon>infoMobilTersedia.cs</DependentUpon>
+    <Compile Include="View\FormPenyewa.Designer.cs">
+      <DependentUpon>FormPenyewa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormMobil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormMobil.Designer.cs">
+      <DependentUpon>FormMobil.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Entity\DetailSewa.cs" />
     <Compile Include="Model\Entity\Kategori.cs" />
@@ -73,14 +79,17 @@
     <Compile Include="Model\Entity\Petugas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="View\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\formInfoPenyewa.resx">
-      <DependentUpon>formInfoPenyewa.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\infoMobilTersedia.resx">
-      <DependentUpon>infoMobilTersedia.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormPenyewa.resx">
+      <DependentUpon>FormPenyewa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormMobil.resx">
+      <DependentUpon>FormMobil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

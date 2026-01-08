@@ -1,6 +1,6 @@
 ﻿namespace SistemSewaMobil
 {
-    partial class formInfoPenyewa
+    partial class FormPenyewa
     {
         /// <summary>
         /// Required designer variable.
@@ -63,9 +63,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("DejaVu Sans Mono", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(376, 33);
+            this.label1.Location = new System.Drawing.Point(501, 41);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(248, 24);
+            this.label1.Size = new System.Drawing.Size(303, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Informasi Penyewa";
             // 
@@ -73,72 +74,80 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel1.Controls.Add(this.infoPenyewa, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 77);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(16, 95);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.74374F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.25627F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(971, 360);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1295, 443);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // infoPenyewa
             // 
             this.infoPenyewa.HideSelection = false;
-            this.infoPenyewa.Location = new System.Drawing.Point(3, 3);
+            this.infoPenyewa.Location = new System.Drawing.Point(4, 4);
+            this.infoPenyewa.Margin = new System.Windows.Forms.Padding(4);
             this.infoPenyewa.Name = "infoPenyewa";
-            this.infoPenyewa.Size = new System.Drawing.Size(965, 309);
+            this.infoPenyewa.Size = new System.Drawing.Size(1285, 379);
             this.infoPenyewa.TabIndex = 0;
             this.infoPenyewa.UseCompatibleStateImageBehavior = false;
+            this.infoPenyewa.SelectedIndexChanged += new System.EventHandler(this.infoPenyewa_SelectedIndexChanged);
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 709F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 945F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 104F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 107F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
             this.tableLayoutPanel2.Controls.Add(this.button2, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.button1, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.button3, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 318);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 392);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(965, 39);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1287, 47);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(790, 3);
+            this.button2.Location = new System.Drawing.Point(1053, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(74, 23);
+            this.button2.Size = new System.Drawing.Size(99, 28);
             this.button2.TabIndex = 1;
             this.button2.Text = "Hapus";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(870, 3);
+            this.button1.Location = new System.Drawing.Point(1160, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 23);
+            this.button1.Size = new System.Drawing.Size(123, 28);
             this.button1.TabIndex = 0;
             this.button1.Text = "Hapus Semua";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(712, 3);
+            this.button3.Location = new System.Drawing.Point(949, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(72, 23);
+            this.button3.Size = new System.Drawing.Size(96, 28);
             this.button3.TabIndex = 2;
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.masterDataToolStripMenuItem,
@@ -147,9 +156,10 @@
             this.bantuanToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(991, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1321, 28);
             this.menuStrip1.TabIndex = 25;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // fileToolStripMenuItem
             // 
@@ -157,20 +167,20 @@
             this.homeToolStripMenuItem,
             this.exitKeluarToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.homeToolStripMenuItem.Text = "Home";
             this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // exitKeluarToolStripMenuItem
             // 
             this.exitKeluarToolStripMenuItem.Name = "exitKeluarToolStripMenuItem";
-            this.exitKeluarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitKeluarToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.exitKeluarToolStripMenuItem.Text = "Exit/Keluar";
             // 
             // masterDataToolStripMenuItem
@@ -180,7 +190,7 @@
             this.dataPenyewaToolStripMenuItem,
             this.dataPetugasToolStripMenuItem});
             this.masterDataToolStripMenuItem.Name = "masterDataToolStripMenuItem";
-            this.masterDataToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.masterDataToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
             this.masterDataToolStripMenuItem.Text = "Master Data";
             // 
             // dataMobilToolStripMenuItem
@@ -189,32 +199,32 @@
             this.dataMobilTersediaToolStripMenuItem,
             this.dataMobilDisewaToolStripMenuItem1});
             this.dataMobilToolStripMenuItem.Name = "dataMobilToolStripMenuItem";
-            this.dataMobilToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.dataMobilToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataMobilToolStripMenuItem.Text = "Data Mobil";
             // 
             // dataMobilTersediaToolStripMenuItem
             // 
             this.dataMobilTersediaToolStripMenuItem.Name = "dataMobilTersediaToolStripMenuItem";
-            this.dataMobilTersediaToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.dataMobilTersediaToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
             this.dataMobilTersediaToolStripMenuItem.Text = "Data Mobil Tersedia";
             this.dataMobilTersediaToolStripMenuItem.Click += new System.EventHandler(this.dataMobilTersediaToolStripMenuItem_Click_1);
             // 
             // dataMobilDisewaToolStripMenuItem1
             // 
             this.dataMobilDisewaToolStripMenuItem1.Name = "dataMobilDisewaToolStripMenuItem1";
-            this.dataMobilDisewaToolStripMenuItem1.Size = new System.Drawing.Size(178, 22);
+            this.dataMobilDisewaToolStripMenuItem1.Size = new System.Drawing.Size(226, 26);
             this.dataMobilDisewaToolStripMenuItem1.Text = "Data Mobil disewa";
             // 
             // dataPenyewaToolStripMenuItem
             // 
             this.dataPenyewaToolStripMenuItem.Name = "dataPenyewaToolStripMenuItem";
-            this.dataPenyewaToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.dataPenyewaToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataPenyewaToolStripMenuItem.Text = "Data Penyewa";
             // 
             // dataPetugasToolStripMenuItem
             // 
             this.dataPetugasToolStripMenuItem.Name = "dataPetugasToolStripMenuItem";
-            this.dataPetugasToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.dataPetugasToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataPetugasToolStripMenuItem.Text = "Data Petugas";
             // 
             // transaksiToolStripMenuItem
@@ -223,19 +233,19 @@
             this.pembayaranToolStripMenuItem,
             this.printSToolStripMenuItem});
             this.transaksiToolStripMenuItem.Name = "transaksiToolStripMenuItem";
-            this.transaksiToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.transaksiToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.transaksiToolStripMenuItem.Text = "Transaksi";
             // 
             // pembayaranToolStripMenuItem
             // 
             this.pembayaranToolStripMenuItem.Name = "pembayaranToolStripMenuItem";
-            this.pembayaranToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.pembayaranToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.pembayaranToolStripMenuItem.Text = "Pembayaran";
             // 
             // printSToolStripMenuItem
             // 
             this.printSToolStripMenuItem.Name = "printSToolStripMenuItem";
-            this.printSToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.printSToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.printSToolStripMenuItem.Text = "Print Invoice";
             // 
             // pengaturanToolStripMenuItem
@@ -244,19 +254,19 @@
             this.keloloaAkunToolStripMenuItem,
             this.backupDataToolStripMenuItem});
             this.pengaturanToolStripMenuItem.Name = "pengaturanToolStripMenuItem";
-            this.pengaturanToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.pengaturanToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
             this.pengaturanToolStripMenuItem.Text = "Pengaturan";
             // 
             // keloloaAkunToolStripMenuItem
             // 
             this.keloloaAkunToolStripMenuItem.Name = "keloloaAkunToolStripMenuItem";
-            this.keloloaAkunToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.keloloaAkunToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
             this.keloloaAkunToolStripMenuItem.Text = "Keloloa akun";
             // 
             // backupDataToolStripMenuItem
             // 
             this.backupDataToolStripMenuItem.Name = "backupDataToolStripMenuItem";
-            this.backupDataToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.backupDataToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
             this.backupDataToolStripMenuItem.Text = "Backup Data";
             // 
             // bantuanToolStripMenuItem
@@ -265,31 +275,32 @@
             this.panduanPenggunaanToolStripMenuItem,
             this.tentangAplikasiToolStripMenuItem});
             this.bantuanToolStripMenuItem.Name = "bantuanToolStripMenuItem";
-            this.bantuanToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.bantuanToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
             this.bantuanToolStripMenuItem.Text = "Bantuan";
             // 
             // panduanPenggunaanToolStripMenuItem
             // 
             this.panduanPenggunaanToolStripMenuItem.Name = "panduanPenggunaanToolStripMenuItem";
-            this.panduanPenggunaanToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.panduanPenggunaanToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
             this.panduanPenggunaanToolStripMenuItem.Text = "Panduan Penggunaan";
             // 
             // tentangAplikasiToolStripMenuItem
             // 
             this.tentangAplikasiToolStripMenuItem.Name = "tentangAplikasiToolStripMenuItem";
-            this.tentangAplikasiToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.tentangAplikasiToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
             this.tentangAplikasiToolStripMenuItem.Text = "Tentang Aplikasi";
             // 
-            // formInfoPenyewa
+            // FormPenyewa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(991, 459);
+            this.ClientSize = new System.Drawing.Size(1321, 565);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
-            this.Name = "formInfoPenyewa";
-            this.Text = "Informasi Penyewa";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "FormPenyewa";
+            this.Text = "Penyewa";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);

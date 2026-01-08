@@ -1,6 +1,6 @@
 ﻿namespace SistemSewaMobil
 {
-    partial class infoMobilTersedia
+    partial class FormMobil
     {
         /// <summary>
         /// Required designer variable.
@@ -63,82 +63,90 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("DejaVu Sans Mono", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(141, 36);
+            this.label1.Location = new System.Drawing.Point(188, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(346, 24);
+            this.label1.Size = new System.Drawing.Size(422, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Informasi Mobil Tersedia";
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 605F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 807F));
             this.tableLayoutPanel1.Controls.Add(this.infoMobil, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(16, 76);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 94);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 277F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(605, 318);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 341F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(807, 391);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // infoMobil
             // 
             this.infoMobil.HideSelection = false;
-            this.infoMobil.Location = new System.Drawing.Point(3, 3);
+            this.infoMobil.Location = new System.Drawing.Point(4, 4);
+            this.infoMobil.Margin = new System.Windows.Forms.Padding(4);
             this.infoMobil.Name = "infoMobil";
-            this.infoMobil.Size = new System.Drawing.Size(599, 271);
+            this.infoMobil.Size = new System.Drawing.Size(797, 333);
             this.infoMobil.TabIndex = 0;
             this.infoMobil.UseCompatibleStateImageBehavior = false;
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 330F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 72F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 322F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 440F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 96F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 429F));
             this.tableLayoutPanel2.Controls.Add(this.button1, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.button2, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.button3, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 280);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 345);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(599, 35);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(799, 42);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(487, 3);
+            this.button1.Location = new System.Drawing.Point(649, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 23);
+            this.button1.Size = new System.Drawing.Size(143, 28);
             this.button1.TabIndex = 0;
             this.button1.Text = "Hapus Semua";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(415, 3);
+            this.button2.Location = new System.Drawing.Point(553, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(66, 23);
+            this.button2.Size = new System.Drawing.Size(88, 28);
             this.button2.TabIndex = 1;
             this.button2.Text = "Hapus";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(333, 3);
+            this.button3.Location = new System.Drawing.Point(444, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 2;
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.masterDataToolStripMenuItem,
@@ -147,7 +155,7 @@
             this.bantuanToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(633, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(844, 28);
             this.menuStrip1.TabIndex = 25;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -157,20 +165,20 @@
             this.homeToolStripMenuItem,
             this.exitKeluarToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.homeToolStripMenuItem.Text = "Home";
             this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // exitKeluarToolStripMenuItem
             // 
             this.exitKeluarToolStripMenuItem.Name = "exitKeluarToolStripMenuItem";
-            this.exitKeluarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitKeluarToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.exitKeluarToolStripMenuItem.Text = "Exit/Keluar";
             // 
             // masterDataToolStripMenuItem
@@ -180,7 +188,7 @@
             this.dataPenyewaToolStripMenuItem,
             this.dataPetugasToolStripMenuItem});
             this.masterDataToolStripMenuItem.Name = "masterDataToolStripMenuItem";
-            this.masterDataToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.masterDataToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
             this.masterDataToolStripMenuItem.Text = "Master Data";
             // 
             // dataMobilToolStripMenuItem
@@ -189,31 +197,31 @@
             this.dataMobilTersediaToolStripMenuItem,
             this.dataMobilDisewaToolStripMenuItem1});
             this.dataMobilToolStripMenuItem.Name = "dataMobilToolStripMenuItem";
-            this.dataMobilToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.dataMobilToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataMobilToolStripMenuItem.Text = "Data Mobil";
             // 
             // dataMobilTersediaToolStripMenuItem
             // 
             this.dataMobilTersediaToolStripMenuItem.Name = "dataMobilTersediaToolStripMenuItem";
-            this.dataMobilTersediaToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.dataMobilTersediaToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
             this.dataMobilTersediaToolStripMenuItem.Text = "Data Mobil Tersedia";
             // 
             // dataMobilDisewaToolStripMenuItem1
             // 
             this.dataMobilDisewaToolStripMenuItem1.Name = "dataMobilDisewaToolStripMenuItem1";
-            this.dataMobilDisewaToolStripMenuItem1.Size = new System.Drawing.Size(178, 22);
+            this.dataMobilDisewaToolStripMenuItem1.Size = new System.Drawing.Size(226, 26);
             this.dataMobilDisewaToolStripMenuItem1.Text = "Data Mobil disewa";
             // 
             // dataPenyewaToolStripMenuItem
             // 
             this.dataPenyewaToolStripMenuItem.Name = "dataPenyewaToolStripMenuItem";
-            this.dataPenyewaToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.dataPenyewaToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataPenyewaToolStripMenuItem.Text = "Data Penyewa";
             // 
             // dataPetugasToolStripMenuItem
             // 
             this.dataPetugasToolStripMenuItem.Name = "dataPetugasToolStripMenuItem";
-            this.dataPetugasToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.dataPetugasToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataPetugasToolStripMenuItem.Text = "Data Petugas";
             // 
             // transaksiToolStripMenuItem
@@ -222,19 +230,19 @@
             this.pembayaranToolStripMenuItem,
             this.printSToolStripMenuItem});
             this.transaksiToolStripMenuItem.Name = "transaksiToolStripMenuItem";
-            this.transaksiToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.transaksiToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.transaksiToolStripMenuItem.Text = "Transaksi";
             // 
             // pembayaranToolStripMenuItem
             // 
             this.pembayaranToolStripMenuItem.Name = "pembayaranToolStripMenuItem";
-            this.pembayaranToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.pembayaranToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.pembayaranToolStripMenuItem.Text = "Pembayaran";
             // 
             // printSToolStripMenuItem
             // 
             this.printSToolStripMenuItem.Name = "printSToolStripMenuItem";
-            this.printSToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.printSToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.printSToolStripMenuItem.Text = "Print Invoice";
             // 
             // pengaturanToolStripMenuItem
@@ -243,19 +251,19 @@
             this.keloloaAkunToolStripMenuItem,
             this.backupDataToolStripMenuItem});
             this.pengaturanToolStripMenuItem.Name = "pengaturanToolStripMenuItem";
-            this.pengaturanToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.pengaturanToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
             this.pengaturanToolStripMenuItem.Text = "Pengaturan";
             // 
             // keloloaAkunToolStripMenuItem
             // 
             this.keloloaAkunToolStripMenuItem.Name = "keloloaAkunToolStripMenuItem";
-            this.keloloaAkunToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.keloloaAkunToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
             this.keloloaAkunToolStripMenuItem.Text = "Keloloa akun";
             // 
             // backupDataToolStripMenuItem
             // 
             this.backupDataToolStripMenuItem.Name = "backupDataToolStripMenuItem";
-            this.backupDataToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.backupDataToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
             this.backupDataToolStripMenuItem.Text = "Backup Data";
             // 
             // bantuanToolStripMenuItem
@@ -264,31 +272,33 @@
             this.panduanPenggunaanToolStripMenuItem,
             this.tentangAplikasiToolStripMenuItem});
             this.bantuanToolStripMenuItem.Name = "bantuanToolStripMenuItem";
-            this.bantuanToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.bantuanToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
             this.bantuanToolStripMenuItem.Text = "Bantuan";
             // 
             // panduanPenggunaanToolStripMenuItem
             // 
             this.panduanPenggunaanToolStripMenuItem.Name = "panduanPenggunaanToolStripMenuItem";
-            this.panduanPenggunaanToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.panduanPenggunaanToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
             this.panduanPenggunaanToolStripMenuItem.Text = "Panduan Penggunaan";
             // 
             // tentangAplikasiToolStripMenuItem
             // 
             this.tentangAplikasiToolStripMenuItem.Name = "tentangAplikasiToolStripMenuItem";
-            this.tentangAplikasiToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.tentangAplikasiToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
             this.tentangAplikasiToolStripMenuItem.Text = "Tentang Aplikasi";
             // 
-            // infoMobilTersedia
+            // FormMobil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 450);
+            this.ClientSize = new System.Drawing.Size(844, 554);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
-            this.Name = "infoMobilTersedia";
-            this.Text = "Informasi Mobil yang Tersedia";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "FormMobil";
+            this.Text = "Mobil";
+            this.Load += new System.EventHandler(this.infoMobilTersedia_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);

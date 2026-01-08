@@ -7,19 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemSewaMobil.Model;
+using SistemSewaMobil.Model.Entity;
+using SistemSewaMobil.View;
 
 namespace SistemSewaMobil
 {
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
             InisialisasiListView();
         }
         private void InisialisasiListView()
         {
-            infoMobilTerpilih.View = View.Details;
+            infoMobilTerpilih.View = System.Windows.Forms.View.Details;
             infoMobilTerpilih.FullRowSelect = true;
             infoMobilTerpilih.GridLines = true;
 
@@ -61,20 +64,25 @@ namespace SistemSewaMobil
 
         private void button3_Click(object sender, EventArgs e)
         {
-            formInfoPenyewa menuInfo = new formInfoPenyewa();
+            FormPenyewa menuInfo = new FormPenyewa();
             menuInfo.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            infoMobilTersedia menuInfo = new infoMobilTersedia();
+            FormMobil menuInfo = new FormMobil();
             menuInfo.Show();
         }
 
         private void dataMobilTersediaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            infoMobilTersedia menuInfo = new infoMobilTersedia();
+            FormMobil menuInfo = new FormMobil();
             menuInfo.Show();
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
