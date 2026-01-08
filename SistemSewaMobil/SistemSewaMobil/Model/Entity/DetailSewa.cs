@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace SistemSewaMobil.Model.Entity
 {
-    internal class DetailSewa
+    public class DetailSewa
     {
-        //sdsd//
+        
     }
 }

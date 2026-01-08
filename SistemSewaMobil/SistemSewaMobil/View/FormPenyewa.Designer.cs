@@ -156,7 +156,7 @@
             this.bantuanToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1321, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1321, 30);
             this.menuStrip1.TabIndex = 25;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -301,6 +301,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormPenyewa";
             this.Text = "Penyewa";
+            this.Load += new System.EventHandler(this.FormPenyewa_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);

@@ -56,5 +56,10 @@ namespace SistemSewaMobil
         {
 
         }
+
+        private void FormPenyewa_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

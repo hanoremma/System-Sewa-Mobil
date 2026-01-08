@@ -196,7 +196,7 @@
             this.comboBoxMobil.Size = new System.Drawing.Size(240, 24);
             this.comboBoxMobil.TabIndex = 21;
             this.comboBoxMobil.SelectedIndexChanged += new System.EventHandler(this.comboBoxMobil_SelectedIndexChanged);
-            this.comboBoxMobil.DataSourceChanged += new System.EventHandler(this.Form1_Load);
+            
             // 
             // label2
             // 
@@ -227,6 +227,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(240, 22);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label9
             // 
@@ -445,6 +446,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Simpan";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tableLayoutPanel2
             // 

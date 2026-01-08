@@ -1,45 +1,63 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
+using System.Data;
+using System.Data.SqlClient; // Ini library utamanya
 
 namespace SistemSewaMobil.Model.Context
 {
     public class DbContext : IDisposable
     {
-        // deklarasi private variabel / field 
-        private SQLiteConnection _conn;
+        // Variabel private untuk menyimpan koneksi
+        private SqlConnection _conn;
 
-        // deklarasi property Conn (connection), untuk menyimpan objek koneksi 
-        public SQLiteConnection Conn
+        // Property untuk memanggil koneksi dari luar
+        public SqlConnection Conn
         {
             get { return _conn ?? (_conn = GetOpenConnection()); }
         }
 
-        // Method untuk melakukan koneksi ke database 
-        private SQLiteConnection GetOpenConnection()
+        // Method untuk membuka koneksi ke SQL Server
+        private SqlConnection GetOpenConnection()
         {
-            SQLiteConnection conn = null; // deklarasi objek connection 
+            SqlConnection conn = null;
 
-            try // penggunaan blok try-catch untuk penanganan error 
+            try
             {
-                // atur ulang lokasi database yang disesuaikan dengan 
-                // lokasi database perpustakaan Anda 
-                string dbName = @"C:\Users\emmah\OneDrive\AMIKOM\Sem 3\ST122 - PEMROGRAMAN LANJUT\#24.11.5953\Praktikum 10\Operasi CRUD MVC Part #1\project\PerpustakaanAppMVC\Database\DbPerpustakaan.db";
+                // --- BAGIAN INI HARUS DISESUAIKAN DENGAN SSMS KAMU ---
+                // Data Source = Nama Server di SSMS kamu
+                // Initial Catalog = Nama Database yang kamu buat
+                // Integrated Security = True (Artinya pakai login Windows, tidak perlu user/pass)
 
-                // deklarasi variabel connectionString, ref:https://www.connectionstrings.com/ 
-                string connectionString = string.Format("Data Source = {0};FailIfMissing = True", dbName);
-                conn = new SQLiteConnection(connectionString); // buat objek connection
-                conn.Open(); // buka koneksi ke database 
+                //string connectionString = @"Data Source=NAMA_SERVER_KAMU;Initial Catalog=NAMA_DATABASE_KAMU;Integrated Security=True";
+
+                // Contoh nyata:
+                string connectionString = @"C:\Users\Brian\source\repos\System-Sewa-Mobil\DataBase\sistemSewaMobil.sql";
+
+                conn = new SqlConnection(connectionString);
+                conn.Open(); // Membuka koneksi
             }
-            // jika terjadi error di blok try, akan ditangani langsung oleh blok 
             catch (Exception ex)
             {
                 System.Diagnostics.Debug.Print("Open Connection Error: {0}", ex.Message);
             }
+
             return conn;
+        }
+
+        // Method untuk membersihkan memori (Menutup koneksi)
+        public void Dispose()
+        {
+            if (_conn != null)
+            {
+                try
+                {
+                    if (_conn.State != ConnectionState.Closed) _conn.Close();
+                }
+                finally
+                {
+                    _conn.Dispose();
+                }
+            }
+            GC.SuppressFinalize(this);
         }
     }
 }

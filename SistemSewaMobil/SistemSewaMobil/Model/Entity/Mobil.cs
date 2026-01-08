@@ -8,10 +8,11 @@ namespace SistemSewaMobil.Model.Entity
 {
     public class Mobil
     {
-        public int No { get; set; }
-        public string Merk { get; set; }
-        public string Kategori { get; set; }
-        public string Plat { get; set; }
-        public int Tahun { get; set; }
+        public string idMobil { get; set; }
+        public string noPolisi { get; set; }
+        public string merkMobil { get; set; }
+        public string tahunMobil { get; set; }
+        public string statusKetersediaan { get; set; }
+        public int hargaSewa { get; set; }
     }
 }

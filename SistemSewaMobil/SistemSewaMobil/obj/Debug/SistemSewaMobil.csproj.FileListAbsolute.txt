@@ -38,3 +38,4 @@ C:\Users\Brian\Source\Repos\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\ob
 C:\Users\Brian\Source\Repos\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.FormMain.resources
 C:\Users\Brian\Source\Repos\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.FormPenyewa.resources
 C:\Users\Brian\Source\Repos\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.FormMobil.resources
+C:\Users\Brian\Source\Repos\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.View.FormEntryMobil.resources

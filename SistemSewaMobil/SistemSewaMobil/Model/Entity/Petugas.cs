@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SistemSewaMobil.Model.Entity
 {
-    internal class Petugas
+    public class Petugas
     {
     }
 }

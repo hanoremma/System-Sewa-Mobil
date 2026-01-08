@@ -54,6 +54,7 @@
             this.bantuanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panduanPenggunaanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tentangAplikasiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Button4 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -98,12 +99,13 @@
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 440F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 96F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 116F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 417F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 429F));
             this.tableLayoutPanel2.Controls.Add(this.button1, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.button2, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.Button4, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.button3, 1, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 345);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
@@ -126,20 +128,20 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(553, 4);
+            this.button2.Location = new System.Drawing.Point(232, 4);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 28);
+            this.button2.Size = new System.Drawing.Size(88, 34);
             this.button2.TabIndex = 1;
             this.button2.Text = "Hapus";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(444, 4);
+            this.button3.Location = new System.Drawing.Point(120, 4);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 28);
+            this.button3.Size = new System.Drawing.Size(100, 34);
             this.button3.TabIndex = 2;
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = true;
@@ -155,7 +157,7 @@
             this.bantuanToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(844, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(844, 30);
             this.menuStrip1.TabIndex = 25;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -165,7 +167,7 @@
             this.homeToolStripMenuItem,
             this.exitKeluarToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // homeToolStripMenuItem
@@ -188,7 +190,7 @@
             this.dataPenyewaToolStripMenuItem,
             this.dataPetugasToolStripMenuItem});
             this.masterDataToolStripMenuItem.Name = "masterDataToolStripMenuItem";
-            this.masterDataToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
+            this.masterDataToolStripMenuItem.Size = new System.Drawing.Size(104, 26);
             this.masterDataToolStripMenuItem.Text = "Master Data";
             // 
             // dataMobilToolStripMenuItem
@@ -230,7 +232,7 @@
             this.pembayaranToolStripMenuItem,
             this.printSToolStripMenuItem});
             this.transaksiToolStripMenuItem.Name = "transaksiToolStripMenuItem";
-            this.transaksiToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.transaksiToolStripMenuItem.Size = new System.Drawing.Size(82, 26);
             this.transaksiToolStripMenuItem.Text = "Transaksi";
             // 
             // pembayaranToolStripMenuItem
@@ -251,7 +253,7 @@
             this.keloloaAkunToolStripMenuItem,
             this.backupDataToolStripMenuItem});
             this.pengaturanToolStripMenuItem.Name = "pengaturanToolStripMenuItem";
-            this.pengaturanToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
+            this.pengaturanToolStripMenuItem.Size = new System.Drawing.Size(97, 26);
             this.pengaturanToolStripMenuItem.Text = "Pengaturan";
             // 
             // keloloaAkunToolStripMenuItem
@@ -272,7 +274,7 @@
             this.panduanPenggunaanToolStripMenuItem,
             this.tentangAplikasiToolStripMenuItem});
             this.bantuanToolStripMenuItem.Name = "bantuanToolStripMenuItem";
-            this.bantuanToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
+            this.bantuanToolStripMenuItem.Size = new System.Drawing.Size(77, 26);
             this.bantuanToolStripMenuItem.Text = "Bantuan";
             // 
             // panduanPenggunaanToolStripMenuItem
@@ -286,6 +288,16 @@
             this.tentangAplikasiToolStripMenuItem.Name = "tentangAplikasiToolStripMenuItem";
             this.tentangAplikasiToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
             this.tentangAplikasiToolStripMenuItem.Text = "Tentang Aplikasi";
+            // 
+            // Button4
+            // 
+            this.Button4.Location = new System.Drawing.Point(3, 3);
+            this.Button4.Name = "Button4";
+            this.Button4.Size = new System.Drawing.Size(109, 36);
+            this.Button4.TabIndex = 3;
+            this.Button4.Text = "Tambah";
+            this.Button4.UseVisualStyleBackColor = true;
+            this.Button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // FormMobil
             // 
@@ -336,5 +348,6 @@
         private System.Windows.Forms.ToolStripMenuItem bantuanToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem panduanPenggunaanToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tentangAplikasiToolStripMenuItem;
+        private System.Windows.Forms.Button Button4;
     }
 }

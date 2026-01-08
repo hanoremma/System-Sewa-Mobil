@@ -35,7 +35,7 @@ namespace SistemSewaMobil.View
                 MessageBox.Show("Login Berhasil!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // 3. Pindah ke Menu Utama (Asumsi FormMain adalah menu utama)
-                FormMain menuUtama = new FormMain();
+                FormEntryMobil menuUtama = new FormEntryMobil();
                 menuUtama.Show(); // Tampilkan menu utama
 
                 this.Hide(); // Sembunyikan form login ini
