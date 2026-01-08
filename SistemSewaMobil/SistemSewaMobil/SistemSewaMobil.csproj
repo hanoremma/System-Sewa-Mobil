@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Context\DbContext.cs" />
     <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,7 +116,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />
-    <Folder Include="Model\Context\" />
     <Folder Include="Model\Repository\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

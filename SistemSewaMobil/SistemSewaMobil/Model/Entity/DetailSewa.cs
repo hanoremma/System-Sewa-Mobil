@@ -8,5 +8,6 @@ namespace SistemSewaMobil.Model.Entity
 {
     internal class DetailSewa
     {
+        //sdsd//
     }
 }
