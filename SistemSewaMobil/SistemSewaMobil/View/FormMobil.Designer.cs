@@ -30,12 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.infoMobil = new System.Windows.Forms.ListView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.Button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.infoMobil = new System.Windows.Forms.ListView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,11 +67,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("DejaVu Sans Mono", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(141, 36);
+            this.label1.Location = new System.Drawing.Point(210, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(346, 24);
+            this.label1.Size = new System.Drawing.Size(220, 24);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Informasi Mobil Tersedia";
+            this.label1.Text = "Informasi Mobil";
             // 
             // tableLayoutPanel1
             // 
@@ -86,15 +86,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(605, 318);
             this.tableLayoutPanel1.TabIndex = 2;
-            // 
-            // infoMobil
-            // 
-            this.infoMobil.HideSelection = false;
-            this.infoMobil.Location = new System.Drawing.Point(3, 3);
-            this.infoMobil.Name = "infoMobil";
-            this.infoMobil.Size = new System.Drawing.Size(599, 271);
-            this.infoMobil.TabIndex = 0;
-            this.infoMobil.UseCompatibleStateImageBehavior = false;
             // 
             // tableLayoutPanel2
             // 
@@ -155,6 +146,15 @@
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // infoMobil
+            // 
+            this.infoMobil.HideSelection = false;
+            this.infoMobil.Location = new System.Drawing.Point(3, 3);
+            this.infoMobil.Name = "infoMobil";
+            this.infoMobil.Size = new System.Drawing.Size(599, 271);
+            this.infoMobil.TabIndex = 0;
+            this.infoMobil.UseCompatibleStateImageBehavior = false;
             // 
             // menuStrip1
             // 

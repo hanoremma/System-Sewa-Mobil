@@ -10,6 +10,9 @@ namespace SistemSewaMobil.Model.Entity
     {
         public string idPenyewa { get; set; }
         public string namaPenyewa { get; set; }
-        
+        public string alamatPenyewa { get; set; }
+        public string noKtpPenyewa { get; set; }
+        public string noHpPenyewa { get; set; }
+
     }
 }

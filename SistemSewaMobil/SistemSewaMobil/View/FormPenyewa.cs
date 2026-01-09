@@ -24,15 +24,11 @@ namespace SistemSewaMobil
             infoPenyewa.GridLines = true;
 
             infoPenyewa.Columns.Add("No.", 30, HorizontalAlignment.Center);
-            infoPenyewa.Columns.Add("Nama", 120, HorizontalAlignment.Center);
-            infoPenyewa.Columns.Add("Alamat", 100, HorizontalAlignment.Center);
-            infoPenyewa.Columns.Add("No HP", 100, HorizontalAlignment.Center);
-            infoPenyewa.Columns.Add("KTP", 100, HorizontalAlignment.Center);
-            infoPenyewa.Columns.Add("Sewa Mobil", 100, HorizontalAlignment.Center);
-            infoPenyewa.Columns.Add("Tanggal Sewa", 100, HorizontalAlignment.Center);
-            infoPenyewa.Columns.Add("Tanggal Kembali", 100, HorizontalAlignment.Center);
-            infoPenyewa.Columns.Add("Total", 100, HorizontalAlignment.Center);
-            infoPenyewa.Columns.Add("Status Pembayaran", 115, HorizontalAlignment.Center);
+            infoPenyewa.Columns.Add("ID Penyewa", 120, HorizontalAlignment.Center);
+            infoPenyewa.Columns.Add("Nama Penyewa", 160, HorizontalAlignment.Center);
+            infoPenyewa.Columns.Add("Alamat Penyewa", 200, HorizontalAlignment.Center);
+            infoPenyewa.Columns.Add("KTP", 150, HorizontalAlignment.Center);
+            infoPenyewa.Columns.Add("No HP", 150, HorizontalAlignment.Center);
         }
 
         private void dataMobilTersediaToolStripMenuItem_Click_1(object sender, EventArgs e)

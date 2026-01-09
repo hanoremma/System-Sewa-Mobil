@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Data;
-using System.Data.SqlClient; // Ini library utamanya
+using System.Data.SqlClient; 
 
 namespace SistemSewaMobil.Model.Context
 {

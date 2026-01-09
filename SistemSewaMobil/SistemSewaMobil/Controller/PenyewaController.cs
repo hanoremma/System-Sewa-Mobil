@@ -1,40 +1,42 @@
-using System;
-using System.Collections.Generic;
-using System.Windows.Forms; // Needed for MessageBox
+﻿using SistemSewaMobil.Model.Context;
 using SistemSewaMobil.Model.Entity;
 using SistemSewaMobil.Model.Repository;
-using SistemSewaMobil.Model.Context;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SistemSewaMobil.Controller
 {
-    public class MobilController
+    public class PenyewaController
     {
-        public int Create(Mobil mobil)
+        public int Create(Penyewa penyewa)
         {
             using (DbContext context = new DbContext())
             {
-                MobilRepository repo = new MobilRepository(context);
-                return repo.Create(mobil);
+                PenyewaRepository repo = new PenyewaRepository(context);
+                return repo.Create(penyewa);
             }
         }
-
-        // 2. UPDATE: Edit Car Data
-        public int Update(Mobil mobil)
+        // 2. UPDATE: Edit costumer data
+        public int Update(Penyewa penyewa)
         {
             int result = 0;
 
             // Validation
-            if (string.IsNullOrEmpty(mobil.merkMobil) || string.IsNullOrEmpty(mobil.noPolisi))
+            if (string.IsNullOrEmpty(penyewa.namaPenyewa) || string.IsNullOrEmpty(penyewa.noHpPenyewa))
             {
-                MessageBox.Show("Merk Mobil dan No Polisi harus diisi!", "Peringatan",
+                MessageBox.Show("Nama Penyewa dan No HP penyewa harus diisi!", "Peringatan",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return 0;
             }
 
             using (DbContext context = new DbContext())
             {
-                var repo = new MobilRepository(context);
-                result = repo.Update(mobil);
+                var repo = new PenyewaRepository(context);
+                result = repo.Update(penyewa);
             }
 
             if (result > 0)
@@ -50,9 +52,7 @@ namespace SistemSewaMobil.Controller
 
             return result;
         }
-
-        // 3. DELETE: Remove Car
-        public int Delete(Mobil mobil)
+        public int Delete(Penyewa penyewa)
         {
             int result = 0;
 
@@ -64,44 +64,40 @@ namespace SistemSewaMobil.Controller
             {
                 using (DbContext context = new DbContext())
                 {
-                    var repo = new MobilRepository(context);
-                    result = repo.Delete(mobil);
+                    var repo = new PenyewaRepository(context);
+                    result = repo.Delete(penyewa);
                 }
 
                 if (result > 0)
                 {
-                    MessageBox.Show("Data mobil berhasil dihapus!", "Informasi",
+                    MessageBox.Show("Data penyewa berhasil dihapus!", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Data mobil gagal dihapus!", "Peringatan",
+                    MessageBox.Show("Data penyewa gagal dihapus!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
 
             return result;
         }
-
-        public List<Mobil> GetAllMobil()
+        public List<Penyewa> GetAllPenyewa()
         {
             using (DbContext context = new DbContext())
             {
-                MobilRepository repo = new MobilRepository(context);
+                PenyewaRepository repo = new PenyewaRepository(context);
                 return repo.ReadAll();
             }
         }
-
-
-        // 5. READ BY MERK: Search Cars
-        public List<Mobil> ReadByMerk(string nama)
+        public List<Penyewa> ReadByNama(string nama)
         {
-            List<Mobil> list = new List<Mobil>();
+            List<Penyewa> list = new List<Penyewa>();
 
             using (DbContext context = new DbContext())
             {
-                var repo = new MobilRepository(context);
-                list = repo.ReadByMerk(nama);
+                var repo = new PenyewaRepository(context);
+                list = repo.ReadByNama(nama);
             }
 
             return list;

@@ -49,121 +49,136 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 55);
+            this.label1.Location = new System.Drawing.Point(28, 45);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 16);
+            this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Id Mobil";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 89);
+            this.label2.Location = new System.Drawing.Point(28, 72);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 16);
+            this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "No Polisi";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 154);
+            this.label3.Location = new System.Drawing.Point(28, 125);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 16);
+            this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Tahun Mobil";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(38, 122);
+            this.label4.Location = new System.Drawing.Point(28, 99);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 16);
+            this.label4.Size = new System.Drawing.Size(59, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "Merk Mobil";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(38, 287);
+            this.label5.Location = new System.Drawing.Point(28, 233);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 16);
+            this.label5.Size = new System.Drawing.Size(0, 13);
             this.label5.TabIndex = 7;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(38, 255);
+            this.label6.Location = new System.Drawing.Point(28, 207);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 16);
+            this.label6.Size = new System.Drawing.Size(0, 13);
             this.label6.TabIndex = 6;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(38, 222);
+            this.label7.Location = new System.Drawing.Point(28, 180);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 16);
+            this.label7.Size = new System.Drawing.Size(66, 13);
             this.label7.TabIndex = 5;
             this.label7.Text = "Harga Sewa";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(38, 188);
+            this.label8.Location = new System.Drawing.Point(28, 153);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(102, 16);
+            this.label8.Size = new System.Drawing.Size(81, 13);
             this.label8.TabIndex = 4;
             this.label8.Text = "Status Tersedia";
             // 
             // txtIdMobil
             // 
-            this.txtIdMobil.Location = new System.Drawing.Point(156, 49);
+            this.txtIdMobil.Location = new System.Drawing.Point(117, 40);
+            this.txtIdMobil.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdMobil.Name = "txtIdMobil";
-            this.txtIdMobil.Size = new System.Drawing.Size(113, 22);
+            this.txtIdMobil.Size = new System.Drawing.Size(117, 20);
             this.txtIdMobil.TabIndex = 8;
             // 
             // txtNoPolisi
             // 
-            this.txtNoPolisi.Location = new System.Drawing.Point(156, 83);
+            this.txtNoPolisi.Location = new System.Drawing.Point(117, 67);
+            this.txtNoPolisi.Margin = new System.Windows.Forms.Padding(2);
             this.txtNoPolisi.Name = "txtNoPolisi";
-            this.txtNoPolisi.Size = new System.Drawing.Size(113, 22);
+            this.txtNoPolisi.Size = new System.Drawing.Size(117, 20);
             this.txtNoPolisi.TabIndex = 9;
             // 
             // txtMerkMobil
             // 
-            this.txtMerkMobil.Location = new System.Drawing.Point(156, 119);
+            this.txtMerkMobil.Location = new System.Drawing.Point(117, 97);
+            this.txtMerkMobil.Margin = new System.Windows.Forms.Padding(2);
             this.txtMerkMobil.Name = "txtMerkMobil";
-            this.txtMerkMobil.Size = new System.Drawing.Size(113, 22);
+            this.txtMerkMobil.Size = new System.Drawing.Size(117, 20);
             this.txtMerkMobil.TabIndex = 10;
             // 
             // txtHargaSewa
             // 
-            this.txtHargaSewa.Location = new System.Drawing.Point(156, 222);
+            this.txtHargaSewa.Location = new System.Drawing.Point(117, 180);
+            this.txtHargaSewa.Margin = new System.Windows.Forms.Padding(2);
             this.txtHargaSewa.Name = "txtHargaSewa";
-            this.txtHargaSewa.Size = new System.Drawing.Size(113, 22);
+            this.txtHargaSewa.Size = new System.Drawing.Size(117, 20);
             this.txtHargaSewa.TabIndex = 12;
             // 
             // txtTahunMobil
             // 
-            this.txtTahunMobil.Location = new System.Drawing.Point(156, 151);
+            this.txtTahunMobil.Location = new System.Drawing.Point(117, 123);
+            this.txtTahunMobil.Margin = new System.Windows.Forms.Padding(2);
             this.txtTahunMobil.Name = "txtTahunMobil";
-            this.txtTahunMobil.Size = new System.Drawing.Size(113, 22);
+            this.txtTahunMobil.Size = new System.Drawing.Size(117, 20);
             this.txtTahunMobil.TabIndex = 11;
             // 
             // cmbStatusTersedia
             // 
             this.cmbStatusTersedia.FormattingEnabled = true;
-            this.cmbStatusTersedia.Location = new System.Drawing.Point(156, 185);
+            this.cmbStatusTersedia.Location = new System.Drawing.Point(117, 150);
+            this.cmbStatusTersedia.Margin = new System.Windows.Forms.Padding(2);
             this.cmbStatusTersedia.Name = "cmbStatusTersedia";
-            this.cmbStatusTersedia.Size = new System.Drawing.Size(113, 24);
+            this.cmbStatusTersedia.Size = new System.Drawing.Size(117, 21);
             this.cmbStatusTersedia.TabIndex = 13;
             // 
             // btnSimpan
             // 
-            this.btnSimpan.Location = new System.Drawing.Point(310, 277);
+            this.btnSimpan.Location = new System.Drawing.Point(232, 225);
+            this.btnSimpan.Margin = new System.Windows.Forms.Padding(2);
             this.btnSimpan.Name = "btnSimpan";
-            this.btnSimpan.Size = new System.Drawing.Size(107, 26);
+            this.btnSimpan.Size = new System.Drawing.Size(80, 21);
             this.btnSimpan.TabIndex = 14;
             this.btnSimpan.Text = "Simpan";
             this.btnSimpan.UseVisualStyleBackColor = true;
@@ -171,9 +186,10 @@
             // 
             // btnSelesai
             // 
-            this.btnSelesai.Location = new System.Drawing.Point(433, 277);
+            this.btnSelesai.Location = new System.Drawing.Point(325, 225);
+            this.btnSelesai.Margin = new System.Windows.Forms.Padding(2);
             this.btnSelesai.Name = "btnSelesai";
-            this.btnSelesai.Size = new System.Drawing.Size(107, 26);
+            this.btnSelesai.Size = new System.Drawing.Size(80, 21);
             this.btnSelesai.TabIndex = 15;
             this.btnSelesai.Text = "Selesai";
             this.btnSelesai.UseVisualStyleBackColor = true;
@@ -181,9 +197,9 @@
             // 
             // FormEntryMobil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 325);
+            this.ClientSize = new System.Drawing.Size(431, 264);
             this.Controls.Add(this.btnSelesai);
             this.Controls.Add(this.btnSimpan);
             this.Controls.Add(this.cmbStatusTersedia);
@@ -200,6 +216,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormEntryMobil";
             this.Text = "FormEntryMobil";
             this.ResumeLayout(false);

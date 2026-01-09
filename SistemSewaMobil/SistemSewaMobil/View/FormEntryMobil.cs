@@ -13,6 +13,17 @@ namespace SistemSewaMobil.View
             InitializeComponent();
             controller = new MobilController(); 
             isNewData = true;
+
+            InitStatusCombo();
+        }
+
+        private void InitStatusCombo()
+        {
+            cmbStatusTersedia.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbStatusTersedia.Items.Clear();
+            cmbStatusTersedia.Items.Add("Tersedia");
+            cmbStatusTersedia.Items.Add("Tidak Tersedia");
+            cmbStatusTersedia.SelectedIndex = 0;
         }
         public event CreateUpdateEventHandler OnCreate;
 
@@ -47,6 +58,7 @@ namespace SistemSewaMobil.View
             txtIdMobil.Enabled = false;
         }
 
+
         private void btnSimpan_Click(object sender, EventArgs e)
         {
             if (isNewData) mobil = new Mobil();
@@ -76,16 +88,6 @@ namespace SistemSewaMobil.View
                         MessageBox.Show("Data berhasil disimpan");
                         this.DialogResult = DialogResult.OK;
                         this.Close();
-
-
-                        //txtIdMobil.Clear();
-                        //txtNoPolisi.Clear();
-                        //txtMerkMobil.Clear();
-                        //txtTahunMobil.Clear();
-                        //cmbStatusTersedia.SelectedIndex = -1;
-                        //txtHargaSewa.Clear();
-
-                        //txtIdMobil.Focus();
                     }
                 }
                 else

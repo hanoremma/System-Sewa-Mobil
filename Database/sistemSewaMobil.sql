@@ -120,7 +120,7 @@ INSERT INTO kategori (idKategori, namaKategori)
 VALUES ('K01', 'SUV');
 
 DELETE FROM kategori
-WHERE idKategori = 'K01';
+WHERE idKategori = 'K05';
 
 /* Mengubah K01 menjadi SUV */
 UPDATE kategori 
@@ -160,6 +160,54 @@ VALUES
 -- K03 adalah MPV (Medium MPV) -> Contoh: Innova Reborn
 ('M005', 'K02', 'AB 5678 FG', 'Toyota Innova', '2020', 'Tersedia', 450000);
 
+
+
+INSERT INTO mobil 
+(idMobil, idKategori, noPolisi, merkMobil, tahunMobil, statusKetersediaan, hargaSewa)
+VALUES
+('M006', 'K01', 'AB 2024 RS', 'Honda CR-V', '2022', 'Tersedia', 600000),
+('M007', 'K01', 'AB 9999 LL', 'Toyota Fortuner', '2023', 'Tersedia', 850000),
+('M008', 'K02', 'AB 3344 MT', 'Suzuki Ertiga', '2021', 'Tersedia', 350000),
+('M009', 'K02', 'AB 7788 PL', 'Mitsubishi Xpander', '2022', 'Tersedia', 400000),
+('M010', 'K03', 'AB 1234 QQ', 'Daihatsu Ayla', '2023', 'Tersedia', 250000),
+('M011', 'K03', 'AB 5566 ZZ', 'Toyota Calya', '2022', 'Tersedia', 300000),
+('M012', 'K05', 'AB 7777 VIP', 'BMW 320i', '2023', 'Tersedia', 2500000);
+
+
+
 select * from mobil
+select * from detailSewa
+select * from pembayaran
+
+select * from penyewa
+
+ALTER TABLE mobil
+ALTER COLUMN statusKetersediaan VARCHAR(30);
+
+ALTER TABLE detailSewa
+ALTER COLUMN statusPenyewaan VARCHAR(50);
 
 
+UPDATE mobil
+SET statusKetersediaan = 'Tidak tersedia'
+WHERE idMobil = 'M001';
+
+SELECT
+    ds.idDetailSewa,
+    p.namaPenyewa,
+    pt.namaPetugas,
+    m.noPolisi AS PlatMobil,
+    ds.tglPinjam,
+    ds.tglKembali,
+    ds.statusPenyewaan,
+    ds.totalBiaya
+FROM detailSewa ds
+JOIN penyewa p 
+    ON ds.idPenyewa = p.idPenyewa
+JOIN petugas pt 
+    ON ds.idPetugas = pt.idPetugas
+JOIN mobil m 
+    ON ds.idMobil = m.idMobil;
+
+
+--ingin menampilkan idDetailSewa, Nama penyewa, Nama Petugas, Plat Mobil, Tanggal Pinjam, Tanggal Kembali, statusPenyewaan, titalBiaya

@@ -48,8 +48,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\MobilController.cs" />
+    <Compile Include="Controller\PenyewaController.cs" />
     <Compile Include="Model\Context\DbContext.cs" />
     <Compile Include="Model\Repository\MobilRepository.cs" />
+    <Compile Include="Model\Repository\PenyewaRepository.cs" />
     <Compile Include="View\FormEntryMobil.cs">
       <SubType>Form</SubType>
     </Compile>
