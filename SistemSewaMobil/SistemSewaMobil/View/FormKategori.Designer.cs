@@ -160,12 +160,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("DejaVu Sans Mono", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(493, 116);
+            this.label1.Location = new System.Drawing.Point(485, 104);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 31);
+            this.label1.Size = new System.Drawing.Size(337, 31);
             this.label1.TabIndex = 29;
-            this.label1.Text = "CARI MOBIL!!";
+            this.label1.Text = "List Kategori Mobil";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // FormKategori
