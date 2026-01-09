@@ -61,5 +61,31 @@ namespace SistemSewaMobil.View
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label3.Left -= 5;
+
+            // Kalau sudah keluar panel, balik ke kanan (loop)
+            if (label3.Right < 0)
+            {
+                label3.Left = this.Width;
+            }
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
