@@ -91,7 +91,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(193, 372);
+            this.label2.Location = new System.Drawing.Point(193, 381);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 29);
             this.label2.TabIndex = 7;
@@ -156,6 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FloralWhite;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(733, 549);
             this.Controls.Add(this.panel2);
@@ -168,6 +169,7 @@
             this.Controls.Add(this.txtPasswordLogin);
             this.Controls.Add(this.txtUsernameLogin);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormLogin";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.FormLogin_Load);

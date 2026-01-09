@@ -88,5 +88,25 @@ namespace SistemSewaMobil
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void infoMobilTerpilih_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbljam.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void dataMobilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
