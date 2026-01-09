@@ -10,49 +10,48 @@ using System.Windows.Forms;
 
 namespace SistemSewaMobil.Controller
 {
-    public class PenyewaController
+    public class PetugasController
     {
-        public int Create(Penyewa penyewa)
+        public int Create(Petugas petugas)
         {
             using (DbContext context = new DbContext())
             {
-                PenyewaRepository repo = new PenyewaRepository(context);
-                return repo.Create(penyewa);
+                PetugasRepository repo = new PetugasRepository(context);
+                return repo.Create(petugas);
             }
         }
-        // 2. UPDATE: Edit costumer data
-        public int Update(Penyewa penyewa)
+        public int Update(Petugas petugas)
         {
             int result = 0;
 
             // Validation
-            if (string.IsNullOrEmpty(penyewa.namaPenyewa) || string.IsNullOrEmpty(penyewa.noHpPenyewa))
+            if (string.IsNullOrEmpty(petugas.namaPetugas) || string.IsNullOrEmpty(petugas.noHpPetugas))
             {
-                MessageBox.Show("Nama Penyewa dan No HP penyewa harus diisi!", "Peringatan",
+                MessageBox.Show("Nama petugas dan No HP petugas harus diisi!", "Peringatan",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return 0;
             }
 
             using (DbContext context = new DbContext())
             {
-                var repo = new PenyewaRepository(context);
-                result = repo.Update(penyewa);
+                var repo = new PetugasRepository(context);
+                result = repo.Update(petugas);
             }
 
             if (result > 0)
             {
-                MessageBox.Show("Data penyewa berhasil diperbaiki!", "Informasi",
+                MessageBox.Show("Data petugas berhasil diperbaiki!", "Informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Data penyewa gagal diperbaiki!", "Peringatan",
+                MessageBox.Show("Data petugas gagal diperbaiki!", "Peringatan",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             return result;
         }
-        public int Delete(Penyewa penyewa)
+        public int Delete(Petugas petugas)
         {
             int result = 0;
 
@@ -64,40 +63,40 @@ namespace SistemSewaMobil.Controller
             {
                 using (DbContext context = new DbContext())
                 {
-                    var repo = new PenyewaRepository(context);
-                    result = repo.Delete(penyewa);
+                    var repo = new PetugasRepository(context);
+                    result = repo.Delete(petugas);
                 }
 
                 if (result > 0)
                 {
-                    MessageBox.Show("Data penyewa berhasil dihapus!", "Informasi",
+                    MessageBox.Show("Data petugas berhasil dihapus!", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Data penyewa gagal dihapus!", "Peringatan",
+                    MessageBox.Show("Data petugas gagal dihapus!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
 
             return result;
         }
-        public List<Penyewa> GetAllPenyewa()
+        public List<Petugas> GetAllPetugas()
         {
             using (DbContext context = new DbContext())
             {
-                PenyewaRepository repo = new PenyewaRepository(context);
+                PetugasRepository repo = new PetugasRepository(context);
                 return repo.ReadAll();
             }
         }
-        public List<Penyewa> ReadByNamaPenyewa(string nama)
+        public List<Petugas> ReadByNamaPetugas(string nama)
         {
-            List<Penyewa> list = new List<Penyewa>();
+            List<Petugas> list = new List<Petugas>();
 
             using (DbContext context = new DbContext())
             {
-                var repo = new PenyewaRepository(context);
-                list = repo.ReadByNamaPenyewa(nama);
+                var repo = new PetugasRepository(context);
+                list = repo.ReadByNamaPetugas(nama);
             }
 
             return list;

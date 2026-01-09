@@ -47,11 +47,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\KategoriController.cs" />
     <Compile Include="Controller\MobilController.cs" />
     <Compile Include="Controller\PenyewaController.cs" />
+    <Compile Include="Controller\PetugasController.cs" />
     <Compile Include="Model\Context\DbContext.cs" />
+    <Compile Include="Model\Repository\KategoriRepository.cs" />
     <Compile Include="Model\Repository\MobilRepository.cs" />
     <Compile Include="Model\Repository\PenyewaRepository.cs" />
+    <Compile Include="Model\Repository\PetugasRepository.cs" />
     <Compile Include="View\FormEntryMobil.cs">
       <SubType>Form</SubType>
     </Compile>

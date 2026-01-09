@@ -8,5 +8,7 @@ namespace SistemSewaMobil.Model.Entity
 {
     public class Kategori
     {
+        public string idKategori { get; set; }
+        public string namaKategori { get; set; }
     }
 }

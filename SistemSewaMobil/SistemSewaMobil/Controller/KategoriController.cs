@@ -10,49 +10,52 @@ using System.Windows.Forms;
 
 namespace SistemSewaMobil.Controller
 {
-    public class PenyewaController
+    public class KategoriController
     {
-        public int Create(Penyewa penyewa)
+        public int Create(Kategori kategori)
         {
             using (DbContext context = new DbContext())
             {
-                PenyewaRepository repo = new PenyewaRepository(context);
-                return repo.Create(penyewa);
+                KategoriRepository repo = new KategoriRepository(context);
+                return repo.Create(kategori);
             }
         }
-        // 2. UPDATE: Edit costumer data
-        public int Update(Penyewa penyewa)
+
+        // 2. UPDATE: Edit Car Data
+        public int Update(Kategori kategori)
         {
             int result = 0;
 
             // Validation
-            if (string.IsNullOrEmpty(penyewa.namaPenyewa) || string.IsNullOrEmpty(penyewa.noHpPenyewa))
+            if (string.IsNullOrEmpty(kategori.namaKategori))
             {
-                MessageBox.Show("Nama Penyewa dan No HP penyewa harus diisi!", "Peringatan",
+                MessageBox.Show("Nama kategori harus diisi!", "Peringatan",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return 0;
             }
 
             using (DbContext context = new DbContext())
             {
-                var repo = new PenyewaRepository(context);
-                result = repo.Update(penyewa);
+                var repo = new KategoriRepository(context);
+                result = repo.Update(kategori);
             }
 
             if (result > 0)
             {
-                MessageBox.Show("Data penyewa berhasil diperbaiki!", "Informasi",
+                MessageBox.Show("Data kategori berhasil diperbaiki!", "Informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Data penyewa gagal diperbaiki!", "Peringatan",
+                MessageBox.Show("Data kategori gagal diperbaiki!", "Peringatan",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             return result;
         }
-        public int Delete(Penyewa penyewa)
+
+        // 3. DELETE: Remove Car
+        public int Delete(Kategori kategori)
         {
             int result = 0;
 
@@ -64,42 +67,45 @@ namespace SistemSewaMobil.Controller
             {
                 using (DbContext context = new DbContext())
                 {
-                    var repo = new PenyewaRepository(context);
-                    result = repo.Delete(penyewa);
+                    var repo = new KategoriRepository(context);
+                    result = repo.Delete(kategori);
                 }
 
                 if (result > 0)
                 {
-                    MessageBox.Show("Data penyewa berhasil dihapus!", "Informasi",
+                    MessageBox.Show("Data kategori berhasil dihapus!", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Data penyewa gagal dihapus!", "Peringatan",
+                    MessageBox.Show("Data kategori gagal dihapus!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
 
             return result;
         }
-        public List<Penyewa> GetAllPenyewa()
+
+        public List<Kategori> GetAllKategori()
         {
             using (DbContext context = new DbContext())
             {
-                PenyewaRepository repo = new PenyewaRepository(context);
+                KategoriRepository repo = new KategoriRepository(context);
                 return repo.ReadAll();
             }
         }
-        public List<Penyewa> ReadByNamaPenyewa(string nama)
+
+
+        // 5. READ BY MERK: Search Cars
+        public List<Kategori> ReadByNamaKategori(string nama)
         {
-            List<Penyewa> list = new List<Penyewa>();
+            List<Kategori> list = new List<Kategori>();
 
             using (DbContext context = new DbContext())
             {
-                var repo = new PenyewaRepository(context);
-                list = repo.ReadByNamaPenyewa(nama);
+                var repo = new KategoriRepository(context);
+                list = repo.ReadByNamaKategori(nama);
             }
-
             return list;
         }
     }

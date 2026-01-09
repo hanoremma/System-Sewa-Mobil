@@ -124,7 +124,7 @@ namespace SistemSewaMobil.Model.Repository
 
             return list;
         }
-        public List<Penyewa> ReadByNama(string nama)
+        public List<Penyewa> ReadByNamaPenyewa(string nama)
         {
             List<Penyewa> list = new List<Penyewa>();
 
@@ -159,7 +159,7 @@ namespace SistemSewaMobil.Model.Repository
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.Print("ReadByMerk Error: {0}", ex.Message);
+                System.Diagnostics.Debug.Print("ReadByNamaPenyewa Error: {0}", ex.Message);
             }
 
             return list;

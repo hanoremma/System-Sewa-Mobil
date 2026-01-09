@@ -173,12 +173,19 @@ VALUES
 ('M011', 'K03', 'AB 5566 ZZ', 'Toyota Calya', '2022', 'Tersedia', 300000),
 ('M012', 'K05', 'AB 7777 VIP', 'BMW 320i', '2023', 'Tersedia', 2500000);
 
+ALTER TABLE petugas
+ADD alamatPetugas VARCHAR(255);
 
+UPDATE petugas SET alamatPetugas = 'Sleman, Kaliurang' WHERE idPetugas = 'PT001';
+UPDATE petugas SET alamatPetugas = 'Jl. Merdeka No.10, Jakarta' WHERE idPetugas = 'PT002';
+UPDATE petugas SET alamatPetugas = 'Jl. Sudirman No.25, Bandung' WHERE idPetugas = 'PT003';
+UPDATE petugas SET alamatPetugas = 'Magelang, Muntilan' WHERE idPetugas = 'PT004';
+UPDATE petugas SET alamatPetugas = 'Klaten, Prambanan' WHERE idPetugas = 'PT005';
 
 select * from mobil
 select * from detailSewa
 select * from pembayaran
-
+select * from petugas
 select * from penyewa
 
 ALTER TABLE mobil
@@ -208,6 +215,11 @@ JOIN petugas pt
     ON ds.idPetugas = pt.idPetugas
 JOIN mobil m 
     ON ds.idMobil = m.idMobil;
+
+sys.tables;
+
+sp_help
+
 
 
 --ingin menampilkan idDetailSewa, Nama penyewa, Nama Petugas, Plat Mobil, Tanggal Pinjam, Tanggal Kembali, statusPenyewaan, titalBiaya
