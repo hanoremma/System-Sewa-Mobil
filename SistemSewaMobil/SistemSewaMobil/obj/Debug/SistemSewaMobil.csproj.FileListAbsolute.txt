@@ -32,7 +32,6 @@ C:\Users\Brian\Source\Repos\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\ob
 C:\Users\Brian\Source\Repos\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.exe
 C:\Users\Brian\Source\Repos\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.pdb
 C:\Users\Brian\Source\Repos\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.View.FormLogin.resources
-C:\Users\Brian\Source\Repos\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.FormMain.resources
 C:\Users\Brian\Source\Repos\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.FormPenyewa.resources
 C:\Users\Brian\Source\Repos\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.FormMobil.resources
 C:\Users\Brian\Source\Repos\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.View.FormEntryMobil.resources
@@ -41,3 +40,8 @@ C:\Users\emmah\Music\VS2022 - Github\System-Sewa-Mobil\SistemSewaMobil\SistemSew
 C:\Users\emmah\Music\VS2022 - Github\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.FormMain.resources
 C:\Users\emmah\Music\VS2022 - Github\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.FormPenyewa.resources
 C:\Users\emmah\Music\VS2022 - Github\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.FormMobil.resources
+C:\Users\Brian\source\repos\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.FormDetailSewa.resources
+C:\Users\Brian\source\repos\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.View.FormEntryPenyewa.resources
+C:\Users\Brian\source\repos\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.View.FormEntryPetugas.resources
+C:\Users\Brian\source\repos\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.View.FormKategori.resources
+C:\Users\Brian\source\repos\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.View.FormPetugas.resources

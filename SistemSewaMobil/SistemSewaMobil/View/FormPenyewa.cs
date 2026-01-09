@@ -19,16 +19,16 @@ namespace SistemSewaMobil
         }
         private void InisialisasiListPenyewaView()
         {
-            infoPenyewa.View = System.Windows.Forms.View.Details;
-            infoPenyewa.FullRowSelect = true;
-            infoPenyewa.GridLines = true;
+            lvwDaftarPenyewa.View = System.Windows.Forms.View.Details;
+            lvwDaftarPenyewa.FullRowSelect = true;
+            lvwDaftarPenyewa.GridLines = true;
 
-            infoPenyewa.Columns.Add("No.", 30, HorizontalAlignment.Center);
-            infoPenyewa.Columns.Add("ID Penyewa", 120, HorizontalAlignment.Center);
-            infoPenyewa.Columns.Add("Nama Penyewa", 160, HorizontalAlignment.Center);
-            infoPenyewa.Columns.Add("Alamat Penyewa", 200, HorizontalAlignment.Center);
-            infoPenyewa.Columns.Add("KTP", 150, HorizontalAlignment.Center);
-            infoPenyewa.Columns.Add("No HP", 150, HorizontalAlignment.Center);
+            lvwDaftarPenyewa.Columns.Add("No.", 30, HorizontalAlignment.Center);
+            lvwDaftarPenyewa.Columns.Add("ID Penyewa", 120, HorizontalAlignment.Center);
+            lvwDaftarPenyewa.Columns.Add("Nama Penyewa", 160, HorizontalAlignment.Center);
+            lvwDaftarPenyewa.Columns.Add("Alamat Penyewa", 200, HorizontalAlignment.Center);
+            lvwDaftarPenyewa.Columns.Add("KTP", 150, HorizontalAlignment.Center);
+            lvwDaftarPenyewa.Columns.Add("No HP", 150, HorizontalAlignment.Center);
         }
 
         private void dataMobilTersediaToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace SistemSewaMobil
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormMain menuInfo = new FormMain();
+            FormDetailSewa menuInfo = new FormDetailSewa();
             menuInfo.Show();
         }
 

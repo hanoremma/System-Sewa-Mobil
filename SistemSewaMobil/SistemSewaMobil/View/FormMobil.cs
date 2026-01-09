@@ -26,22 +26,22 @@ namespace SistemSewaMobil
         }
         private void InisialisasiListMobilView()
         {
-            infoMobil.View = System.Windows.Forms.View.Details; // FIX: Use fully qualified enum
-            infoMobil.FullRowSelect = true;
-            infoMobil.GridLines = true;
+            lvwDaftarMobil.View = System.Windows.Forms.View.Details; // FIX: Use fully qualified enum
+            lvwDaftarMobil.FullRowSelect = true;
+            lvwDaftarMobil.GridLines = true;
 
-            infoMobil.Columns.Add("No.", 30, HorizontalAlignment.Center);
-            infoMobil.Columns.Add("Id Mobil", 100, HorizontalAlignment.Left);
-            infoMobil.Columns.Add("No Polisi", 100, HorizontalAlignment.Center);
-            infoMobil.Columns.Add("Merk Mobil", 120, HorizontalAlignment.Center);
-            infoMobil.Columns.Add("Tahun", 50, HorizontalAlignment.Center);
-            infoMobil.Columns.Add("Status sedia", 70, HorizontalAlignment.Center);
-            infoMobil.Columns.Add("Harga Sewa/hari", 145, HorizontalAlignment.Center);
+            lvwDaftarMobil.Columns.Add("No.", 30, HorizontalAlignment.Center);
+            lvwDaftarMobil.Columns.Add("Id Mobil", 100, HorizontalAlignment.Left);
+            lvwDaftarMobil.Columns.Add("No Polisi", 100, HorizontalAlignment.Center);
+            lvwDaftarMobil.Columns.Add("Merk Mobil", 120, HorizontalAlignment.Center);
+            lvwDaftarMobil.Columns.Add("Tahun", 50, HorizontalAlignment.Center);
+            lvwDaftarMobil.Columns.Add("Status sedia", 70, HorizontalAlignment.Center);
+            lvwDaftarMobil.Columns.Add("Harga Sewa/hari", 145, HorizontalAlignment.Center);
         }
 
         private void LoadMobilData()
         {
-            infoMobil.Items.Clear();
+            lvwDaftarMobil.Items.Clear();
             listMobil = controller.GetAllMobil();
 
             // This method should load data into the infoMobil ListView
@@ -49,7 +49,7 @@ namespace SistemSewaMobil
 
             foreach (var mobil in listMobil)
             {
-                var noUrut = infoMobil.Items.Count + 1;
+                var noUrut = lvwDaftarMobil.Items.Count + 1;
                 var item = new ListViewItem(noUrut.ToString());
                 item.SubItems.Add(mobil.idMobil);
                 item.SubItems.Add(mobil.noPolisi);
@@ -57,13 +57,13 @@ namespace SistemSewaMobil
                 item.SubItems.Add(mobil.tahunMobil.ToString());
                 item.SubItems.Add(mobil.statusKetersediaan);
                 item.SubItems.Add(mobil.hargaSewa.ToString("Rp.")); // Format as currency
-                infoMobil.Items.Add(item);
+                lvwDaftarMobil.Items.Add(item);
             }
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormMain menuInfo = new FormMain();
+            FormDetailSewa menuInfo = new FormDetailSewa();
             menuInfo.Show();
         }
 
@@ -77,7 +77,7 @@ namespace SistemSewaMobil
         private void OnCreateEventHandler(Mobil mobil)
         {
             listMobil.Add(mobil);
-            int noUrut = infoMobil.Items.Count + 1;
+            int noUrut = lvwDaftarMobil.Items.Count + 1;
 
             ListViewItem item = new ListViewItem(noUrut.ToString());
             item.SubItems.Add(mobil.idMobil);
@@ -86,14 +86,14 @@ namespace SistemSewaMobil
             item.SubItems.Add(mobil.tahunMobil);
             item.SubItems.Add(mobil.statusKetersediaan);
             item.SubItems.Add(mobil.hargaSewa.ToString("Rp."));
-            infoMobil.Items.Add(item);
+            lvwDaftarMobil.Items.Add(item);
         }
 
         private void OnUpdateEventHandler(Mobil mobil)
         {
-            int index = infoMobil.SelectedIndices[0];
+            int index = lvwDaftarMobil.SelectedIndices[0];
 
-            ListViewItem itemRow = infoMobil.Items[index];
+            ListViewItem itemRow = lvwDaftarMobil.Items[index];
             itemRow.SubItems[1].Text = mobil.idMobil;
             itemRow.SubItems[2].Text = mobil.noPolisi;
             itemRow.SubItems[3].Text = mobil.merkMobil;
@@ -137,7 +137,7 @@ namespace SistemSewaMobil
                 }
             }
             */
-            if (infoMobil.SelectedItems.Count == 0)
+            if (lvwDaftarMobil.SelectedItems.Count == 0)
             {
                 MessageBox.Show(
                     "Silakan pilih data mobil yang akan diubah.",
@@ -149,7 +149,7 @@ namespace SistemSewaMobil
             }
 
             // ambil index baris yang dipilih
-            int index = infoMobil.SelectedIndices[0];
+            int index = lvwDaftarMobil.SelectedIndices[0];
 
             // ambil data dari listMobil
             Mobil mobil = listMobil[index];
@@ -168,14 +168,14 @@ namespace SistemSewaMobil
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (infoMobil.SelectedItems.Count > 0)
+            if (lvwDaftarMobil.SelectedItems.Count > 0)
             {
                 var konfirmasi = MessageBox.Show("Apakah data mobil ingin dihapus?", "Konfirmasi",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation
                 );
                 if (konfirmasi == DialogResult.Yes)
                 {
-                    Mobil mobil = listMobil[infoMobil.SelectedIndices[0]];
+                    Mobil mobil = listMobil[lvwDaftarMobil.SelectedIndices[0]];
                     var result = controller.Delete(mobil);
                     if (result > 0) LoadMobilData();
                 }
@@ -198,18 +198,18 @@ namespace SistemSewaMobil
 
         private void button5_Click(object sender, EventArgs e)
         {
-            string keyword = textBox1.Text.Trim();
+            string keyword = txtCariMobil.Text.Trim();
             if (string.IsNullOrEmpty(keyword))
             {
                 LoadMobilData();
                 return;
             }
-            infoMobil.Items.Clear();
+            lvwDaftarMobil.Items.Clear();
             listMobil = controller.ReadByMerk(keyword);
 
             foreach (var mobil in listMobil)
             {
-                var noUrut = infoMobil.Items.Count + 1;
+                var noUrut = lvwDaftarMobil.Items.Count + 1;
                 var item = new ListViewItem(noUrut.ToString());
                 item.SubItems.Add(mobil.idMobil);
                 item.SubItems.Add(mobil.noPolisi);
@@ -217,7 +217,7 @@ namespace SistemSewaMobil
                 item.SubItems.Add(mobil.tahunMobil.ToString());
                 item.SubItems.Add(mobil.statusKetersediaan);
                 item.SubItems.Add(mobil.hargaSewa.ToString("Rp.")); // Format as currency
-                infoMobil.Items.Add(item);
+                lvwDaftarMobil.Items.Add(item);
             }
             if (listMobil.Count == 0)
             {

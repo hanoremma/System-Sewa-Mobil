@@ -13,9 +13,9 @@ using SistemSewaMobil.View;
 
 namespace SistemSewaMobil
 {
-    public partial class FormMain : Form
+    public partial class FormDetailSewa : Form
     {
-        public FormMain()
+        public FormDetailSewa()
         {
             InitializeComponent();
             InisialisasiListView();
@@ -80,6 +80,11 @@ namespace SistemSewaMobil
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

@@ -19,11 +19,11 @@ namespace SistemSewaMobil.View
 
         private void InitStatusCombo()
         {
-            cmbStatusTersedia.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbStatusTersedia.Items.Clear();
-            cmbStatusTersedia.Items.Add("Tersedia");
-            cmbStatusTersedia.Items.Add("Tidak Tersedia");
-            cmbStatusTersedia.SelectedIndex = 0;
+            cmbStatusTersediaEntryMobil.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbStatusTersediaEntryMobil.Items.Clear();
+            cmbStatusTersediaEntryMobil.Items.Add("Tersedia");
+            cmbStatusTersediaEntryMobil.Items.Add("Tidak Tersedia");
+            cmbStatusTersediaEntryMobil.SelectedIndex = 0;
         }
         public event CreateUpdateEventHandler OnCreate;
 
@@ -48,14 +48,14 @@ namespace SistemSewaMobil.View
             this.controller = controller;
             isNewData = false;
             mobil = obj;
-            txtIdMobil.Text = obj.idMobil;
-            txtNoPolisi.Text = obj.noPolisi;
-            txtMerkMobil.Text = obj.merkMobil;
-            txtTahunMobil.Text = obj.tahunMobil.ToString();
-            cmbStatusTersedia.Text = obj.statusKetersediaan;
-            txtHargaSewa.Text = obj.hargaSewa.ToString();
+            txtIdMobilEntryMobil.Text = obj.idMobil;
+            txtNoPolisiEntryMobil.Text = obj.noPolisi;
+            txtMerkMobilEntryMobil.Text = obj.merkMobil;
+            txtTahunMobilEntryMobil.Text = obj.tahunMobil.ToString();
+            cmbStatusTersediaEntryMobil.Text = obj.statusKetersediaan;
+            txtHargaSewaEntryMobil.Text = obj.hargaSewa.ToString();
 
-            txtIdMobil.Enabled = false;
+            txtIdMobilEntryMobil.Enabled = false;
         }
 
 
@@ -63,13 +63,13 @@ namespace SistemSewaMobil.View
         {
             if (isNewData) mobil = new Mobil();
 
-            mobil.idMobil = txtIdMobil.Text;
-            mobil.noPolisi = txtNoPolisi.Text;
-            mobil.merkMobil = txtMerkMobil.Text;
-            mobil.tahunMobil = txtTahunMobil.Text;
-            mobil.statusKetersediaan = cmbStatusTersedia.Text;
+            mobil.idMobil = txtIdMobilEntryMobil.Text;
+            mobil.noPolisi = txtNoPolisiEntryMobil.Text;
+            mobil.merkMobil = txtMerkMobilEntryMobil.Text;
+            mobil.tahunMobil = txtTahunMobilEntryMobil.Text;
+            mobil.statusKetersediaan = cmbStatusTersediaEntryMobil.Text;
             //mobil.hargaSewa = (int)decimal.Parse(txtHargaSewa.Text);
-            mobil.hargaSewa = int.TryParse(txtHargaSewa.Text, out int harga) ? harga : 0;
+            mobil.hargaSewa = int.TryParse(txtHargaSewaEntryMobil.Text, out int harga) ? harga : 0;
 
 
             int result = 0;
@@ -117,6 +117,11 @@ namespace SistemSewaMobil.View
         private void btnSelesai_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -16,7 +16,7 @@ namespace SistemSewaMobil.View
         public FormLogin()
         {
             InitializeComponent();
-            txtPassword.PasswordChar = '*';
+            txtPasswordLogin.PasswordChar = '*';
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -26,8 +26,8 @@ namespace SistemSewaMobil.View
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
+            string username = txtUsernameLogin.Text;
+            string password = txtPasswordLogin.Text;
 
             // 2. Cek apakah username dan password benar (Contoh sederhana hardcode)
             if (username == "admin" && password == "1234")
@@ -53,6 +53,11 @@ namespace SistemSewaMobil.View
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
