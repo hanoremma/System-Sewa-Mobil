@@ -52,15 +52,17 @@ namespace SistemSewaMobil.Model.Repository
         public int Update(Mobil mobil)
         {
             int result = 0;
-            // Perintah SQL Insert
-            string sql = @"UPDATE mobil SET idMobil = @idMobil, noPolisi = @noPolisi, merkMobil = @merkMobil, 
-tahunMobil =@tahunMobil, statusKetersediaan = @statusKetersediaan, hargaSewa = @hargaSewa";
+
+            string sql = @"UPDATE mobil SET
+                    noPolisi = @noPolisi,
+                    merkMobil = @merkMobil,
+                    tahunMobil = @tahunMobil,
+                    statusKetersediaan = @statusKetersediaan,
+                    hargaSewa = @hargaSewa
+                   WHERE idMobil = @idMobil";
 
             using (SqlCommand cmd = new SqlCommand(sql, _conn))
             {
-                // Assuming the object passed to the function is named 'mobil'
-                // Example: public int Create(Mobil mobil)
-
                 cmd.Parameters.AddWithValue("@idMobil", mobil.idMobil);
                 cmd.Parameters.AddWithValue("@noPolisi", mobil.noPolisi);
                 cmd.Parameters.AddWithValue("@merkMobil", mobil.merkMobil);
@@ -77,8 +79,10 @@ tahunMobil =@tahunMobil, statusKetersediaan = @statusKetersediaan, hargaSewa = @
                     System.Diagnostics.Debug.Print("Update Error: {0}", ex.Message);
                 }
             }
+
             return result;
         }
+
         public int Delete (Mobil mobil)
         {
             int result = 0;

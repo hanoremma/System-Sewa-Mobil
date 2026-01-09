@@ -43,6 +43,8 @@ namespace SistemSewaMobil.View
             txtTahunMobil.Text = obj.tahunMobil.ToString();
             cmbStatusTersedia.Text = obj.statusKetersediaan;
             txtHargaSewa.Text = obj.hargaSewa.ToString();
+
+            txtIdMobil.Enabled = false;
         }
 
         private void btnSimpan_Click(object sender, EventArgs e)
@@ -70,6 +72,7 @@ namespace SistemSewaMobil.View
                     if (result > 0)
                     {
                         //OnCreate(mobil);
+                        OnCreate?.Invoke(mobil);
                         MessageBox.Show("Data berhasil disimpan");
                         this.DialogResult = DialogResult.OK;
                         this.Close();
@@ -87,11 +90,18 @@ namespace SistemSewaMobil.View
                 }
                 else
                 {
+
                     result = controller.Update(mobil);
+
                     if (result > 0)
                     {
-                        OnUpdate(mobil);
+                        OnUpdate?.Invoke(mobil);
+                        this.DialogResult = DialogResult.OK;
                         this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data tidak berubah / gagal diupdate");
                     }
                 }
             }
