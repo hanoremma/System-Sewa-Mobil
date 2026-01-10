@@ -198,7 +198,6 @@
             this.label9.Size = new System.Drawing.Size(286, 31);
             this.label9.TabIndex = 34;
             this.label9.Text = "Infokan Mobilnya";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // FormEntryMobil
             // 
@@ -225,6 +224,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormEntryMobil";
             this.Text = "FormEntryMobil";
+            this.Load += new System.EventHandler(this.FormEntryMobil_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

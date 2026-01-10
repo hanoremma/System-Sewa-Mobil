@@ -17,12 +17,7 @@ namespace SistemSewaMobil.View
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
+        private void txtIdEntryPenyewa_TextChanged(object sender, EventArgs e)
         {
 
         }

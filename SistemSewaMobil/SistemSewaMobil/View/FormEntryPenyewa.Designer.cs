@@ -51,7 +51,6 @@
             this.label1.Size = new System.Drawing.Size(18, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Id";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -95,6 +94,7 @@
             this.txtIdEntryPenyewa.Name = "txtIdEntryPenyewa";
             this.txtIdEntryPenyewa.Size = new System.Drawing.Size(163, 22);
             this.txtIdEntryPenyewa.TabIndex = 5;
+            this.txtIdEntryPenyewa.TextChanged += new System.EventHandler(this.txtIdEntryPenyewa_TextChanged);
             // 
             // txtNamaEntryPenyewa
             // 
@@ -152,7 +152,6 @@
             this.label6.Size = new System.Drawing.Size(235, 31);
             this.label6.TabIndex = 33;
             this.label6.Text = "Input Penyewa";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // FormEntryPenyewa
             // 

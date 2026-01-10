@@ -119,7 +119,7 @@ namespace SistemSewaMobil.View
             this.Close();
         }
 
-        private void label9_Click(object sender, EventArgs e)
+        private void FormEntryMobil_Load(object sender, EventArgs e)
         {
 
         }
