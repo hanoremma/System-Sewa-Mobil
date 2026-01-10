@@ -50,8 +50,8 @@ namespace SistemSewaMobil.Model.Repository
         {
             int result = 0;
 
-            string sql = @"UPDATE kategori SET
-                    namaKategori = @namaKategori,
+            string sql = @"UPDATE kategori 
+                   SET namaKategori = @namaKategori 
                    WHERE idKategori = @idKategori";
 
             using (SqlCommand cmd = new SqlCommand(sql, _conn))

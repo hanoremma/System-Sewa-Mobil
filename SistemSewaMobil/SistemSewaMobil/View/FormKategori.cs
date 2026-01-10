@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SistemSewaMobil.Controller;
+using SistemSewaMobil.Model.Entity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,19 +14,206 @@ namespace SistemSewaMobil.View
 {
     public partial class FormKategori : Form
     {
+        private List<Kategori> listKategori = new List<Kategori>();
+        private KategoriController controller;
+        private bool isEdit = false;
+        private int selectedIndex = -1;
         public FormKategori()
         {
             InitializeComponent();
+            controller = new KategoriController();
+            InisialisasiListKategoriView();
+            LoadKategori();
+
+            lvwDaftarKategori.SelectedIndexChanged += lvwDaftarKategori_SelectedIndexChanged;
+        }
+        private void InisialisasiListKategoriView()
+        {
+            lvwDaftarKategori.View = System.Windows.Forms.View.Details; // FIX: Use fully qualified enum
+            lvwDaftarKategori.FullRowSelect = true;
+            lvwDaftarKategori.GridLines = true;
+
+            lvwDaftarKategori.Columns.Add("No.", 30, HorizontalAlignment.Center);
+            lvwDaftarKategori.Columns.Add("Id Mobil", 100, HorizontalAlignment.Left);
+            lvwDaftarKategori.Columns.Add("Nama Kategori", 150, HorizontalAlignment.Center);
+        }
+        private void LoadKategori()
+        {
+            lvwDaftarKategori.Items.Clear();
+            listKategori = controller.GetAllKategori();
+
+            // This method should load data into the infoMobil ListView
+            // Implementation depends on how data is stored/retrieved
+
+            foreach (var kategori in listKategori)
+            {
+                var noUrut = lvwDaftarKategori.Items.Count + 1;
+                var item = new ListViewItem(noUrut.ToString());
+                item.SubItems.Add(kategori.idKategori);
+                item.SubItems.Add(kategori.namaKategori);
+                lvwDaftarKategori.Items.Add(item);
+            }
+        }
+        private void OnCreateEventHandler(Kategori kategori)
+        {
+            listKategori.Add(kategori);
+            int noUrut = lvwDaftarKategori.Items.Count + 1;
+
+            ListViewItem item = new ListViewItem(noUrut.ToString());
+            item.SubItems.Add(kategori.idKategori);
+            item.SubItems.Add(kategori.namaKategori);
+            lvwDaftarKategori.Items.Add(item);
+        }
+        private void OnUpdateEventHandler(Kategori kategori)
+        {
+            // pastikan ada row yang dipilih
+            if (lvwDaftarKategori.SelectedItems.Count == 0)
+                return;
+
+            // ambil index row yang sedang dipilih
+            int index = lvwDaftarKategori.SelectedIndices[0];
+
+            // ambil ListViewItem sesuai index
+            ListViewItem itemRow = lvwDaftarKategori.Items[index];
+
+            // update kolom
+            itemRow.SubItems[1].Text = kategori.idKategori;      // kolom ID
+            itemRow.SubItems[2].Text = kategori.namaKategori;    // kolom Nama
+
+            // jika ingin, bisa reset form agar ID bisa diedit ulang
+            txtIdKategoriMobil.Enabled = true;
+
+            // set isEdit false supaya tidak salah mode edit
+            isEdit = false;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void lvwDaftarKategori_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (lvwDaftarKategori.SelectedItems.Count == 0)
+                return;
 
+            // Ambil index baris yang dipilih
+            selectedIndex = lvwDaftarKategori.SelectedIndices[0];
+
+            // Ambil data kategori dari list
+            Kategori kategori = listKategori[selectedIndex];
+
+            // Pastikan textbox enabled sebelum assign text
+            txtIdKategoriMobil.Enabled = true;
+            txtIdKategoriMobil.Text = kategori.idKategori;
+            txtNamaKategori.Text = kategori.namaKategori;
+
+            // Lock ID supaya tidak bisa diubah
+            txtIdKategoriMobil.Enabled = false;
+
+            isEdit = true;
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
 
+        private void btnTambahKategori_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtIdKategoriMobil.Text) ||
+        string.IsNullOrWhiteSpace(txtNamaKategori.Text))
+            {
+                MessageBox.Show("Lengkapi data kategori");
+                return;
+            }
+
+            Kategori kategori = new Kategori
+            {
+                idKategori = txtIdKategoriMobil.Text,
+                namaKategori = txtNamaKategori.Text
+            };
+
+            int result = controller.Create(kategori);
+            if (result > 0)
+            {
+                MessageBox.Show("Data berhasil disimpan");
+
+                OnCreateEventHandler(kategori);
+                LoadKategori();
+
+                ClearForm();
+            }
+        }
+
+        private void btnUpdateKategori_Click(object sender, EventArgs e)
+        {
+            if (!isEdit)
+            {
+                MessageBox.Show("Pilih data yang akan di edit");
+                return;
+            }
+
+            // ambil kategori dari list
+            Kategori kategori = listKategori[selectedIndex];
+
+            // ambil nama baru dari textbox
+            kategori.namaKategori = txtNamaKategori.Text;
+
+            // pastikan ID kategori ada (tidak kosong)
+            if (string.IsNullOrWhiteSpace(kategori.idKategori))
+            {
+                MessageBox.Show("ID kategori tidak valid!");
+                return;
+            }
+
+            // panggil controller untuk update
+            int result = controller.Update(kategori);
+
+            if (result > 0)
+            {
+                MessageBox.Show("Data berhasil diupdate");
+
+                // update ListView
+                OnUpdateEventHandler(kategori);
+
+                // reset form
+                ClearForm();
+            }
+            else
+            {
+                MessageBox.Show("Gagal update data! Periksa ID kategori.");
+            }
+        }
+        private void ClearForm()
+        {
+            txtIdKategoriMobil.Clear();
+            txtNamaKategori.Clear();
+            txtIdKategoriMobil.Enabled = true;
+            isEdit = false;
+            selectedIndex = -1;
+            lvwDaftarKategori.SelectedItems.Clear();
+        }
+
+        private void btnHapusKategori_Click(object sender, EventArgs e)
+        {
+            if (lvwDaftarKategori.SelectedItems.Count > 0)
+            {
+                var konfirmasi = MessageBox.Show("Apakah data kategori ingin dihapus?", "Konfirmasi",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation
+                );
+                if (konfirmasi == DialogResult.Yes)
+                {
+                    Kategori kategori = listKategori[lvwDaftarKategori.SelectedIndices[0]];
+                    var result = controller.Delete(kategori);
+                    if (result > 0) LoadKategori();
+                }
+            }
+            else
+            {
+                MessageBox.Show(
+                    "Silakan pilih data kategori yang akan dihapus.",
+                    "Peringatan",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation
+                );
+            }
+        }
+
+        private void btnSelesaiKategori_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
