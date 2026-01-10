@@ -45,7 +45,7 @@
             // 
             // btnCariPetugas
             // 
-            this.btnCariPetugas.Location = new System.Drawing.Point(1068, 137);
+            this.btnCariPetugas.Location = new System.Drawing.Point(783, 86);
             this.btnCariPetugas.Margin = new System.Windows.Forms.Padding(4);
             this.btnCariPetugas.Name = "btnCariPetugas";
             this.btnCariPetugas.Size = new System.Drawing.Size(92, 25);
@@ -55,16 +55,16 @@
             // 
             // txtCariPetugas
             // 
-            this.txtCariPetugas.Location = new System.Drawing.Point(164, 137);
+            this.txtCariPetugas.Location = new System.Drawing.Point(162, 86);
             this.txtCariPetugas.Margin = new System.Windows.Forms.Padding(4);
             this.txtCariPetugas.Name = "txtCariPetugas";
-            this.txtCariPetugas.Size = new System.Drawing.Size(895, 22);
+            this.txtCariPetugas.Size = new System.Drawing.Size(613, 22);
             this.txtCariPetugas.TabIndex = 32;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 140);
+            this.label2.Location = new System.Drawing.Point(26, 89);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 16);
@@ -78,13 +78,13 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel1.Controls.Add(this.lvwDaftarPenyewa, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(24, 177);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(22, 126);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.74374F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.25627F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1136, 443);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(853, 458);
             this.tableLayoutPanel1.TabIndex = 30;
             // 
             // lvwDaftarPenyewa
@@ -93,7 +93,7 @@
             this.lvwDaftarPenyewa.Location = new System.Drawing.Point(4, 4);
             this.lvwDaftarPenyewa.Margin = new System.Windows.Forms.Padding(4);
             this.lvwDaftarPenyewa.Name = "lvwDaftarPenyewa";
-            this.lvwDaftarPenyewa.Size = new System.Drawing.Size(1127, 379);
+            this.lvwDaftarPenyewa.Size = new System.Drawing.Size(845, 393);
             this.lvwDaftarPenyewa.TabIndex = 0;
             this.lvwDaftarPenyewa.UseCompatibleStateImageBehavior = false;
             // 
@@ -102,18 +102,18 @@
             this.tableLayoutPanel2.ColumnCount = 4;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 796F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 269F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 484F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 581F));
             this.tableLayoutPanel2.Controls.Add(this.btnTambahPetugas, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdatePetugas, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnHapusPetugas, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnSelesaiPetugas, 3, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 392);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 405);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1128, 47);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(845, 47);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // btnTambahPetugas
@@ -141,17 +141,17 @@
             this.btnHapusPetugas.Location = new System.Drawing.Point(225, 4);
             this.btnHapusPetugas.Margin = new System.Windows.Forms.Padding(4);
             this.btnHapusPetugas.Name = "btnHapusPetugas";
-            this.btnHapusPetugas.Size = new System.Drawing.Size(123, 40);
+            this.btnHapusPetugas.Size = new System.Drawing.Size(100, 40);
             this.btnHapusPetugas.TabIndex = 0;
             this.btnHapusPetugas.Text = "Hapus";
             this.btnHapusPetugas.UseVisualStyleBackColor = true;
             // 
             // btnSelesaiPetugas
             // 
-            this.btnSelesaiPetugas.Location = new System.Drawing.Point(1021, 4);
+            this.btnSelesaiPetugas.Location = new System.Drawing.Point(709, 4);
             this.btnSelesaiPetugas.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelesaiPetugas.Name = "btnSelesaiPetugas";
-            this.btnSelesaiPetugas.Size = new System.Drawing.Size(111, 40);
+            this.btnSelesaiPetugas.Size = new System.Drawing.Size(136, 40);
             this.btnSelesaiPetugas.TabIndex = 3;
             this.btnSelesaiPetugas.Text = "Selesai";
             this.btnSelesaiPetugas.UseVisualStyleBackColor = true;
@@ -160,7 +160,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("DejaVu Sans Mono", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(429, 86);
+            this.label1.Location = new System.Drawing.Point(287, 36);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(303, 31);
@@ -172,7 +172,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 706);
+            this.ClientSize = new System.Drawing.Size(891, 597);
             this.Controls.Add(this.btnCariPetugas);
             this.Controls.Add(this.txtCariPetugas);
             this.Controls.Add(this.label2);

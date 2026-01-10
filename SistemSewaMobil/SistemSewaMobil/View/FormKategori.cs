@@ -215,5 +215,15 @@ namespace SistemSewaMobil.View
         {
             this.Close();
         }
+
+        private void FormKategori_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCariKategori_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

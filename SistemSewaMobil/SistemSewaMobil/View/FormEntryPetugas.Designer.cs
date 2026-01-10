@@ -41,7 +41,7 @@
             // 
             // btnSelesaiEntryPetugas
             // 
-            this.btnSelesaiEntryPetugas.Location = new System.Drawing.Point(242, 305);
+            this.btnSelesaiEntryPetugas.Location = new System.Drawing.Point(274, 328);
             this.btnSelesaiEntryPetugas.Name = "btnSelesaiEntryPetugas";
             this.btnSelesaiEntryPetugas.Size = new System.Drawing.Size(127, 34);
             this.btnSelesaiEntryPetugas.TabIndex = 31;
@@ -50,7 +50,7 @@
             // 
             // btnSimpanEntryPetugas
             // 
-            this.btnSimpanEntryPetugas.Location = new System.Drawing.Point(92, 305);
+            this.btnSimpanEntryPetugas.Location = new System.Drawing.Point(124, 328);
             this.btnSimpanEntryPetugas.Name = "btnSimpanEntryPetugas";
             this.btnSimpanEntryPetugas.Size = new System.Drawing.Size(127, 34);
             this.btnSimpanEntryPetugas.TabIndex = 30;
@@ -59,21 +59,21 @@
             // 
             // txtNoHpEntryPetugas
             // 
-            this.txtNoHpEntryPetugas.Location = new System.Drawing.Point(196, 232);
+            this.txtNoHpEntryPetugas.Location = new System.Drawing.Point(228, 255);
             this.txtNoHpEntryPetugas.Name = "txtNoHpEntryPetugas";
             this.txtNoHpEntryPetugas.Size = new System.Drawing.Size(163, 22);
             this.txtNoHpEntryPetugas.TabIndex = 29;
             // 
             // txtNamaEntryPetugas
             // 
-            this.txtNamaEntryPetugas.Location = new System.Drawing.Point(196, 191);
+            this.txtNamaEntryPetugas.Location = new System.Drawing.Point(228, 214);
             this.txtNamaEntryPetugas.Name = "txtNamaEntryPetugas";
             this.txtNamaEntryPetugas.Size = new System.Drawing.Size(163, 22);
             this.txtNamaEntryPetugas.TabIndex = 28;
             // 
             // txtIdEntryPetugas
             // 
-            this.txtIdEntryPetugas.Location = new System.Drawing.Point(196, 153);
+            this.txtIdEntryPetugas.Location = new System.Drawing.Point(228, 176);
             this.txtIdEntryPetugas.Name = "txtIdEntryPetugas";
             this.txtIdEntryPetugas.Size = new System.Drawing.Size(163, 22);
             this.txtIdEntryPetugas.TabIndex = 27;
@@ -81,7 +81,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(101, 235);
+            this.label5.Location = new System.Drawing.Point(133, 258);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 16);
             this.label5.TabIndex = 26;
@@ -90,7 +90,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(101, 194);
+            this.label3.Location = new System.Drawing.Point(133, 217);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 16);
             this.label3.TabIndex = 25;
@@ -99,7 +99,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(101, 156);
+            this.label1.Location = new System.Drawing.Point(133, 179);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 16);
             this.label1.TabIndex = 24;
@@ -109,7 +109,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("DejaVu Sans Mono", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(86, 59);
+            this.label2.Location = new System.Drawing.Point(103, 85);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(320, 31);
@@ -120,7 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 442);
+            this.ClientSize = new System.Drawing.Size(537, 477);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSelesaiEntryPetugas);
             this.Controls.Add(this.btnSimpanEntryPetugas);

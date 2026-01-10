@@ -67,7 +67,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("DejaVu Sans Mono", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(421, 44);
+            this.label1.Location = new System.Drawing.Point(244, 52);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(303, 31);
@@ -81,22 +81,22 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel1.Controls.Add(this.lvwDaftarPenyewa, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(16, 135);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 139);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.74374F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.25627F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1136, 443);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(849, 443);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // lvwDaftarPenyewa
             // 
             this.lvwDaftarPenyewa.HideSelection = false;
             this.lvwDaftarPenyewa.Location = new System.Drawing.Point(4, 4);
-            this.lvwDaftarPenyewa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lvwDaftarPenyewa.Margin = new System.Windows.Forms.Padding(4);
             this.lvwDaftarPenyewa.Name = "lvwDaftarPenyewa";
-            this.lvwDaftarPenyewa.Size = new System.Drawing.Size(1127, 379);
+            this.lvwDaftarPenyewa.Size = new System.Drawing.Size(841, 379);
             this.lvwDaftarPenyewa.TabIndex = 0;
             this.lvwDaftarPenyewa.UseCompatibleStateImageBehavior = false;
             this.lvwDaftarPenyewa.SelectedIndexChanged += new System.EventHandler(this.infoPenyewa_SelectedIndexChanged);
@@ -106,24 +106,24 @@
             this.tableLayoutPanel2.ColumnCount = 4;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 796F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 269F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 485F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 580F));
             this.tableLayoutPanel2.Controls.Add(this.btnTambahPenyewa, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdatePenyewa, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnHapusPenyewa, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnSelesaiPenyewa, 3, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 392);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1128, 47);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(841, 47);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // btnTambahPenyewa
             // 
             this.btnTambahPenyewa.Location = new System.Drawing.Point(4, 4);
-            this.btnTambahPenyewa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTambahPenyewa.Margin = new System.Windows.Forms.Padding(4);
             this.btnTambahPenyewa.Name = "btnTambahPenyewa";
             this.btnTambahPenyewa.Size = new System.Drawing.Size(96, 40);
             this.btnTambahPenyewa.TabIndex = 2;
@@ -133,7 +133,7 @@
             // btnUpdatePenyewa
             // 
             this.btnUpdatePenyewa.Location = new System.Drawing.Point(116, 4);
-            this.btnUpdatePenyewa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdatePenyewa.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdatePenyewa.Name = "btnUpdatePenyewa";
             this.btnUpdatePenyewa.Size = new System.Drawing.Size(99, 40);
             this.btnUpdatePenyewa.TabIndex = 1;
@@ -143,19 +143,19 @@
             // btnHapusPenyewa
             // 
             this.btnHapusPenyewa.Location = new System.Drawing.Point(225, 4);
-            this.btnHapusPenyewa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHapusPenyewa.Margin = new System.Windows.Forms.Padding(4);
             this.btnHapusPenyewa.Name = "btnHapusPenyewa";
-            this.btnHapusPenyewa.Size = new System.Drawing.Size(123, 40);
+            this.btnHapusPenyewa.Size = new System.Drawing.Size(107, 40);
             this.btnHapusPenyewa.TabIndex = 0;
             this.btnHapusPenyewa.Text = "Hapus";
             this.btnHapusPenyewa.UseVisualStyleBackColor = true;
             // 
             // btnSelesaiPenyewa
             // 
-            this.btnSelesaiPenyewa.Location = new System.Drawing.Point(1021, 4);
-            this.btnSelesaiPenyewa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSelesaiPenyewa.Location = new System.Drawing.Point(710, 4);
+            this.btnSelesaiPenyewa.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelesaiPenyewa.Name = "btnSelesaiPenyewa";
-            this.btnSelesaiPenyewa.Size = new System.Drawing.Size(111, 40);
+            this.btnSelesaiPenyewa.Size = new System.Drawing.Size(131, 40);
             this.btnSelesaiPenyewa.TabIndex = 3;
             this.btnSelesaiPenyewa.Text = "Selesai";
             this.btnSelesaiPenyewa.UseVisualStyleBackColor = true;
@@ -172,7 +172,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1204, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(891, 28);
             this.menuStrip1.TabIndex = 25;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -189,14 +189,14 @@
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.homeToolStripMenuItem.Text = "Home";
             this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // exitKeluarToolStripMenuItem
             // 
             this.exitKeluarToolStripMenuItem.Name = "exitKeluarToolStripMenuItem";
-            this.exitKeluarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitKeluarToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.exitKeluarToolStripMenuItem.Text = "Exit/Keluar";
             // 
             // masterDataToolStripMenuItem
@@ -215,7 +215,7 @@
             this.dataMobilTersediaToolStripMenuItem,
             this.dataMobilDisewaToolStripMenuItem1});
             this.dataMobilToolStripMenuItem.Name = "dataMobilToolStripMenuItem";
-            this.dataMobilToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataMobilToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataMobilToolStripMenuItem.Text = "Data Mobil";
             // 
             // dataMobilTersediaToolStripMenuItem
@@ -234,13 +234,13 @@
             // dataPenyewaToolStripMenuItem
             // 
             this.dataPenyewaToolStripMenuItem.Name = "dataPenyewaToolStripMenuItem";
-            this.dataPenyewaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataPenyewaToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataPenyewaToolStripMenuItem.Text = "Data Penyewa";
             // 
             // dataPetugasToolStripMenuItem
             // 
             this.dataPetugasToolStripMenuItem.Name = "dataPetugasToolStripMenuItem";
-            this.dataPetugasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataPetugasToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataPetugasToolStripMenuItem.Text = "Data Petugas";
             // 
             // transaksiToolStripMenuItem
@@ -255,13 +255,13 @@
             // pembayaranToolStripMenuItem
             // 
             this.pembayaranToolStripMenuItem.Name = "pembayaranToolStripMenuItem";
-            this.pembayaranToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pembayaranToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.pembayaranToolStripMenuItem.Text = "Pembayaran";
             // 
             // printSToolStripMenuItem
             // 
             this.printSToolStripMenuItem.Name = "printSToolStripMenuItem";
-            this.printSToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.printSToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.printSToolStripMenuItem.Text = "Print Invoice";
             // 
             // pengaturanToolStripMenuItem
@@ -276,13 +276,13 @@
             // keloloaAkunToolStripMenuItem
             // 
             this.keloloaAkunToolStripMenuItem.Name = "keloloaAkunToolStripMenuItem";
-            this.keloloaAkunToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.keloloaAkunToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
             this.keloloaAkunToolStripMenuItem.Text = "Keloloa akun";
             // 
             // backupDataToolStripMenuItem
             // 
             this.backupDataToolStripMenuItem.Name = "backupDataToolStripMenuItem";
-            this.backupDataToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.backupDataToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
             this.backupDataToolStripMenuItem.Text = "Backup Data";
             // 
             // bantuanToolStripMenuItem
@@ -309,7 +309,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 98);
+            this.label2.Location = new System.Drawing.Point(25, 102);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 16);
@@ -318,16 +318,16 @@
             // 
             // txtCariPenyewa
             // 
-            this.txtCariPenyewa.Location = new System.Drawing.Point(156, 95);
-            this.txtCariPenyewa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCariPenyewa.Location = new System.Drawing.Point(161, 99);
+            this.txtCariPenyewa.Margin = new System.Windows.Forms.Padding(4);
             this.txtCariPenyewa.Name = "txtCariPenyewa";
-            this.txtCariPenyewa.Size = new System.Drawing.Size(895, 22);
+            this.txtCariPenyewa.Size = new System.Drawing.Size(609, 22);
             this.txtCariPenyewa.TabIndex = 27;
             // 
             // btnCariPenyewa
             // 
-            this.btnCariPenyewa.Location = new System.Drawing.Point(1060, 95);
-            this.btnCariPenyewa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCariPenyewa.Location = new System.Drawing.Point(778, 96);
+            this.btnCariPenyewa.Margin = new System.Windows.Forms.Padding(4);
             this.btnCariPenyewa.Name = "btnCariPenyewa";
             this.btnCariPenyewa.Size = new System.Drawing.Size(92, 25);
             this.btnCariPenyewa.TabIndex = 28;
@@ -338,14 +338,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1204, 647);
+            this.ClientSize = new System.Drawing.Size(891, 598);
             this.Controls.Add(this.btnCariPenyewa);
             this.Controls.Add(this.txtCariPenyewa);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormPenyewa";
             this.Text = "Penyewa";
             this.Load += new System.EventHandler(this.FormPenyewa_Load);

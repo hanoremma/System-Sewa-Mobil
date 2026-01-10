@@ -46,7 +46,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(85, 156);
+            this.label1.Location = new System.Drawing.Point(133, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 16);
             this.label1.TabIndex = 0;
@@ -55,7 +55,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(85, 231);
+            this.label2.Location = new System.Drawing.Point(133, 235);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 16);
             this.label2.TabIndex = 1;
@@ -64,7 +64,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(85, 194);
+            this.label3.Location = new System.Drawing.Point(133, 198);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 16);
             this.label3.TabIndex = 2;
@@ -73,7 +73,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(85, 269);
+            this.label4.Location = new System.Drawing.Point(133, 273);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 16);
             this.label4.TabIndex = 3;
@@ -82,7 +82,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(85, 310);
+            this.label5.Location = new System.Drawing.Point(133, 314);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 16);
             this.label5.TabIndex = 4;
@@ -90,7 +90,7 @@
             // 
             // txtIdEntryPenyewa
             // 
-            this.txtIdEntryPenyewa.Location = new System.Drawing.Point(180, 153);
+            this.txtIdEntryPenyewa.Location = new System.Drawing.Point(228, 157);
             this.txtIdEntryPenyewa.Name = "txtIdEntryPenyewa";
             this.txtIdEntryPenyewa.Size = new System.Drawing.Size(163, 22);
             this.txtIdEntryPenyewa.TabIndex = 5;
@@ -98,35 +98,35 @@
             // 
             // txtNamaEntryPenyewa
             // 
-            this.txtNamaEntryPenyewa.Location = new System.Drawing.Point(180, 191);
+            this.txtNamaEntryPenyewa.Location = new System.Drawing.Point(228, 195);
             this.txtNamaEntryPenyewa.Name = "txtNamaEntryPenyewa";
             this.txtNamaEntryPenyewa.Size = new System.Drawing.Size(163, 22);
             this.txtNamaEntryPenyewa.TabIndex = 6;
             // 
             // txtNoKtpEntryPenyewa
             // 
-            this.txtNoKtpEntryPenyewa.Location = new System.Drawing.Point(180, 266);
+            this.txtNoKtpEntryPenyewa.Location = new System.Drawing.Point(228, 270);
             this.txtNoKtpEntryPenyewa.Name = "txtNoKtpEntryPenyewa";
             this.txtNoKtpEntryPenyewa.Size = new System.Drawing.Size(163, 22);
             this.txtNoKtpEntryPenyewa.TabIndex = 8;
             // 
             // txtAlamatEntryPenyewa
             // 
-            this.txtAlamatEntryPenyewa.Location = new System.Drawing.Point(180, 228);
+            this.txtAlamatEntryPenyewa.Location = new System.Drawing.Point(228, 232);
             this.txtAlamatEntryPenyewa.Name = "txtAlamatEntryPenyewa";
             this.txtAlamatEntryPenyewa.Size = new System.Drawing.Size(163, 22);
             this.txtAlamatEntryPenyewa.TabIndex = 7;
             // 
             // txtNoHpEntryPenyewa
             // 
-            this.txtNoHpEntryPenyewa.Location = new System.Drawing.Point(180, 307);
+            this.txtNoHpEntryPenyewa.Location = new System.Drawing.Point(228, 311);
             this.txtNoHpEntryPenyewa.Name = "txtNoHpEntryPenyewa";
             this.txtNoHpEntryPenyewa.Size = new System.Drawing.Size(163, 22);
             this.txtNoHpEntryPenyewa.TabIndex = 9;
             // 
             // btnSimpanEntryPenyewa
             // 
-            this.btnSimpanEntryPenyewa.Location = new System.Drawing.Point(78, 373);
+            this.btnSimpanEntryPenyewa.Location = new System.Drawing.Point(126, 377);
             this.btnSimpanEntryPenyewa.Name = "btnSimpanEntryPenyewa";
             this.btnSimpanEntryPenyewa.Size = new System.Drawing.Size(127, 34);
             this.btnSimpanEntryPenyewa.TabIndex = 10;
@@ -135,7 +135,7 @@
             // 
             // btnSelesaiEntryPenyewa
             // 
-            this.btnSelesaiEntryPenyewa.Location = new System.Drawing.Point(228, 373);
+            this.btnSelesaiEntryPenyewa.Location = new System.Drawing.Point(276, 377);
             this.btnSelesaiEntryPenyewa.Name = "btnSelesaiEntryPenyewa";
             this.btnSelesaiEntryPenyewa.Size = new System.Drawing.Size(127, 34);
             this.btnSelesaiEntryPenyewa.TabIndex = 11;
@@ -146,7 +146,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("DejaVu Sans Mono", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(98, 57);
+            this.label6.Location = new System.Drawing.Point(146, 61);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(235, 31);
@@ -157,7 +157,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(445, 450);
+            this.ClientSize = new System.Drawing.Size(530, 480);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnSelesaiEntryPenyewa);
             this.Controls.Add(this.btnSimpanEntryPenyewa);
