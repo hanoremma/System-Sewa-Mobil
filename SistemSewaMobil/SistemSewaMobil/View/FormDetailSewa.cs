@@ -37,7 +37,7 @@ namespace SistemSewaMobil
 
         private void comboBoxMobil_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Mobil mobilDipilih = (Mobil)comboBoxMobil.SelectedItem;
+            Mobil mobilDipilih = (Mobil)cmbMobilYangDisewaDetailSewa.SelectedItem;
 
             infoMobilTerpilih.Items.Clear(); // Hapus isi ListView sebelum diisi ulang
 
