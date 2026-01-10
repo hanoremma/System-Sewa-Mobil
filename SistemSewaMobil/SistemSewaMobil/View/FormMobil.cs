@@ -13,7 +13,6 @@ using SistemSewaMobil.View;
 
 namespace SistemSewaMobil
 {
-    //tesssss comment untuk PR
     public partial class FormMobil : Form
     {
         private List<Mobil> listMobil = new List<Mobil>();
