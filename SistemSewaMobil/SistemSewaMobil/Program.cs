@@ -17,7 +17,7 @@ namespace SistemSewaMobil
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormKategori());
+            Application.Run(new FormLogin());
         }
     }
 }
