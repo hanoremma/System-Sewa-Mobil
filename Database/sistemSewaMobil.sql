@@ -91,6 +91,282 @@ CREATE TABLE Pembayaran (
         ON UPDATE CASCADE
 );
 
+DELETE FROM penyewa 
+DELETE FROM petugas
+DELETE FROM kategori 
+DELETE FROM mobil 
+DELETE FROM detailSewa 
+DELETE FROM pembayaran
+
+select * from penyewa --done
+select * from petugas --done
+select * from kategori --done
+select * from mobil 
+select * from detailSewa 
+select * from pembayaran
+
+--step paling awal (done)
+CREATE SEQUENCE Seq_AutoID
+    START WITH 1
+    INCREMENT BY 1;
+--step1
+ALTER TABLE detailSewa DROP CONSTRAINT FK_detailSewa_penyewa;
+--step2
+ALTER TABLE penyewa DROP CONSTRAINT PK_penyewa_idPenyewa;
+--step3
+ALTER TABLE penyewa DROP COLUMN idPenyewa;
+--step4
+ALTER TABLE penyewa ADD id_angka INT IDENTITY(1,1);
+--step5
+ALTER TABLE penyewa 
+ADD idPenyewa AS (CAST(('PEN' + RIGHT('000' + CAST(id_angka AS VARCHAR(5)), 3)) AS VARCHAR(10))) PERSISTED NOT NULL;
+--step6
+ALTER TABLE penyewa ADD CONSTRAINT PK_penyewa_idPenyewa PRIMARY KEY (idPenyewa);
+
+--step1
+ALTER TABLE detailSewa DROP CONSTRAINT FK_detailSewa_petugas;
+--step2
+ALTER TABLE petugas DROP CONSTRAINT PK_petugas_idPetugas;
+--step3
+ALTER TABLE petugas DROP COLUMN idPetugas;
+--step4
+ALTER TABLE petugas ADD id_angka INT IDENTITY(1,1);
+--step5
+ALTER TABLE petugas
+ADD idPetugas AS (CAST(('PET' + RIGHT('000' + CAST(id_angka AS VARCHAR(5)), 3)) AS VARCHAR(10))) PERSISTED NOT NULL;
+--step6
+ALTER TABLE petugas ADD CONSTRAINT PK_petugas_idPetugas PRIMARY KEY (idPetugas);
+
+--step1
+ALTER TABLE mobil DROP CONSTRAINT FK_mobil_idkategori;
+--step2
+ALTER TABLE kategori DROP CONSTRAINT PK_kategori_idKategori;
+--step3
+ALTER TABLE kategori DROP COLUMN idKategori;
+--step4
+ALTER TABLE kategori ADD id_angka INT IDENTITY(1,1);
+--step5
+ALTER TABLE kategori
+ADD idKategori AS (CAST(('K' + RIGHT('000' + CAST(id_angka AS VARCHAR(5)), 3)) AS VARCHAR(10))) PERSISTED NOT NULL;
+--step6
+ALTER TABLE kategori ADD CONSTRAINT PK_kategori_idKategori PRIMARY KEY (idKategori);
+
+--step1
+ALTER TABLE detailSewa DROP CONSTRAINT FK_detailSewa_mobil;
+--step2
+ALTER TABLE mobil DROP CONSTRAINT PK_mobil_idMobil;
+--step3
+ALTER TABLE mobil DROP COLUMN idMobil;
+--step4
+ALTER TABLE mobil ADD id_angka INT IDENTITY(1,1);
+--step5
+ALTER TABLE mobil
+ADD idMobil AS (CAST(('M' + RIGHT('000' + CAST(id_angka AS VARCHAR(5)), 3)) AS VARCHAR(10))) PERSISTED NOT NULL;
+--step6
+ALTER TABLE mobil ADD CONSTRAINT PK_mobil_idMobil PRIMARY KEY (idMobil);
+
+--step1
+ALTER TABLE pembayaran DROP CONSTRAINT FK_Pembayaran_DetailSewa;
+--step2
+ALTER TABLE detailSewa DROP CONSTRAINT PK__detailSe__CDBBD89849636A25;
+--step3
+ALTER TABLE detailSewa DROP COLUMN idDetailSewa;
+--step4
+ALTER TABLE detailSewa ADD id_angka INT IDENTITY(1,1);
+--step5
+ALTER TABLE detailSewa
+ADD idDetailSewa AS (CAST(('DS' + RIGHT('000' + CAST(id_angka AS VARCHAR(5)), 3)) AS VARCHAR(10))) PERSISTED NOT NULL;
+--step6
+ALTER TABLE detailSewa ADD CONSTRAINT PK_detailSewa_idDetailSewa PRIMARY KEY (idDetailSewa);
+
+--SELECT name 
+--FROM sys.key_constraints 
+--WHERE type = 'FK' AND OBJECT_NAME(parent_object_id) = 'pembayaran';
+
+--step1
+ALTER TABLE detailSewa DROP CONSTRAINT FK_detailSewa_mobil;
+--step2
+ALTER TABLE pembayaran DROP CONSTRAINT PK__Pembayar__A88E81D69E669EF1
+--step3
+ALTER TABLE pembayaran DROP COLUMN idPembayaran;
+--step4
+ALTER TABLE pembayaran ADD id_angka INT IDENTITY(1,1);
+--step5
+ALTER TABLE pembayaran
+ADD idPembayaran AS (CAST(('INV' + RIGHT('000' + CAST(id_angka AS VARCHAR(5)), 3)) AS VARCHAR(10))) PERSISTED NOT NULL;
+--step6
+ALTER TABLE pembayaran ADD CONSTRAINT PK_mobil_idPembayaran PRIMARY KEY (idPembayaran);
+
+ALTER TABLE mobil ALTER COLUMN idKategori VARCHAR(10);
+
+ALTER TABLE detailSewa ALTER COLUMN idPenyewa VARCHAR(10);
+ALTER TABLE detailSewa ALTER COLUMN idPetugas VARCHAR(10);
+ALTER TABLE detailSewa ALTER COLUMN idMobil VARCHAR(10);
+
+ALTER TABLE Pembayaran ALTER COLUMN idDetailSewa VARCHAR(10);
+
+ALTER TABLE mobil ADD CONSTRAINT FK_mobil_idKategori 
+FOREIGN KEY (idKategori) REFERENCES kategori(idKategori) ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE detailSewa ADD CONSTRAINT FK_detailSewa_penyewa 
+FOREIGN KEY (idPenyewa) REFERENCES penyewa(idPenyewa) ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE detailSewa ADD CONSTRAINT FK_detailSewa_petugas 
+FOREIGN KEY (idPetugas) REFERENCES petugas(idPetugas) ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE detailSewa ADD CONSTRAINT FK_detailSewa_mobil 
+FOREIGN KEY (idMobil) REFERENCES mobil(idMobil) ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE pembayaran ADD CONSTRAINT FK_pembayaran_detailSewa 
+FOREIGN KEY (idDetailSewa) REFERENCES detailSewa(idDetailSewa) ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE Pembayaran 
+ADD biayaServis INT NOT NULL CONSTRAINT DF_biayaServis DEFAULT 0,
+    diskon INT NOT NULL CONSTRAINT DF_diskon DEFAULT 0;
+
+CREATE TRIGGER trg_HitungTotalBiaya
+ON detailSewa
+AFTER INSERT, UPDATE
+AS
+BEGIN
+    UPDATE ds
+    SET ds.totalBiaya = (
+        CASE 
+            WHEN DATEDIFF(DAY, i.tglPinjam, i.tglKembali) = 0 THEN 1 
+            ELSE DATEDIFF(DAY, i.tglPinjam, i.tglKembali) 
+        END
+    ) * m.hargaSewa
+    FROM detailSewa ds
+    INNER JOIN inserted i ON ds.idDetailSewa = i.idDetailSewa
+    INNER JOIN mobil m ON i.idMobil = m.idMobil;
+END;
+
+CREATE TRIGGER trg_HitungTotalPembayaran
+ON Pembayaran
+AFTER INSERT, UPDATE
+AS
+BEGIN
+    UPDATE p
+    SET p.totalPembayaran = (ds.totalBiaya + ISNULL(i.biayaServis, 0) - ISNULL(i.diskon, 0))
+    FROM Pembayaran p
+    INNER JOIN inserted i ON p.idPembayaran = i.idPembayaran
+    INNER JOIN detailSewa ds ON i.idDetailSewa = ds.idDetailSewa;
+END;
+
+INSERT INTO penyewa (namaPenyewa, alamatPenyewa, noKtpPenyewa, noHpPenyewa)
+VALUES ('Andi Pratama', 'Jl. Merdeka No. 10', '3201011212900001', '085611112222'),
+       ('Dewi Lestari', 'Sleman, Yogyakarta', '3404014505950002', '081344445555');
+
+INSERT INTO penyewa (namaPenyewa, alamatPenyewa, noKtpPenyewa, noHpPenyewa)
+VALUES ('Halimah Ahmad', 'Sleman, Yogyakarta', '3201011212900004', '085612212222');
+
+INSERT INTO petugas (namaPetugas, noHpPetugas)
+VALUES ('Admin Budi', '081234567890'),
+       ('Siti Kasir', '081299998888');
+
+INSERT INTO kategori (namaKategori)
+VALUES ('City Car'), 
+       ('MPV'), 
+       ('SUV');
+
+INSERT INTO mobil (idKategori, noPolisi, merkMobil, tahunMobil, statusKetersediaan, hargaSewa)
+VALUES 
+('K001', 'B 1234 ABC', 'Toyota Avanza', '2022', 'tersedia', 350000),
+('K001', 'D 5678 XYZ', 'Honda Brio', '2021', 'tersedia', 250000),
+('K002', 'L 9101 QWE', 'Mitsubishi Xpander', '2023', 'Tidak tersedia', 450000);
+
+INSERT INTO detailSewa (idPenyewa, idPetugas, idMobil, tglPinjam, tglKembali, statusPenyewaan)
+VALUES 
+('PEN001', 'PET001', 'M001', '2025-01-10 08:00:00', '2025-01-12 08:00:00', 'Sedang Berlangsung'),
+('PEN002', 'PET002', 'M002', '2025-01-11 10:00:00', '2025-01-11 18:00:00', 'Sedang Berlangsung');
+
+INSERT INTO detailSewa (idPenyewa, idPetugas, idMobil, tglPinjam, tglKembali, statusPenyewaan)
+VALUES
+('PEN003', 'PET002', 'M001', '2026-01-05', '2026-01-07', 'Sedang Berlangsung');
+
+INSERT INTO Pembayaran (idDetailSewa, metodePembayaran, tglPembayaran, statusPembayaran, biayaServis, diskon)
+VALUES 
+('DS001', 'Cash', GETDATE(), 'Lunas', 50000, 0),        -- Ada biaya servis 50rb
+('DS002', 'Transfer', GETDATE(), 'Belum Lunas', 0, 10000); -- Ada diskon 10rb, servis 0
+
+INSERT INTO Pembayaran (idDetailSewa, metodePembayaran, tglPembayaran, statusPembayaran, biayaServis, diskon)
+VALUES 
+('DS003', 'E-Wallet', '2026-01-05', 'Lunas', 0, 0);
+
+DELETE FROM penyewa 
+DELETE FROM petugas
+DELETE FROM kategori 
+DELETE FROM mobil 
+DELETE FROM detailSewa 
+DELETE FROM pembayaran
+
+DBCC CHECKIDENT ('penyewa', RESEED, 0);
+DBCC CHECKIDENT ('petugas', RESEED, 0);
+DBCC CHECKIDENT ('kategori', RESEED, 0);
+DBCC CHECKIDENT ('Pembayaran', RESEED, 0);
+DBCC CHECKIDENT ('detailSewa', RESEED, 0);
+DBCC CHECKIDENT ('mobil', RESEED, 0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 INSERT INTO penyewa (idPenyewa, namaPenyewa, alamatPenyewa, noKtpPenyewa, noHpPenyewa)
 VALUES
 ('P001', 'Andika Pratama', 'Sleman, Kaliurang', '3275011203980001', '081234567890'),
@@ -182,12 +458,6 @@ UPDATE petugas SET alamatPetugas = 'Jl. Sudirman No.25, Bandung' WHERE idPetugas
 UPDATE petugas SET alamatPetugas = 'Magelang, Muntilan' WHERE idPetugas = 'PT004';
 UPDATE petugas SET alamatPetugas = 'Klaten, Prambanan' WHERE idPetugas = 'PT005';
 
-select * from mobil
-select * from detailSewa
-select * from pembayaran
-select * from petugas
-select * from penyewa
-
 ALTER TABLE mobil
 ALTER COLUMN statusKetersediaan VARCHAR(30);
 
@@ -223,3 +493,30 @@ sp_help
 
 
 --ingin menampilkan idDetailSewa, Nama penyewa, Nama Petugas, Plat Mobil, Tanggal Pinjam, Tanggal Kembali, statusPenyewaan, titalBiaya
+
+SELECT name 
+FROM sys.check_constraints 
+WHERE parent_object_id = OBJECT_ID('detailSewa');
+
+select * from penyewa --done
+select * from petugas --done
+select * from kategori --done
+select * from mobil --done
+select * from detailSewa --done
+select * from pembayaran
+
+INSERT INTO detailSewa 
+(idDetailSewa, idPenyewa, idPetugas, idMobil, tglPinjam, tglKembali, statusPenyewaan, totalBiaya)
+VALUES
+('DS004', 'P003', 'PT001', 'M007', '2025-07-11', '2025-07-12', 'Selesai', 600000);
+
+INSERT INTO kategori (namaKategori)
+VALUES ('City Car'), 
+       ('MPV'), 
+       ('SUV');
+
+       INSERT INTO mobil (idKategori, noPolisi, merkMobil, tahunMobil, statusKetersediaan, hargaSewa)
+VALUES 
+('K001', 'B 1234 ABC', 'Toyota Avanza', '2022', 'tersedia', 350000),
+('K001', 'D 5678 XYZ', 'Honda Brio', '2021', 'tersedia', 250000),
+('K002', 'L 9101 QWE', 'Mitsubishi Xpander', '2023', 'Tidak tersedia', 450000);

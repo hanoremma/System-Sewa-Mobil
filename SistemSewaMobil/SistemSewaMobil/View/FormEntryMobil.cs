@@ -1,6 +1,9 @@
 ﻿using SistemSewaMobil.Controller;
+using SistemSewaMobil.Model.Context;
 using SistemSewaMobil.Model.Entity;
+using SistemSewaMobil.Model.Repository;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace SistemSewaMobil.View
@@ -15,6 +18,10 @@ namespace SistemSewaMobil.View
             isNewData = true;
 
             InitStatusCombo();
+            InitKategoriCombo();
+
+            txtIdMobilEntryMobil.Text = "(Otomatis)";
+            txtIdMobilEntryMobil.Enabled = false;
         }
 
         private void InitStatusCombo()
@@ -24,6 +31,20 @@ namespace SistemSewaMobil.View
             cmbStatusTersediaEntryMobil.Items.Add("Tersedia");
             cmbStatusTersediaEntryMobil.Items.Add("Tidak Tersedia");
             cmbStatusTersediaEntryMobil.SelectedIndex = 0;
+        }
+
+        private void InitKategoriCombo()
+        {
+            KategoriRepository repoKat = new KategoriRepository(new DbContext());
+            List<Kategori> daftarKat = repoKat.ReadAll();
+
+            cmbKategoriEntryMobil.DataSource = daftarKat;
+
+            cmbKategoriEntryMobil.DisplayMember = "namaKategori";
+
+            cmbKategoriEntryMobil.ValueMember = "idKategori";
+
+            cmbKategoriEntryMobil.SelectedIndex = -1;
         }
         public event CreateUpdateEventHandler OnCreate;
 
@@ -48,7 +69,10 @@ namespace SistemSewaMobil.View
             this.controller = controller;
             isNewData = false;
             mobil = obj;
+
             txtIdMobilEntryMobil.Text = obj.idMobil;
+            txtIdMobilEntryMobil.Enabled = false;
+            cmbKategoriEntryMobil.SelectedValue = obj.idKategori; ;
             txtNoPolisiEntryMobil.Text = obj.noPolisi;
             txtMerkMobilEntryMobil.Text = obj.merkMobil;
             txtTahunMobilEntryMobil.Text = obj.tahunMobil.ToString();
@@ -64,6 +88,7 @@ namespace SistemSewaMobil.View
             if (isNewData) mobil = new Mobil();
 
             mobil.idMobil = txtIdMobilEntryMobil.Text;
+            mobil.idKategori = cmbKategoriEntryMobil.SelectedValue.ToString();
             mobil.noPolisi = txtNoPolisiEntryMobil.Text;
             mobil.merkMobil = txtMerkMobilEntryMobil.Text;
             mobil.tahunMobil = txtTahunMobilEntryMobil.Text;

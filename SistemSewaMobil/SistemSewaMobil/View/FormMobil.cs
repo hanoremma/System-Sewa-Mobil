@@ -32,6 +32,7 @@ namespace SistemSewaMobil
 
             lvwDaftarMobil.Columns.Add("No.", 30, HorizontalAlignment.Center);
             lvwDaftarMobil.Columns.Add("Id Mobil", 100, HorizontalAlignment.Left);
+            lvwDaftarMobil.Columns.Add("Kategori", 100, HorizontalAlignment.Left);
             lvwDaftarMobil.Columns.Add("No Polisi", 100, HorizontalAlignment.Center);
             lvwDaftarMobil.Columns.Add("Merk Mobil", 120, HorizontalAlignment.Center);
             lvwDaftarMobil.Columns.Add("Tahun", 50, HorizontalAlignment.Center);
@@ -52,6 +53,7 @@ namespace SistemSewaMobil
                 var noUrut = lvwDaftarMobil.Items.Count + 1;
                 var item = new ListViewItem(noUrut.ToString());
                 item.SubItems.Add(mobil.idMobil);
+                item.SubItems.Add(mobil.namaKategori);
                 item.SubItems.Add(mobil.noPolisi);
                 item.SubItems.Add(mobil.merkMobil);
                 item.SubItems.Add(mobil.tahunMobil.ToString());
@@ -81,6 +83,7 @@ namespace SistemSewaMobil
 
             ListViewItem item = new ListViewItem(noUrut.ToString());
             item.SubItems.Add(mobil.idMobil);
+            item.SubItems.Add(mobil.namaKategori);
             item.SubItems.Add(mobil.noPolisi);
             item.SubItems.Add(mobil.merkMobil);
             item.SubItems.Add(mobil.tahunMobil);
@@ -95,6 +98,7 @@ namespace SistemSewaMobil
 
             ListViewItem itemRow = lvwDaftarMobil.Items[index];
             itemRow.SubItems[1].Text = mobil.idMobil;
+            itemRow.SubItems[2].Text = mobil.namaKategori;
             itemRow.SubItems[2].Text = mobil.noPolisi;
             itemRow.SubItems[3].Text = mobil.merkMobil;
             itemRow.SubItems[4].Text = mobil.tahunMobil;
@@ -212,6 +216,7 @@ namespace SistemSewaMobil
                 var noUrut = lvwDaftarMobil.Items.Count + 1;
                 var item = new ListViewItem(noUrut.ToString());
                 item.SubItems.Add(mobil.idMobil);
+                item.SubItems.Add(mobil.namaKategori);
                 item.SubItems.Add(mobil.noPolisi);
                 item.SubItems.Add(mobil.merkMobil);
                 item.SubItems.Add(mobil.tahunMobil.ToString());

@@ -90,14 +90,14 @@ namespace SistemSewaMobil.Controller
                 return repo.ReadAll();
             }
         }
-        public List<Penyewa> ReadByNamaPenyewa(string nama)
+        public List<Penyewa> ReadByNamaPenyewa(string namapenyewa)
         {
             List<Penyewa> list = new List<Penyewa>();
 
             using (DbContext context = new DbContext())
             {
                 var repo = new PenyewaRepository(context);
-                list = repo.ReadByNamaPenyewa(nama);
+                list = repo.ReadByNamaPenyewa(namapenyewa);
             }
 
             return list;

@@ -22,7 +22,7 @@ namespace SistemSewaMobil
         }
         private void InisialisasiListView()
         {
-            infoMobilTerpilih.View = System.Windows.Forms.View.Details;
+            /*infoMobilTerpilih.View = System.Windows.Forms.View.Details;
             infoMobilTerpilih.FullRowSelect = true;
             infoMobilTerpilih.GridLines = true;
 
@@ -32,14 +32,14 @@ namespace SistemSewaMobil
             infoMobilTerpilih.Columns.Add("No Polisi", 100, HorizontalAlignment.Center);
             infoMobilTerpilih.Columns.Add("Tahun", 50, HorizontalAlignment.Center);
             infoMobilTerpilih.Columns.Add("Status sedia", 70, HorizontalAlignment.Center);
-            infoMobilTerpilih.Columns.Add("Harga Sewa/hari", 100, HorizontalAlignment.Center);
+            infoMobilTerpilih.Columns.Add("Harga Sewa/hari", 100, HorizontalAlignment.Center);*/
         }
 
         private void comboBoxMobil_SelectedIndexChanged(object sender, EventArgs e)
         {
             Mobil mobilDipilih = (Mobil)cmbMobilYangDisewaDetailSewa.SelectedItem;
 
-            infoMobilTerpilih.Items.Clear(); // Hapus isi ListView sebelum diisi ulang
+            /*infoMobilTerpilih.Items.Clear(); // Hapus isi ListView sebelum diisi ulang
 
             ListViewItem item = new ListViewItem(mobilDipilih.idMobil);
             item.SubItems.Add(mobilDipilih.noPolisi);
@@ -48,7 +48,7 @@ namespace SistemSewaMobil
             item.SubItems.Add(mobilDipilih.statusKetersediaan);
             item.SubItems.Add(mobilDipilih.hargaSewa.ToString());
 
-            infoMobilTerpilih.Items.Add(item);
+            infoMobilTerpilih.Items.Add(item);*/
         }
 
         private void button3_Click(object sender, EventArgs e)

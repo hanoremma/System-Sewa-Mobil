@@ -24,13 +24,11 @@ namespace SistemSewaMobil.Model.Repository
         {
             int result = 0;
             // Perintah SQL Insert
-            string sql = @"INSERT INTO penyewa (idPenyewa, namaPenyewa, alamatPenyewa, noKtpPenyewa, noHpPenyewa) 
-                           VALUES (@idPenyewa, @namaPenyewa, @alamatPenyewa, @noKtpPenyewa, @noHpPenyewa)";
+            string sql = @"INSERT INTO penyewa (namaPenyewa, alamatPenyewa, noKtpPenyewa, noHpPenyewa) 
+                           VALUES (@namaPenyewa, @alamatPenyewa, @noKtpPenyewa, @noHpPenyewa)";
 
             using (SqlCommand cmd = new SqlCommand(sql, _conn))
             {
-
-                cmd.Parameters.AddWithValue("@idPenyewa", penyewa.idPenyewa);
                 cmd.Parameters.AddWithValue("@namaPenyewa", penyewa.namaPenyewa);
                 cmd.Parameters.AddWithValue("@alamatPenyewa", penyewa.alamatPenyewa);
                 cmd.Parameters.AddWithValue("@noKtpPenyewa", penyewa.noKtpPenyewa);
@@ -55,7 +53,7 @@ namespace SistemSewaMobil.Model.Repository
                     namaPenyewa = @namaPenyewa,
                     alamatPenyewa = @alamatPenyewa,
                     noKtpPenyewa = @noKtpPenyewa,
-                    noHpPenyewa = @noHpPenyewa,
+                    noHpPenyewa = @noHpPenyewa
                    WHERE idPenyewa = @idPenyewa";
 
             using (SqlCommand cmd = new SqlCommand(sql, _conn))
@@ -124,7 +122,7 @@ namespace SistemSewaMobil.Model.Repository
 
             return list;
         }
-        public List<Penyewa> ReadByNamaPenyewa(string nama)
+        public List<Penyewa> ReadByNamaPenyewa(string namapenyewa)
         {
             List<Penyewa> list = new List<Penyewa>();
 
@@ -134,12 +132,12 @@ namespace SistemSewaMobil.Model.Repository
                 string sql = @"SELECT idPenyewa, namaPenyewa, alamatPenyewa, noKtpPenyewa, noHpPenyewa
                                FROM penyewa
                                WHERE namaPenyewa LIKE @namaPenyewa
-                               ORDER BY namaMobil";
+                               ORDER BY namaPenyewa";
 
                 using (SqlCommand cmd = new SqlCommand(sql, _conn))
                 {
                     // Use wildcard % for search (e.g., "Avanza" becomes "%Avanza%")
-                    cmd.Parameters.AddWithValue("@namaPenyewa", string.Format("%{0}%", nama));
+                    cmd.Parameters.AddWithValue("@namaPenyewa", string.Format("%{0}%", namapenyewa));
 
                     using (SqlDataReader dtr = cmd.ExecuteReader())
                     {

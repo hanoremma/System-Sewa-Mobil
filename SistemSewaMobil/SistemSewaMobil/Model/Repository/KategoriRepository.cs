@@ -23,15 +23,11 @@ namespace SistemSewaMobil.Model.Repository
         {
             int result = 0;
             // Perintah SQL Insert
-            string sql = @"INSERT INTO kategori (idKategori, namaKategori) 
-                           VALUES (@idKategori, @namaKategori)";
+            string sql = @"INSERT INTO kategori (namaKategori) 
+                           VALUES (@namaKategori)";
 
             using (SqlCommand cmd = new SqlCommand(sql, _conn))
             {
-                // Assuming the object passed to the function is named 'mobil'
-                // Example: public int Create(Mobil mobil)
-
-                cmd.Parameters.AddWithValue("@idKategori", kategori.idKategori);
                 cmd.Parameters.AddWithValue("@namaKategori", kategori.namaKategori);
 
                 try

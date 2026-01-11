@@ -25,6 +25,9 @@ namespace SistemSewaMobil.View
             InisialisasiListKategoriView();
             LoadKategori();
 
+            txtIdKategoriMobil.Text = "(Otomatis)";
+            txtIdKategoriMobil.Enabled = false;
+
             lvwDaftarKategori.SelectedIndexChanged += lvwDaftarKategori_SelectedIndexChanged;
         }
         private void InisialisasiListKategoriView()
@@ -41,9 +44,6 @@ namespace SistemSewaMobil.View
         {
             lvwDaftarKategori.Items.Clear();
             listKategori = controller.GetAllKategori();
-
-            // This method should load data into the infoMobil ListView
-            // Implementation depends on how data is stored/retrieved
 
             foreach (var kategori in listKategori)
             {
@@ -168,8 +168,8 @@ namespace SistemSewaMobil.View
                 // update ListView
                 OnUpdateEventHandler(kategori);
 
-                // reset form
                 ClearForm();
+
             }
             else
             {
@@ -178,12 +178,12 @@ namespace SistemSewaMobil.View
         }
         private void ClearForm()
         {
-            txtIdKategoriMobil.Clear();
+            txtIdKategoriMobil.Text = "(Otomatis)";
+            txtIdKategoriMobil.Enabled = false;
             txtNamaKategori.Clear();
-            txtIdKategoriMobil.Enabled = true;
+            lvwDaftarKategori.SelectedItems.Clear();
             isEdit = false;
             selectedIndex = -1;
-            lvwDaftarKategori.SelectedItems.Clear();
         }
 
         private void btnHapusKategori_Click(object sender, EventArgs e)
@@ -223,7 +223,29 @@ namespace SistemSewaMobil.View
 
         private void btnCariKategori_Click(object sender, EventArgs e)
         {
+            string keyword = txtCariKategori.Text.Trim();
+            if (string.IsNullOrEmpty(keyword))
+            {
+                ClearForm();
+                return;
+            }
+            lvwDaftarKategori.Items.Clear();
+            listKategori = controller.ReadByNamaKategori(keyword);
 
+            foreach (var kategori in listKategori)
+            {
+                var noUrut = lvwDaftarKategori.Items.Count + 1;
+                var item = new ListViewItem(noUrut.ToString());
+                item.SubItems.Add(kategori.idKategori);
+                item.SubItems.Add(kategori.namaKategori);
+                lvwDaftarKategori.Items.Add(item);
+            }
+            if (listKategori.Count == 0)
+            {
+                MessageBox.Show("Data mobil dengan merk " + keyword + " tidak ditemukan.", "Informasi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearForm();
+            }
         }
     }
 }

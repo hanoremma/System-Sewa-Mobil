@@ -51,7 +51,7 @@ namespace SistemSewaMobil.Model.Repository
             string sql = @"UPDATE petugas SET
                     namaPetugas = @namaPetugas,
                     noHpPetugas = @noHpPetugas,
-                    alamatPetugas = @alamatPetugas,
+                    alamatPetugas = @alamatPetugas
                    WHERE idPetugas = @idPetugas";
 
             using (SqlCommand cmd = new SqlCommand(sql, _conn))

@@ -22,15 +22,15 @@ namespace SistemSewaMobil.Model.Repository
         {
             int result = 0;
             // Perintah SQL Insert
-            string sql = @"INSERT INTO mobil (idMobil, noPolisi, merkMobil, tahunMobil, statusKetersediaan, hargaSewa) 
-                           VALUES (@idMobil, @noPolisi, @merkMobil, @tahunMobil, @statusKetersediaan, @hargaSewa)";
+            string sql = @"INSERT INTO mobil (idKategori, noPolisi, merkMobil, tahunMobil, statusKetersediaan, hargaSewa) 
+                           VALUES (@idKategori, @noPolisi, @merkMobil, @tahunMobil, @statusKetersediaan, @hargaSewa)";
 
             using (SqlCommand cmd = new SqlCommand(sql, _conn))
             {
                 // Assuming the object passed to the function is named 'mobil'
                 // Example: public int Create(Mobil mobil)
 
-                cmd.Parameters.AddWithValue("@idMobil", mobil.idMobil);
+                cmd.Parameters.AddWithValue("@idKategori", mobil.idKategori);
                 cmd.Parameters.AddWithValue("@noPolisi", mobil.noPolisi);
                 cmd.Parameters.AddWithValue("@merkMobil", mobil.merkMobil);
                 cmd.Parameters.AddWithValue("@tahunMobil", mobil.tahunMobil);
@@ -54,6 +54,7 @@ namespace SistemSewaMobil.Model.Repository
             int result = 0;
 
             string sql = @"UPDATE mobil SET
+                    idKategori = @idKategori,
                     noPolisi = @noPolisi,
                     merkMobil = @merkMobil,
                     tahunMobil = @tahunMobil,
@@ -63,12 +64,13 @@ namespace SistemSewaMobil.Model.Repository
 
             using (SqlCommand cmd = new SqlCommand(sql, _conn))
             {
-                cmd.Parameters.AddWithValue("@idMobil", mobil.idMobil);
+                cmd.Parameters.AddWithValue("@idKategori", mobil.idKategori);
                 cmd.Parameters.AddWithValue("@noPolisi", mobil.noPolisi);
                 cmd.Parameters.AddWithValue("@merkMobil", mobil.merkMobil);
                 cmd.Parameters.AddWithValue("@tahunMobil", mobil.tahunMobil);
                 cmd.Parameters.AddWithValue("@statusKetersediaan", mobil.statusKetersediaan);
                 cmd.Parameters.AddWithValue("@hargaSewa", mobil.hargaSewa);
+                cmd.Parameters.AddWithValue("@idMobil", mobil.idMobil);
 
                 try
                 {
@@ -108,10 +110,11 @@ namespace SistemSewaMobil.Model.Repository
         {
             List<Mobil> list = new List<Mobil>();
 
-            string sql = @"SELECT idMobil, noPolisi, merkMobil, tahunMobil, 
-                              statusKetersediaan, hargaSewa
-                       FROM mobil
-                       ORDER BY merkMobil";
+            string sql = @"SELECT m.idMobil, m.idKategori, k.namaKategori, m.noPolisi, 
+                          m.merkMobil, m.tahunMobil, m.statusKetersediaan, m.hargaSewa
+                   FROM mobil m
+                   JOIN kategori k ON m.idKategori = k.idKategori
+                   ORDER BY m.merkMobil";
 
             using (SqlCommand cmd = new SqlCommand(sql, _conn))
             using (SqlDataReader dtr = cmd.ExecuteReader())
@@ -121,6 +124,8 @@ namespace SistemSewaMobil.Model.Repository
                     list.Add(new Mobil
                     {
                         idMobil = dtr["idMobil"].ToString(),
+                        idKategori = dtr["idKategori"].ToString(),
+                        namaKategori = dtr["namaKategori"].ToString(),
                         noPolisi = dtr["noPolisi"].ToString(),
                         merkMobil = dtr["merkMobil"].ToString(),
                         tahunMobil = dtr["tahunMobil"].ToString(),
@@ -143,10 +148,12 @@ namespace SistemSewaMobil.Model.Repository
             try
             {
                 // SQL using LIKE for partial matching
-                string sql = @"SELECT idMobil, noPolisi, merkMobil, tahunMobil, statusKetersediaan, hargaSewa 
-                               FROM mobil 
-                               WHERE merkMobil LIKE @merkMobil 
-                               ORDER BY merkMobil";
+                string sql = @"SELECT m.idMobil, m.idKategori, k.namaKategori, m.noPolisi, 
+                              m.merkMobil, m.tahunMobil, m.statusKetersediaan, m.hargaSewa 
+                       FROM mobil m
+                       JOIN kategori k ON m.idKategori = k.idKategori
+                       WHERE m.merkMobil LIKE @merkMobil 
+                       ORDER BY m.merkMobil";
 
                 using (SqlCommand cmd = new SqlCommand(sql, _conn))
                 {
@@ -159,6 +166,8 @@ namespace SistemSewaMobil.Model.Repository
                         {
                             Mobil m = new Mobil();
                             m.idMobil = dtr["idMobil"].ToString();
+                            m.idKategori = dtr["idKategori"].ToString();
+                            m.namaKategori = dtr["namaKategori"].ToString();
                             m.noPolisi = dtr["noPolisi"].ToString();
                             m.merkMobil = dtr["merkMobil"].ToString();
                             m.tahunMobil = dtr["tahunMobil"].ToString();
