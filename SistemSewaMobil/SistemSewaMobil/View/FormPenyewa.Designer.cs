@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPenyewa));
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lvwDaftarPenyewa = new System.Windows.Forms.ListView();
@@ -66,11 +67,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("DejaVu Sans Mono", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(244, 52);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("DejaVu Sans Mono", 19.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(14, 68);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(303, 31);
+            this.label1.Size = new System.Drawing.Size(357, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "Informasi Penyewa";
             // 
@@ -79,9 +82,9 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.Controls.Add(this.lvwDaftarPenyewa, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 139);
+            this.tableLayoutPanel1.Controls.Add(this.lvwDaftarPenyewa, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 203);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -172,7 +175,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(891, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(985, 28);
             this.menuStrip1.TabIndex = 25;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -309,16 +312,19 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 102);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(17, 166);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 16);
+            this.label2.Size = new System.Drawing.Size(137, 16);
             this.label2.TabIndex = 26;
             this.label2.Text = "Cari data Penyewa";
             // 
             // txtCariPenyewa
             // 
-            this.txtCariPenyewa.Location = new System.Drawing.Point(161, 99);
+            this.txtCariPenyewa.Location = new System.Drawing.Point(172, 166);
             this.txtCariPenyewa.Margin = new System.Windows.Forms.Padding(4);
             this.txtCariPenyewa.Name = "txtCariPenyewa";
             this.txtCariPenyewa.Size = new System.Drawing.Size(609, 22);
@@ -326,7 +332,7 @@
             // 
             // btnCariPenyewa
             // 
-            this.btnCariPenyewa.Location = new System.Drawing.Point(778, 96);
+            this.btnCariPenyewa.Location = new System.Drawing.Point(789, 163);
             this.btnCariPenyewa.Margin = new System.Windows.Forms.Padding(4);
             this.btnCariPenyewa.Name = "btnCariPenyewa";
             this.btnCariPenyewa.Size = new System.Drawing.Size(92, 25);
@@ -338,7 +344,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(891, 598);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(985, 659);
             this.Controls.Add(this.btnCariPenyewa);
             this.Controls.Add(this.txtCariPenyewa);
             this.Controls.Add(this.label2);

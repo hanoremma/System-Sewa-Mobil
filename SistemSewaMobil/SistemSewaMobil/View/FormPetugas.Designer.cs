@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPetugas));
             this.btnCariPetugas = new System.Windows.Forms.Button();
             this.txtCariPetugas = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,7 +46,7 @@
             // 
             // btnCariPetugas
             // 
-            this.btnCariPetugas.Location = new System.Drawing.Point(783, 86);
+            this.btnCariPetugas.Location = new System.Drawing.Point(783, 119);
             this.btnCariPetugas.Margin = new System.Windows.Forms.Padding(4);
             this.btnCariPetugas.Name = "btnCariPetugas";
             this.btnCariPetugas.Size = new System.Drawing.Size(92, 25);
@@ -55,7 +56,7 @@
             // 
             // txtCariPetugas
             // 
-            this.txtCariPetugas.Location = new System.Drawing.Point(162, 86);
+            this.txtCariPetugas.Location = new System.Drawing.Point(162, 119);
             this.txtCariPetugas.Margin = new System.Windows.Forms.Padding(4);
             this.txtCariPetugas.Name = "txtCariPetugas";
             this.txtCariPetugas.Size = new System.Drawing.Size(613, 22);
@@ -64,10 +65,13 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 89);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(26, 122);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 16);
+            this.label2.Size = new System.Drawing.Size(131, 16);
             this.label2.TabIndex = 31;
             this.label2.Text = "Cari data Petugas";
             // 
@@ -78,7 +82,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel1.Controls.Add(this.lvwDaftarPenyewa, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(22, 126);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(22, 159);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -159,11 +163,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("DejaVu Sans Mono", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(287, 36);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("DejaVu Sans Mono", 19F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(24, 41);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(303, 31);
+            this.label1.Size = new System.Drawing.Size(357, 38);
             this.label1.TabIndex = 29;
             this.label1.Text = "Informasi Petugas";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -172,7 +178,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(891, 597);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1052, 627);
             this.Controls.Add(this.btnCariPetugas);
             this.Controls.Add(this.txtCariPetugas);
             this.Controls.Add(this.label2);

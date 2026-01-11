@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDetailSewa));
             this.label1 = new System.Windows.Forms.Label();
             this.btnLihatInfoPenyewaDetailSewa = new System.Windows.Forms.Button();
             this.btnResetDetailSewa = new System.Windows.Forms.Button();
@@ -77,11 +78,12 @@
             this.txtAlamatDetailSewa = new System.Windows.Forms.TextBox();
             this.ktpNoKtpDetailSewa = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtIdPenyewaDetailSewa = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbljam = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtIdPenyewaDetailSewa = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -97,7 +99,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("DejaVu Sans Mono", 19F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(177, 92);
+            this.label1.Location = new System.Drawing.Point(595, 77);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(357, 38);
@@ -107,8 +109,8 @@
             // 
             // btnLihatInfoPenyewaDetailSewa
             // 
-            this.btnLihatInfoPenyewaDetailSewa.Location = new System.Drawing.Point(305, 632);
-            this.btnLihatInfoPenyewaDetailSewa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLihatInfoPenyewaDetailSewa.Location = new System.Drawing.Point(674, 636);
+            this.btnLihatInfoPenyewaDetailSewa.Margin = new System.Windows.Forms.Padding(4);
             this.btnLihatInfoPenyewaDetailSewa.Name = "btnLihatInfoPenyewaDetailSewa";
             this.btnLihatInfoPenyewaDetailSewa.Size = new System.Drawing.Size(216, 31);
             this.btnLihatInfoPenyewaDetailSewa.TabIndex = 2;
@@ -118,8 +120,8 @@
             // 
             // btnResetDetailSewa
             // 
-            this.btnResetDetailSewa.Location = new System.Drawing.Point(27, 593);
-            this.btnResetDetailSewa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnResetDetailSewa.Location = new System.Drawing.Point(396, 597);
+            this.btnResetDetailSewa.Margin = new System.Windows.Forms.Padding(4);
             this.btnResetDetailSewa.Name = "btnResetDetailSewa";
             this.btnResetDetailSewa.Size = new System.Drawing.Size(124, 31);
             this.btnResetDetailSewa.TabIndex = 1;
@@ -128,8 +130,8 @@
             // 
             // btnSimpanDetailSewa
             // 
-            this.btnSimpanDetailSewa.Location = new System.Drawing.Point(27, 632);
-            this.btnSimpanDetailSewa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSimpanDetailSewa.Location = new System.Drawing.Point(396, 636);
+            this.btnSimpanDetailSewa.Margin = new System.Windows.Forms.Padding(4);
             this.btnSimpanDetailSewa.Name = "btnSimpanDetailSewa";
             this.btnSimpanDetailSewa.Size = new System.Drawing.Size(124, 31);
             this.btnSimpanDetailSewa.TabIndex = 0;
@@ -139,8 +141,8 @@
             // 
             // btnLihatInfoMobilDetailSewa
             // 
-            this.btnLihatInfoMobilDetailSewa.Location = new System.Drawing.Point(305, 593);
-            this.btnLihatInfoMobilDetailSewa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLihatInfoMobilDetailSewa.Location = new System.Drawing.Point(674, 597);
+            this.btnLihatInfoMobilDetailSewa.Margin = new System.Windows.Forms.Padding(4);
             this.btnLihatInfoMobilDetailSewa.Name = "btnLihatInfoMobilDetailSewa";
             this.btnLihatInfoMobilDetailSewa.Size = new System.Drawing.Size(216, 31);
             this.btnLihatInfoMobilDetailSewa.TabIndex = 3;
@@ -160,7 +162,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(557, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1262, 28);
             this.menuStrip1.TabIndex = 24;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -295,18 +297,18 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.Fuchsia;
-            this.label8.Location = new System.Drawing.Point(4, 385);
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(4, 350);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(178, 16);
+            this.label8.Size = new System.Drawing.Size(154, 32);
             this.label8.TabIndex = 16;
             this.label8.Text = "Informasi Mobil yang Terpilih";
             // 
             // splitContainer1
             // 
             this.splitContainer1.Location = new System.Drawing.Point(204, 354);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -326,9 +328,9 @@
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Location = new System.Drawing.Point(4, 4);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(105, 20);
+            this.radioButton3.Size = new System.Drawing.Size(116, 20);
             this.radioButton3.TabIndex = 11;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Belum Lunas";
@@ -338,9 +340,9 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(453, 4);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(101, 20);
+            this.radioButton1.Size = new System.Drawing.Size(112, 20);
             this.radioButton1.TabIndex = 9;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Belum lunas";
@@ -350,9 +352,9 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(19, 4);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(64, 20);
+            this.radioButton2.Size = new System.Drawing.Size(69, 20);
             this.radioButton2.TabIndex = 10;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Lunas";
@@ -368,7 +370,7 @@
             "Cash",
             "Debit"});
             this.comboBox4.Location = new System.Drawing.Point(204, 319);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(240, 24);
             this.comboBox4.TabIndex = 23;
@@ -376,18 +378,18 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Fuchsia;
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(4, 315);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 16);
+            this.label5.Size = new System.Drawing.Size(151, 16);
             this.label5.TabIndex = 8;
             this.label5.Text = "Metode Pembayaran";
             // 
             // txt
             // 
             this.txt.Location = new System.Drawing.Point(204, 284);
-            this.txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt.Margin = new System.Windows.Forms.Padding(4);
             this.txt.Name = "txt";
             this.txt.Size = new System.Drawing.Size(240, 22);
             this.txt.TabIndex = 22;
@@ -395,18 +397,19 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Fuchsia;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(4, 280);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 16);
+            this.label6.Size = new System.Drawing.Size(43, 16);
             this.label6.TabIndex = 11;
             this.label6.Text = "Total";
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(204, 249);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(240, 22);
             this.dateTimePicker1.TabIndex = 5;
@@ -414,18 +417,19 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Fuchsia;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(4, 245);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 16);
+            this.label4.Size = new System.Drawing.Size(125, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "Tanggal Kembali";
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Location = new System.Drawing.Point(204, 214);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(240, 22);
             this.dateTimePicker2.TabIndex = 6;
@@ -433,11 +437,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Fuchsia;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(4, 210);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 16);
+            this.label3.Size = new System.Drawing.Size(107, 16);
             this.label3.TabIndex = 3;
             this.label3.Text = "Tanggal Sewa";
             // 
@@ -454,7 +458,7 @@
             "Suzuki Ertiga B 9999 XYZ",
             "Toyota Innova D 1111 CCC"});
             this.cmbMobilYangDisewaDetailSewa.Location = new System.Drawing.Point(204, 179);
-            this.cmbMobilYangDisewaDetailSewa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbMobilYangDisewaDetailSewa.Margin = new System.Windows.Forms.Padding(4);
             this.cmbMobilYangDisewaDetailSewa.Name = "cmbMobilYangDisewaDetailSewa";
             this.cmbMobilYangDisewaDetailSewa.Size = new System.Drawing.Size(240, 24);
             this.cmbMobilYangDisewaDetailSewa.TabIndex = 21;
@@ -463,40 +467,40 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Fuchsia;
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label9.Location = new System.Drawing.Point(4, 175);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(119, 16);
+            this.label9.Size = new System.Drawing.Size(136, 16);
             this.label9.TabIndex = 21;
             this.label9.Text = "Mobil yang disewa";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.Fuchsia;
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label11.Location = new System.Drawing.Point(4, 140);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(54, 16);
+            this.label11.Size = new System.Drawing.Size(60, 16);
             this.label11.TabIndex = 28;
             this.label11.Text = "No KTP";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.Fuchsia;
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label10.Location = new System.Drawing.Point(4, 105);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 16);
+            this.label10.Size = new System.Drawing.Size(55, 16);
             this.label10.TabIndex = 27;
             this.label10.Text = "Alamat";
             // 
             // txtNamaPenyewaDetailSewa
             // 
             this.txtNamaPenyewaDetailSewa.Location = new System.Drawing.Point(204, 39);
-            this.txtNamaPenyewaDetailSewa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNamaPenyewaDetailSewa.Margin = new System.Windows.Forms.Padding(4);
             this.txtNamaPenyewaDetailSewa.Name = "txtNamaPenyewaDetailSewa";
             this.txtNamaPenyewaDetailSewa.Size = new System.Drawing.Size(240, 22);
             this.txtNamaPenyewaDetailSewa.TabIndex = 1;
@@ -505,7 +509,7 @@
             // txtNoHpDetailSewa
             // 
             this.txtNoHpDetailSewa.Location = new System.Drawing.Point(204, 74);
-            this.txtNoHpDetailSewa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNoHpDetailSewa.Margin = new System.Windows.Forms.Padding(4);
             this.txtNoHpDetailSewa.Name = "txtNoHpDetailSewa";
             this.txtNoHpDetailSewa.Size = new System.Drawing.Size(240, 22);
             this.txtNoHpDetailSewa.TabIndex = 26;
@@ -513,29 +517,29 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.Fuchsia;
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.Location = new System.Drawing.Point(4, 70);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 16);
+            this.label7.Size = new System.Drawing.Size(52, 16);
             this.label7.TabIndex = 25;
             this.label7.Text = "No HP";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Fuchsia;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(4, 35);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 16);
+            this.label2.Size = new System.Drawing.Size(115, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nama Penyewa";
             // 
             // txtAlamatDetailSewa
             // 
             this.txtAlamatDetailSewa.Location = new System.Drawing.Point(204, 109);
-            this.txtAlamatDetailSewa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAlamatDetailSewa.Margin = new System.Windows.Forms.Padding(4);
             this.txtAlamatDetailSewa.Name = "txtAlamatDetailSewa";
             this.txtAlamatDetailSewa.Size = new System.Drawing.Size(240, 22);
             this.txtAlamatDetailSewa.TabIndex = 29;
@@ -543,7 +547,7 @@
             // ktpNoKtpDetailSewa
             // 
             this.ktpNoKtpDetailSewa.Location = new System.Drawing.Point(204, 144);
-            this.ktpNoKtpDetailSewa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ktpNoKtpDetailSewa.Margin = new System.Windows.Forms.Padding(4);
             this.ktpNoKtpDetailSewa.Name = "ktpNoKtpDetailSewa";
             this.ktpNoKtpDetailSewa.Size = new System.Drawing.Size(240, 22);
             this.ktpNoKtpDetailSewa.TabIndex = 30;
@@ -558,7 +562,6 @@
             this.tableLayoutPanel1.Controls.Add(this.txtIdPenyewaDetailSewa, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label12, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.splitContainer1, 1, 10);
-            this.tableLayoutPanel1.Controls.Add(this.label8, 0, 11);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 7);
@@ -577,9 +580,11 @@
             this.tableLayoutPanel1.Controls.Add(this.txtAlamatDetailSewa, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtNoHpDetailSewa, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtNamaPenyewaDetailSewa, 1, 1);
-            this.tableLayoutPanel1.ForeColor = System.Drawing.Color.Fuchsia;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 149);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label8, 0, 10);
+            this.tableLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableLayoutPanel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(382, 153);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 12;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
@@ -596,46 +601,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(532, 420);
             this.tableLayoutPanel1.TabIndex = 20;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 30);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 102);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lbljam
-            // 
-            this.lbljam.AutoSize = true;
-            this.lbljam.BackColor = System.Drawing.Color.Transparent;
-            this.lbljam.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbljam.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbljam.Location = new System.Drawing.Point(721, 73);
-            this.lbljam.Name = "lbljam";
-            this.lbljam.Size = new System.Drawing.Size(174, 46);
-            this.lbljam.TabIndex = 26;
-            this.lbljam.Text = "00:00:00";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.Fuchsia;
-            this.label12.Location = new System.Drawing.Point(4, 0);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(77, 16);
-            this.label12.TabIndex = 31;
-            this.label12.Text = "Id Penyewa";
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // txtIdPenyewaDetailSewa
             // 
@@ -645,11 +611,63 @@
             this.txtIdPenyewaDetailSewa.Size = new System.Drawing.Size(240, 22);
             this.txtIdPenyewaDetailSewa.TabIndex = 32;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label12.Location = new System.Drawing.Point(4, 0);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(87, 16);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "Id Penyewa";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(368, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(220, 170);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lbljam
+            // 
+            this.lbljam.AutoSize = true;
+            this.lbljam.BackColor = System.Drawing.Color.Transparent;
+            this.lbljam.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbljam.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbljam.Location = new System.Drawing.Point(1098, 30);
+            this.lbljam.Name = "lbljam";
+            this.lbljam.Size = new System.Drawing.Size(164, 49);
+            this.lbljam.TabIndex = 26;
+            this.lbljam.Text = "00:00:00";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(29, 279);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(195, 16);
+            this.label13.TabIndex = 27;
+            this.label13.Text = "Sini buat sidebar jangan diubah";
+            // 
             // FormDetailSewa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 691);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1262, 691);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.lbljam);
             this.Controls.Add(this.btnLihatInfoMobilDetailSewa);
             this.Controls.Add(this.btnLihatInfoPenyewaDetailSewa);
@@ -660,7 +678,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.pictureBox1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormDetailSewa";
             this.Text = "Main";
             this.Load += new System.EventHandler(this.Form1_Load_1);
@@ -735,6 +753,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TextBox txtIdPenyewaDetailSewa;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
     }
 }
 

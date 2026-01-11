@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMobil));
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -66,22 +67,24 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("DejaVu Sans Mono", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(275, 41);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("DejaVu Sans Mono", 19F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(31, 76);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(269, 31);
+            this.label1.Size = new System.Drawing.Size(317, 38);
             this.label1.TabIndex = 1;
             this.label1.Text = "Informasi Mobil";
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 807F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 854F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lvwDaftarMobil, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(18, 129);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 210);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 400F));
@@ -101,18 +104,18 @@
             this.tableLayoutPanel2.Controls.Add(this.btnTambahMobil, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdateMobil, 1, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 404);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(846, 48);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // btnSelesaiMobil
             // 
             this.btnSelesaiMobil.Location = new System.Drawing.Point(703, 4);
-            this.btnSelesaiMobil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSelesaiMobil.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelesaiMobil.Name = "btnSelesaiMobil";
             this.btnSelesaiMobil.Size = new System.Drawing.Size(143, 40);
             this.btnSelesaiMobil.TabIndex = 0;
@@ -123,7 +126,7 @@
             // btnHapusMobil
             // 
             this.btnHapusMobil.Location = new System.Drawing.Point(232, 4);
-            this.btnHapusMobil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHapusMobil.Margin = new System.Windows.Forms.Padding(4);
             this.btnHapusMobil.Name = "btnHapusMobil";
             this.btnHapusMobil.Size = new System.Drawing.Size(99, 40);
             this.btnHapusMobil.TabIndex = 1;
@@ -145,7 +148,7 @@
             // btnUpdateMobil
             // 
             this.btnUpdateMobil.Location = new System.Drawing.Point(120, 4);
-            this.btnUpdateMobil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdateMobil.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateMobil.Name = "btnUpdateMobil";
             this.btnUpdateMobil.Size = new System.Drawing.Size(100, 40);
             this.btnUpdateMobil.TabIndex = 2;
@@ -157,7 +160,7 @@
             // 
             this.lvwDaftarMobil.HideSelection = false;
             this.lvwDaftarMobil.Location = new System.Drawing.Point(4, 4);
-            this.lvwDaftarMobil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lvwDaftarMobil.Margin = new System.Windows.Forms.Padding(4);
             this.lvwDaftarMobil.Name = "lvwDaftarMobil";
             this.lvwDaftarMobil.Size = new System.Drawing.Size(846, 392);
             this.lvwDaftarMobil.TabIndex = 0;
@@ -175,7 +178,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(890, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1136, 28);
             this.menuStrip1.TabIndex = 25;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -310,25 +313,28 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 90);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(21, 171);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 16);
+            this.label2.Size = new System.Drawing.Size(112, 16);
             this.label2.TabIndex = 26;
             this.label2.Text = "Cari data mobil";
             // 
             // txtCariMobil
             // 
-            this.txtCariMobil.Location = new System.Drawing.Point(135, 86);
-            this.txtCariMobil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCariMobil.Location = new System.Drawing.Point(154, 171);
+            this.txtCariMobil.Margin = new System.Windows.Forms.Padding(4);
             this.txtCariMobil.Name = "txtCariMobil";
             this.txtCariMobil.Size = new System.Drawing.Size(607, 22);
             this.txtCariMobil.TabIndex = 27;
             // 
             // btnCariMobil
             // 
-            this.btnCariMobil.Location = new System.Drawing.Point(750, 86);
-            this.btnCariMobil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCariMobil.Location = new System.Drawing.Point(779, 167);
+            this.btnCariMobil.Margin = new System.Windows.Forms.Padding(4);
             this.btnCariMobil.Name = "btnCariMobil";
             this.btnCariMobil.Size = new System.Drawing.Size(112, 26);
             this.btnCariMobil.TabIndex = 28;
@@ -340,14 +346,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(890, 598);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1136, 695);
             this.Controls.Add(this.btnCariMobil);
             this.Controls.Add(this.txtCariMobil);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMobil";
             this.Text = "Mobil";
             this.Load += new System.EventHandler(this.infoMobilTersedia_Load);

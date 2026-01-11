@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEntryPenyewa));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,45 +47,60 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(133, 160);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 16);
+            this.label1.Size = new System.Drawing.Size(20, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Id";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(133, 235);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 16);
+            this.label2.Size = new System.Drawing.Size(55, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Alamat";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(133, 198);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 16);
+            this.label3.Size = new System.Drawing.Size(48, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Nama";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Location = new System.Drawing.Point(133, 273);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 16);
+            this.label4.Size = new System.Drawing.Size(53, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "No Ktp";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
             this.label5.Location = new System.Drawing.Point(133, 314);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 16);
+            this.label5.Size = new System.Drawing.Size(51, 16);
             this.label5.TabIndex = 4;
             this.label5.Text = "No Hp";
             // 
@@ -126,26 +142,30 @@
             // 
             // btnSimpanEntryPenyewa
             // 
+            this.btnSimpanEntryPenyewa.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSimpanEntryPenyewa.Location = new System.Drawing.Point(126, 377);
             this.btnSimpanEntryPenyewa.Name = "btnSimpanEntryPenyewa";
             this.btnSimpanEntryPenyewa.Size = new System.Drawing.Size(127, 34);
             this.btnSimpanEntryPenyewa.TabIndex = 10;
             this.btnSimpanEntryPenyewa.Text = "Simpan";
-            this.btnSimpanEntryPenyewa.UseVisualStyleBackColor = true;
+            this.btnSimpanEntryPenyewa.UseVisualStyleBackColor = false;
             // 
             // btnSelesaiEntryPenyewa
             // 
+            this.btnSelesaiEntryPenyewa.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSelesaiEntryPenyewa.Location = new System.Drawing.Point(276, 377);
             this.btnSelesaiEntryPenyewa.Name = "btnSelesaiEntryPenyewa";
             this.btnSelesaiEntryPenyewa.Size = new System.Drawing.Size(127, 34);
             this.btnSelesaiEntryPenyewa.TabIndex = 11;
             this.btnSelesaiEntryPenyewa.Text = "Selesai";
-            this.btnSelesaiEntryPenyewa.UseVisualStyleBackColor = true;
+            this.btnSelesaiEntryPenyewa.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("DejaVu Sans Mono", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
             this.label6.Location = new System.Drawing.Point(146, 61);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
@@ -157,6 +177,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(530, 480);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnSelesaiEntryPenyewa);

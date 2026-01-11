@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEntryPetugas));
             this.btnSelesaiEntryPetugas = new System.Windows.Forms.Button();
             this.btnSimpanEntryPetugas = new System.Windows.Forms.Button();
             this.txtNoHpEntryPetugas = new System.Windows.Forms.TextBox();
@@ -41,21 +42,23 @@
             // 
             // btnSelesaiEntryPetugas
             // 
-            this.btnSelesaiEntryPetugas.Location = new System.Drawing.Point(274, 328);
+            this.btnSelesaiEntryPetugas.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSelesaiEntryPetugas.Location = new System.Drawing.Point(272, 343);
             this.btnSelesaiEntryPetugas.Name = "btnSelesaiEntryPetugas";
             this.btnSelesaiEntryPetugas.Size = new System.Drawing.Size(127, 34);
             this.btnSelesaiEntryPetugas.TabIndex = 31;
             this.btnSelesaiEntryPetugas.Text = "Selesai";
-            this.btnSelesaiEntryPetugas.UseVisualStyleBackColor = true;
+            this.btnSelesaiEntryPetugas.UseVisualStyleBackColor = false;
             // 
             // btnSimpanEntryPetugas
             // 
-            this.btnSimpanEntryPetugas.Location = new System.Drawing.Point(124, 328);
+            this.btnSimpanEntryPetugas.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSimpanEntryPetugas.Location = new System.Drawing.Point(122, 343);
             this.btnSimpanEntryPetugas.Name = "btnSimpanEntryPetugas";
             this.btnSimpanEntryPetugas.Size = new System.Drawing.Size(127, 34);
             this.btnSimpanEntryPetugas.TabIndex = 30;
             this.btnSimpanEntryPetugas.Text = "Simpan";
-            this.btnSimpanEntryPetugas.UseVisualStyleBackColor = true;
+            this.btnSimpanEntryPetugas.UseVisualStyleBackColor = false;
             // 
             // txtNoHpEntryPetugas
             // 
@@ -81,34 +84,45 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(133, 258);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 16);
+            this.label5.Size = new System.Drawing.Size(51, 16);
             this.label5.TabIndex = 26;
             this.label5.Text = "No Hp";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(133, 217);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 16);
+            this.label3.Size = new System.Drawing.Size(48, 16);
             this.label3.TabIndex = 25;
             this.label3.Text = "Nama";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(133, 179);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 16);
+            this.label1.Size = new System.Drawing.Size(20, 16);
             this.label1.TabIndex = 24;
             this.label1.Text = "Id";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("DejaVu Sans Mono", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(103, 85);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -120,6 +134,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(537, 477);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSelesaiEntryPetugas);

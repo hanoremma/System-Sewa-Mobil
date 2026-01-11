@@ -21,6 +21,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKategori));
             this.btnCariKategori = new System.Windows.Forms.Button();
             this.txtCariKategori = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,13 +43,14 @@
             // 
             // btnCariKategori
             // 
+            this.btnCariKategori.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCariKategori.Location = new System.Drawing.Point(719, 201);
             this.btnCariKategori.Margin = new System.Windows.Forms.Padding(4);
             this.btnCariKategori.Name = "btnCariKategori";
             this.btnCariKategori.Size = new System.Drawing.Size(92, 25);
             this.btnCariKategori.TabIndex = 33;
             this.btnCariKategori.Text = "Cari";
-            this.btnCariKategori.UseVisualStyleBackColor = true;
+            this.btnCariKategori.UseVisualStyleBackColor = false;
             this.btnCariKategori.Click += new System.EventHandler(this.btnCariKategori_Click);
             // 
             // txtCariKategori
@@ -62,15 +64,19 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(34, 192);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 16);
+            this.label2.Size = new System.Drawing.Size(97, 16);
             this.label2.TabIndex = 31;
             this.label2.Text = "Cari Kategori";
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
@@ -87,6 +93,7 @@
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tableLayoutPanel2.ColumnCount = 4;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
@@ -150,6 +157,7 @@
             // 
             // lvwDaftarKategori
             // 
+            this.lvwDaftarKategori.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lvwDaftarKategori.HideSelection = false;
             this.lvwDaftarKategori.Location = new System.Drawing.Point(4, 4);
             this.lvwDaftarKategori.Margin = new System.Windows.Forms.Padding(4);
@@ -161,8 +169,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("DejaVu Sans Mono", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(206, 49);
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(31, 47);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(337, 31);
@@ -172,20 +182,26 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(34, 134);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 16);
+            this.label3.Size = new System.Drawing.Size(64, 16);
             this.label3.TabIndex = 34;
             this.label3.Text = "ID Mobil";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Location = new System.Drawing.Point(34, 164);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 16);
+            this.label4.Size = new System.Drawing.Size(110, 16);
             this.label4.TabIndex = 35;
             this.label4.Text = "Nama Kategori";
             // 
@@ -209,6 +225,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(865, 707);
             this.Controls.Add(this.txtNamaKategori);
             this.Controls.Add(this.txtIdKategoriMobil);
