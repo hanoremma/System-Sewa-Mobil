@@ -93,5 +93,75 @@ namespace SistemSewaMobil
         {
 
         }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        bool sidebarExpand;
+        private void sidebarTimer_Tick(object sender, EventArgs e)
+        {
+            int step = 10;
+
+            if (sidebarExpand)
+            {
+                sidebar.Width -= step;
+                if (sidebar.Width <= sidebar.MinimumSize.Width)
+                {
+                    sidebarExpand = false;
+                    sidebarTimer.Stop();
+                }
+            }
+            else
+            {
+                sidebar.Width += step;
+                if (sidebar.Width >= sidebar.MaximumSize.Width)
+                {
+                    sidebarExpand = true;
+                    sidebarTimer.Stop();
+                }
+            }
+
+        }
+
+        private void menuButton_Click(object sender, EventArgs e)
+        {
+            sidebarTimer.Start();
+        }
+
+        private void lbljam_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+            "Yakin ingin keluar?",
+            "Konfirmasi",
+             MessageBoxButtons.YesNo,
+             MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void jam_Tick(object sender, EventArgs e)
+        {
+            lbljam.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
     }
 }
