@@ -89,14 +89,14 @@ namespace SistemSewaMobil.Controller
                 return repo.ReadAll();
             }
         }
-        public List<Petugas> ReadByNamaPetugas(string nama)
+        public List<Petugas> ReadByNamaPetugas(string namapetugas)
         {
             List<Petugas> list = new List<Petugas>();
 
             using (DbContext context = new DbContext())
             {
                 var repo = new PetugasRepository(context);
-                list = repo.ReadByNamaPetugas(nama);
+                list = repo.ReadByNamaPetugas(namapetugas);
             }
 
             return list;

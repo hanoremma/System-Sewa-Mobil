@@ -51,7 +51,7 @@ namespace SistemSewaMobil.Model.Repository
             string sql = @"UPDATE petugas SET
                     namaPetugas = @namaPetugas,
                     noHpPetugas = @noHpPetugas,
-                    alamatPetugas = @alamatPetugas
+                    alamatPetugas = @alamatPetugas 
                    WHERE idPetugas = @idPetugas";
 
             using (SqlCommand cmd = new SqlCommand(sql, _conn))
@@ -118,14 +118,14 @@ namespace SistemSewaMobil.Model.Repository
 
             return list;
         }
-        public List<Petugas> ReadByNamaPetugas(string nama)
+        public List<Petugas> ReadByNamaPetugas(string namapetugas)
         {
             List<Petugas> list = new List<Petugas>();
 
             try
             {
                 // SQL using LIKE for partial matching
-                string sql = @"SELECT idPetugas, namaPetugas, noHpPetugas, alamatPetugas,
+                string sql = @"SELECT idPetugas, namaPetugas, noHpPetugas, alamatPetugas
                                FROM petugas
                                WHERE namaPetugas LIKE @namaPetugas
                                ORDER BY namaPetugas";
@@ -133,19 +133,19 @@ namespace SistemSewaMobil.Model.Repository
                 using (SqlCommand cmd = new SqlCommand(sql, _conn))
                 {
                     // Use wildcard % for search (e.g., "Avanza" becomes "%Avanza%")
-                    cmd.Parameters.AddWithValue("@namaPetugas", string.Format("%{0}%", nama));
+                    cmd.Parameters.AddWithValue("@namaPetugas", string.Format("%{0}%", namapetugas));
 
                     using (SqlDataReader dtr = cmd.ExecuteReader())
                     {
                         while (dtr.Read())
                         {
-                            Petugas p = new Petugas();
-                            p.idPetugas = dtr["idPenyewa"].ToString();
-                            p.namaPetugas = dtr["namaPenyewa"].ToString();
-                            p.noHpPetugas = dtr["alamatPenyewa"].ToString();
-                            p.alamatPetugas = dtr["noKtpPenyewa"].ToString();
+                            Petugas v = new Petugas();
+                            v.idPetugas = dtr["idPetugas"].ToString();
+                            v.namaPetugas = dtr["namaPetugas"].ToString();
+                            v.alamatPetugas = dtr["alamatPetugas"].ToString();
+                            v.noHpPetugas = dtr["noHpPetugas"].ToString();
 
-                            list.Add(p);
+                            list.Add(v);
                         }
                     }
                 }

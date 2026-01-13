@@ -10,10 +10,13 @@ namespace SistemSewaMobil.Model.Entity
     {
         public string idDetailSewa { get; set; }
         public string idPenyewa { get; set; }
+        public string namaPenyewa { get; set; }
         public string idPetugas { get; set; }
+        public string namaPetugas { get; set; }
         public string idMobil { get; set; }
-        public string tglPinjam { get; set; }
-        public string tglKembali { get; set; }
+        public string namaMobil { get; set; }
+        public DateTime tglPinjam { get; set; }
+        public DateTime tglKembali { get; set; }
         public string statusPenyewaan { get; set; }
         public string totalBiaya { get; set; }
 
