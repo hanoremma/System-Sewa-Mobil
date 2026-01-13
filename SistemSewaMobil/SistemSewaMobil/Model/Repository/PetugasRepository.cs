@@ -23,8 +23,8 @@ namespace SistemSewaMobil.Model.Repository
         {
             int result = 0;
             // Perintah SQL Insert
-            string sql = @"INSERT INTO petugas (idPetugas, namaPetugas, noHpPetugas, alamatPetugas) 
-                           VALUES (@idPetugas, @namaPetugas, @noHpPetugas, @alamatPetugas)";
+            string sql = @"INSERT INTO petugas (namaPetugas, noHpPetugas, alamatPetugas) 
+                           VALUES (@namaPetugas, @noHpPetugas, @alamatPetugas)";
 
             using (SqlCommand cmd = new SqlCommand(sql, _conn))
             {
