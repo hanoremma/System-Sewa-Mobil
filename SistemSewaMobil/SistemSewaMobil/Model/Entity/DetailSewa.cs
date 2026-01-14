@@ -18,7 +18,7 @@ namespace SistemSewaMobil.Model.Entity
         public DateTime tglPinjam { get; set; }
         public DateTime tglKembali { get; set; }
         public string statusPenyewaan { get; set; }
-        public string totalBiaya { get; set; }
+        public int totalBiaya { get; set; }
 
     }
 }

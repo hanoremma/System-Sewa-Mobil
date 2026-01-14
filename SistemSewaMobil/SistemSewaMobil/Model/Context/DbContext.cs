@@ -11,10 +11,11 @@ namespace SistemSewaMobil.Model.Context
         public DbContext()
         {
             string connectionString =
-                @"Data Source=EMA_PC\SQLEXPRESS;
-                Initial Catalog=sistemSewaMobil;
-                Integrated Security=True;
-                TrustServerCertificate=True;";
+                @"Data Source=192.168.1.56,1433;
+                  Initial Catalog=sistemSewaMobil;
+                  User ID=sa;
+                  Password=Pass0912;
+                  TrustServerCertificate=True;";
 
             Conn = new SqlConnection(connectionString);
             Conn.Open();
