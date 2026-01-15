@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient; 
+using System.Configuration;
 
 namespace SistemSewaMobil.Model.Context
 {
@@ -11,11 +12,8 @@ namespace SistemSewaMobil.Model.Context
         public DbContext()
         {
             string connectionString =
-                @"Data Source=192.168.1.56,1433;
-                  Initial Catalog=sistemSewaMobil;
-                  User ID=sa;
-                  Password=Pass0912;
-                  TrustServerCertificate=True;";
+                ConfigurationManager.ConnectionStrings["DB"].ConnectionString;
+
 
             Conn = new SqlConnection(connectionString);
             Conn.Open();

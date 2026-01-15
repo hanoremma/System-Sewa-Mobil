@@ -82,10 +82,10 @@ namespace SistemSewaMobil.Model.Repository
 
             return result;
         }
-        public int Delete(Penyewa penyewa)
+        public int Delete(DetailSewa detailsewa)
         {
             int result = 0;
-            string sql = @"DELETE FROM penyewa WHERE idMobil = @idMobil";
+            string sql = @"DELETE FROM detailSewa WHERE idDetailSewa = @idDetailSewa";
 
             using (SqlCommand cmd = new SqlCommand(sql, _conn))
             {
