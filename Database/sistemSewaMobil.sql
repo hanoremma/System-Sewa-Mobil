@@ -520,3 +520,27 @@ VALUES
 ('K001', 'B 1234 ABC', 'Toyota Avanza', '2022', 'tersedia', 350000),
 ('K001', 'D 5678 XYZ', 'Honda Brio', '2021', 'tersedia', 250000),
 ('K002', 'L 9101 QWE', 'Mitsubishi Xpander', '2023', 'Tidak tersedia', 450000);
+
+
+SELECT 
+    ds.idDetailSewa,
+    p.idPenyewa,
+    p.namaPenyewa,
+    p.alamatPenyewa,
+    p.noKtpPenyewa,
+    p.noHpPenyewa,
+    pt.idPetugas,
+    pt.namaPetugas,
+    m.idMobil,
+    m.noPolisi,
+    m.merkMobil,
+    ds.tglPinjam,
+    ds.tglKembali,
+    ds.statusPenyewaan,
+    ds.totalBiaya
+
+FROM detailSewa ds
+JOIN penyewa p   ON ds.idPenyewa = p.idPenyewa
+JOIN petugas pt  ON ds.idPetugas = pt.idPetugas
+JOIN mobil m     ON ds.idMobil = m.idMobil
+ORDER BY ds.tglPinjam DESC;
