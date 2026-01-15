@@ -102,5 +102,133 @@ namespace SistemSewaMobil.Model.Repository
             }
             return result;
         }
+        public List<DetailSewa> ReadAll()
+        {
+            List<DetailSewa> list = new List<DetailSewa>();
+
+            string sql = @"SELECT 
+                                ds.idDetailSewa,
+                                p.idPenyewa,
+                                p.namaPenyewa,
+                                p.alamatPenyewa,
+                                p.noKtpPenyewa,
+                                p.noHpPenyewa,
+                                pt.idPetugas,
+                                pt.namaPetugas,
+                                m.idMobil,
+                                m.noPolisi,
+                                m.merkMobil,
+                                ds.tglPinjam,
+                                ds.tglKembali,
+                                ds.statusPenyewaan,
+                                ds.totalBiaya
+
+                            FROM detailSewa ds
+                            JOIN penyewa p   ON ds.idPenyewa = p.idPenyewa
+                            JOIN petugas pt  ON ds.idPetugas = pt.idPetugas
+                            JOIN mobil m     ON ds.idMobil = m.idMobil
+                            ORDER BY ds.tglPinjam DESC";
+
+            using (SqlCommand cmd = new SqlCommand(sql, _conn))
+            using (SqlDataReader dtr = cmd.ExecuteReader())
+            {
+                while (dtr.Read())
+                {
+                    list.Add(new DetailSewa
+                    {
+                        idDetailSewa = dtr["idDetailSewa"].ToString(),
+                        idPenyewa = dtr["idPenyewa"].ToString(),
+                        namaPenyewa = dtr["namaPenyewa"].ToString(),
+                        alamatPenyewa = dtr["alamatPenyewa"].ToString(),
+                        noKtpPenyewa = dtr["noKtpPenyewa"].ToString(),
+                        noHpPenyewa = dtr["noHpPenyewa"].ToString(),
+
+                        idPetugas = dtr["idPetugas"].ToString(),
+                        namaPetugas = dtr["namaPetugas"].ToString(),
+
+                        idMobil = dtr["idMobil"].ToString(),
+                        merkMobil = dtr["merkMobil"].ToString(),
+                        noPolisi = dtr["noPolisi"].ToString(),
+
+                        tglPinjam = Convert.ToDateTime(dtr["tglPinjam"]),
+                        tglKembali = Convert.ToDateTime(dtr["tglKembali"]),
+                        statusPenyewaan = dtr["statusPenyewaan"].ToString(),
+                        totalBiaya = (int)Convert.ToDecimal(dtr["totalBiaya"])
+                    });
+                }
+            }
+
+            return list;
+        }
+        public List<DetailSewa> ReadByNamaPenyewa(string nama)
+        {
+            List<DetailSewa> list = new List<DetailSewa>();
+
+            try
+            {
+                string sql = @"
+            SELECT 
+                ds.idDetailSewa,
+                p.idPenyewa,
+                p.namaPenyewa,
+                p.alamatPenyewa,
+                p.noKtpPenyewa,
+                p.noHpPenyewa,
+                pt.idPetugas,
+                pt.namaPetugas,
+                m.idMobil,
+                m.noPolisi,
+                m.merkMobil,
+                ds.tglPinjam,
+                ds.tglKembali,
+                ds.statusPenyewaan,
+                ds.totalBiaya
+            FROM detailSewa ds
+            JOIN penyewa p   ON ds.idPenyewa = p.idPenyewa
+            JOIN petugas pt  ON ds.idPetugas = pt.idPetugas
+            JOIN mobil m     ON ds.idMobil = m.idMobil
+            WHERE p.namaPenyewa LIKE @namaPenyewa
+            ORDER BY ds.tglPinjam DESC";
+
+                using (SqlCommand cmd = new SqlCommand(sql, _conn))
+                {
+                    cmd.Parameters.AddWithValue("@namaPenyewa", $"%{nama}%");
+
+                    using (SqlDataReader dtr = cmd.ExecuteReader())
+                    {
+                        while (dtr.Read())
+                        {
+                            list.Add(new DetailSewa
+                            {
+                                idDetailSewa = dtr["idDetailSewa"].ToString(),
+                                idPenyewa = dtr["idPenyewa"].ToString(),
+                                namaPenyewa = dtr["namaPenyewa"].ToString(),
+                                alamatPenyewa = dtr["alamatPenyewa"].ToString(),
+                                noKtpPenyewa = dtr["noKtpPenyewa"].ToString(),
+                                noHpPenyewa = dtr["noHpPenyewa"].ToString(),
+
+                                idPetugas = dtr["idPetugas"].ToString(),
+                                namaPetugas = dtr["namaPetugas"].ToString(),
+
+                                idMobil = dtr["idMobil"].ToString(),
+                                merkMobil = dtr["merkMobil"].ToString(),
+                                noPolisi = dtr["noPolisi"].ToString(),
+
+                                tglPinjam = Convert.ToDateTime(dtr["tglPinjam"]),
+                                tglKembali = Convert.ToDateTime(dtr["tglKembali"]),
+                                statusPenyewaan = dtr["statusPenyewaan"].ToString(),
+                                totalBiaya = (int)Convert.ToDecimal(dtr["totalBiaya"])
+                            });
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print("ReadByNamaPenyewa Error: {0}", ex.Message);
+            }
+
+            return list;
+        }
     }
 }
