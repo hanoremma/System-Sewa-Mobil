@@ -151,6 +151,8 @@ namespace SistemSewaMobil
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Parent = panel1; // atau Form
 
         }
 
@@ -162,6 +164,18 @@ namespace SistemSewaMobil
         private void jam_Tick(object sender, EventArgs e)
         {
             lbljam.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            FormStatistik fp = new FormStatistik();
+            fp.Show();
+            this.Hide();
         }
     }
 }

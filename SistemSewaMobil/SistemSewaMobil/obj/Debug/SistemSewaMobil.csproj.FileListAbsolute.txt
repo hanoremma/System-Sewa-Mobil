@@ -68,3 +68,4 @@ C:\Users\emmah\Music\VS2022 - Github\System-Sewa-Mobil\SistemSewaMobil\SistemSew
 C:\Users\emmah\Music\VS2022 - Github\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.View.FormKategori.resources
 C:\Users\emmah\Music\VS2022 - Github\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.FormDetailSewa.resources
 C:\Users\emmah\Music\VS2022 - Github\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.View.FormPetugas.resources
+E:\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.View.FormStatistik.resources

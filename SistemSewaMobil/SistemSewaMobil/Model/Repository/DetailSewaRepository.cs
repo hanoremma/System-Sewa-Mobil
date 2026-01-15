@@ -23,7 +23,7 @@ namespace SistemSewaMobil.Model.Repository
             int result = 0;
             // Perintah SQL Insert
             string sql = @"INSERT INTO detailSewa (idPenyewa, idPetugas, idMobil, tglPinjam, tglKembali, statusPenyewaan) 
-                           VALUES (@idPenyewa, @idPetugas, @idMobil, @tglPinjma, @tglKembali, @statusPenyewaan)";
+                           VALUES (@idPenyewa, @idPetugas, @idMobil, @tglPinjam, @tglKembali, @statusPenyewaan)";
 
             using (SqlCommand cmd = new SqlCommand(sql, _conn))
             {
@@ -89,7 +89,7 @@ namespace SistemSewaMobil.Model.Repository
 
             using (SqlCommand cmd = new SqlCommand(sql, _conn))
             {
-                cmd.Parameters.AddWithValue("@idMobil", mobil.idMobil);
+               // cmd.Parameters.AddWithValue("@idMobil", mobil.idMobil);
 
                 try
                 {

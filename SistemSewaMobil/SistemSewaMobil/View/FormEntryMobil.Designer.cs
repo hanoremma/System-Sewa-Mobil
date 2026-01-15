@@ -149,7 +149,7 @@
             // txtIdMobilEntryMobil
             // 
             this.txtIdMobilEntryMobil.Location = new System.Drawing.Point(258, 97);
-            this.txtIdMobilEntryMobil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdMobilEntryMobil.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdMobilEntryMobil.Name = "txtIdMobilEntryMobil";
             this.txtIdMobilEntryMobil.Size = new System.Drawing.Size(119, 20);
             this.txtIdMobilEntryMobil.TabIndex = 8;
@@ -157,7 +157,7 @@
             // txtNoPolisiEntryMobil
             // 
             this.txtNoPolisiEntryMobil.Location = new System.Drawing.Point(258, 166);
-            this.txtNoPolisiEntryMobil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNoPolisiEntryMobil.Margin = new System.Windows.Forms.Padding(2);
             this.txtNoPolisiEntryMobil.Name = "txtNoPolisiEntryMobil";
             this.txtNoPolisiEntryMobil.Size = new System.Drawing.Size(119, 20);
             this.txtNoPolisiEntryMobil.TabIndex = 9;
@@ -165,7 +165,7 @@
             // txtMerkMobilEntryMobil
             // 
             this.txtMerkMobilEntryMobil.Location = new System.Drawing.Point(260, 193);
-            this.txtMerkMobilEntryMobil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMerkMobilEntryMobil.Margin = new System.Windows.Forms.Padding(2);
             this.txtMerkMobilEntryMobil.Name = "txtMerkMobilEntryMobil";
             this.txtMerkMobilEntryMobil.Size = new System.Drawing.Size(117, 20);
             this.txtMerkMobilEntryMobil.TabIndex = 10;
@@ -173,7 +173,7 @@
             // txtHargaSewaEntryMobil
             // 
             this.txtHargaSewaEntryMobil.Location = new System.Drawing.Point(260, 290);
-            this.txtHargaSewaEntryMobil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHargaSewaEntryMobil.Margin = new System.Windows.Forms.Padding(2);
             this.txtHargaSewaEntryMobil.Name = "txtHargaSewaEntryMobil";
             this.txtHargaSewaEntryMobil.Size = new System.Drawing.Size(117, 20);
             this.txtHargaSewaEntryMobil.TabIndex = 12;
@@ -181,7 +181,7 @@
             // txtTahunMobilEntryMobil
             // 
             this.txtTahunMobilEntryMobil.Location = new System.Drawing.Point(260, 223);
-            this.txtTahunMobilEntryMobil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTahunMobilEntryMobil.Margin = new System.Windows.Forms.Padding(2);
             this.txtTahunMobilEntryMobil.Name = "txtTahunMobilEntryMobil";
             this.txtTahunMobilEntryMobil.Size = new System.Drawing.Size(117, 20);
             this.txtTahunMobilEntryMobil.TabIndex = 11;
@@ -190,7 +190,7 @@
             // 
             this.cmbStatusTersediaEntryMobil.FormattingEnabled = true;
             this.cmbStatusTersediaEntryMobil.Location = new System.Drawing.Point(260, 254);
-            this.cmbStatusTersediaEntryMobil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbStatusTersediaEntryMobil.Margin = new System.Windows.Forms.Padding(2);
             this.cmbStatusTersediaEntryMobil.Name = "cmbStatusTersediaEntryMobil";
             this.cmbStatusTersediaEntryMobil.Size = new System.Drawing.Size(117, 21);
             this.cmbStatusTersediaEntryMobil.TabIndex = 13;
@@ -199,7 +199,7 @@
             // 
             this.btnSimpanEntryMobil.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSimpanEntryMobil.Location = new System.Drawing.Point(144, 342);
-            this.btnSimpanEntryMobil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSimpanEntryMobil.Margin = new System.Windows.Forms.Padding(2);
             this.btnSimpanEntryMobil.Name = "btnSimpanEntryMobil";
             this.btnSimpanEntryMobil.Size = new System.Drawing.Size(102, 39);
             this.btnSimpanEntryMobil.TabIndex = 14;
@@ -211,7 +211,7 @@
             // 
             this.btnSelesaiEntryMobil.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSelesaiEntryMobil.Location = new System.Drawing.Point(286, 342);
-            this.btnSelesaiEntryMobil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSelesaiEntryMobil.Margin = new System.Windows.Forms.Padding(2);
             this.btnSelesaiEntryMobil.Name = "btnSelesaiEntryMobil";
             this.btnSelesaiEntryMobil.Size = new System.Drawing.Size(102, 39);
             this.btnSelesaiEntryMobil.TabIndex = 15;
@@ -223,11 +223,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("DejaVu Sans Mono", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label9.Location = new System.Drawing.Point(159, 51);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(234, 24);
+            this.label9.Size = new System.Drawing.Size(195, 25);
             this.label9.TabIndex = 34;
             this.label9.Text = "Persediaan Mobil";
             // 
@@ -255,7 +255,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(529, 405);
+            this.ClientSize = new System.Drawing.Size(557, 408);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.cmbKategoriEntryMobil);
             this.Controls.Add(this.label9);
@@ -275,7 +275,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormEntryMobil";
             this.Text = "FormEntryMobil";
             this.Load += new System.EventHandler(this.FormEntryMobil_Load);
