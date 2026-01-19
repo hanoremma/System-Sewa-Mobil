@@ -17,10 +17,14 @@ namespace SistemSewaMobil.View
             InitializeComponent();
         }
 
-
         private void menuButton_Click(object sender, EventArgs e)
         {
             sidebarTimer.Start();
+        }
+
+        private void FormStatistik_Load(object sender, EventArgs e)
+        {
+
         }
 
         bool sidebarExpand;
@@ -48,71 +52,9 @@ namespace SistemSewaMobil.View
             }
         }
 
-        private void jam_tick_Tick(object sender, EventArgs e)
-        {
-            DateTime sekarang = DateTime.Now;
-
-            
-            lbljam.Text = sekarang.ToString("HH:mm:ss");
-
-            int jam = sekarang.Hour;
-
-            
-            if (jam >= 5 && jam < 11)
-            {
-                lblGreeting.Text = "Selamat Pagi🌄";
-            }
-            else if (jam >= 11 && jam < 15)
-            {
-                lblGreeting.Text = "Selamat Siang☀";
-            }
-            else if (jam >= 15 && jam < 18)
-            {
-                lblGreeting.Text = "Selamat Sore🌇";
-            }
-            else
-            {
-                lblGreeting.Text = "Selamat Malam🌙";
-            }
-        }
-
-        private void lbljam_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void lblGreeting_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPenyewa_Click(object sender, EventArgs e)
-        {
-            FormDetailSewa fp = new FormDetailSewa();
-            fp.Show();
-            this.Hide();
-        }
-
-        private void btnStatistik_Click(object sender, EventArgs e)
-        {
-            FormStatistik fp = new FormStatistik();
-            fp.Show();
-            this.Hide();
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show(
-         "Yakin ingin keluar?",
-         "Konfirmasi",
-          MessageBoxButtons.YesNo,
-          MessageBoxIcon.Question
-         );
-
-            if (result == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -120,7 +62,93 @@ namespace SistemSewaMobil.View
 
         }
 
-        private void label12_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPenyewa_Click(object sender, EventArgs e)
+        {
+            FormPenyewa fp = new FormPenyewa();
+            fp.Show();
+            this.Hide();
+        }
+
+        private void btnPetugas_Click(object sender, EventArgs e)
+        {
+            FormPetugas fp = new FormPetugas();
+            fp.Show();
+            this.Hide();
+        }
+
+        private void btnMobil_Click(object sender, EventArgs e)
+        {
+            FormMobil fp = new FormMobil();
+            fp.Show();
+            this.Hide();
+        }
+
+        private void btnKategori_Click(object sender, EventArgs e)
+        {
+            FormKategori fp = new FormKategori();
+            fp.Show();
+            this.Hide();
+        }
+
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+            "Yakin ingin keluar?",
+            "Konfirmasi",
+            MessageBoxButtons.YesNo,
+             MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+      
+        private void menuButton_Click_1(object sender, EventArgs e)
+        {
+            sidebarTimer.Start();
+        }
+
+        private void btnExit_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+          "Yakin ingin keluar?",
+          "Konfirmasi",
+           MessageBoxButtons.YesNo,
+           MessageBoxIcon.Question
+          );
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void btnBeranda_Click(object sender, EventArgs e)
+        {
+            FormBeranda fp = new FormBeranda();
+            fp.Show();
+            this.Hide();
+        }
+
+        private void btnPenyewaan_Click(object sender, EventArgs e)
+        {
+            FormDetailSewa fp = new FormDetailSewa();
+            fp.Show();
+            this.Hide();
+        }
+
+       
+
+        private void btnPembayaran_Click(object sender, EventArgs e)
         {
 
         }

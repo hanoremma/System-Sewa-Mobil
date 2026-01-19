@@ -69,7 +69,6 @@
             this.btnBeranda = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
@@ -464,7 +463,6 @@
             this.sidebar.Controls.Add(this.panel1);
             this.sidebar.Controls.Add(this.button2);
             this.sidebar.Controls.Add(this.button3);
-            this.sidebar.Controls.Add(this.button4);
             this.sidebar.Controls.Add(this.btnExit);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
@@ -535,6 +533,7 @@
             this.button2.Text = "                  Penyewaan\r\n";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -552,24 +551,7 @@
             this.button3.Text = "                Pembayaran\r\n";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(3, 415);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(279, 83);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "                Statistik\r\n";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // btnExit
             // 
@@ -579,7 +561,7 @@
             this.btnExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(3, 504);
+            this.btnExit.Location = new System.Drawing.Point(3, 415);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnExit.Size = new System.Drawing.Size(279, 83);
@@ -683,7 +665,6 @@
         private System.Windows.Forms.Button menuButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnBeranda;
         private System.Windows.Forms.Timer sidebarTimer;

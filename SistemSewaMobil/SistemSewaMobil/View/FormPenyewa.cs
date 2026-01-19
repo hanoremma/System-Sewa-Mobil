@@ -204,7 +204,7 @@ namespace SistemSewaMobil
 
         private void btnSelesaiPenyewa_Click(object sender, EventArgs e)
         {
-            FormStatistik fp = new FormStatistik();
+            FormBeranda fp = new FormBeranda();
             fp.Show();
             this.Hide();
         }
