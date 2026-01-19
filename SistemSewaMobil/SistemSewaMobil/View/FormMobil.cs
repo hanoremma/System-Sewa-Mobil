@@ -197,7 +197,9 @@ namespace SistemSewaMobil
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            FormStatistik fp = new FormStatistik();
+            fp.Show();
+            this.Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)

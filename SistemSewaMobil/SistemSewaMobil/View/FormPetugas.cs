@@ -179,7 +179,9 @@ namespace SistemSewaMobil.View
 
         private void btnSelesaiPetugas_Click(object sender, EventArgs e)
         {
-            this.Close();
+            FormStatistik fp = new FormStatistik();
+            fp.Show();
+            this.Hide();
         }
     }
 }

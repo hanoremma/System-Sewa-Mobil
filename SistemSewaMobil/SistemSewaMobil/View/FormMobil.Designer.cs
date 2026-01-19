@@ -68,18 +68,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("DejaVu Sans Mono", 19F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(23, 62);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(268, 30);
+            this.label1.Size = new System.Drawing.Size(202, 30);
             this.label1.TabIndex = 1;
             this.label1.Text = "Informasi Mobil";
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 640F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 701F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lvwDaftarMobil, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 171);
@@ -132,7 +132,7 @@
             // btnTambahMobil
             // 
             this.btnTambahMobil.Location = new System.Drawing.Point(2, 2);
-            this.btnTambahMobil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTambahMobil.Margin = new System.Windows.Forms.Padding(2);
             this.btnTambahMobil.Name = "btnTambahMobil";
             this.btnTambahMobil.Size = new System.Drawing.Size(82, 35);
             this.btnTambahMobil.TabIndex = 3;

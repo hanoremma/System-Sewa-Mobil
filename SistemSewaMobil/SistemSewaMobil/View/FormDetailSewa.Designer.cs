@@ -66,7 +66,7 @@
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.menuButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnBeranda = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -87,18 +87,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(358, 44);
+            this.label1.Location = new System.Drawing.Point(349, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(266, 30);
+            this.label1.Size = new System.Drawing.Size(536, 69);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Beranda Penyewaan\r\n";
+            this.label1.Text = "Daftar Penyewaan\r\n";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnLihatInfoPenyewaDetailSewa
             // 
-            this.btnLihatInfoPenyewaDetailSewa.Location = new System.Drawing.Point(530, 550);
+            this.btnLihatInfoPenyewaDetailSewa.Location = new System.Drawing.Point(471, 574);
             this.btnLihatInfoPenyewaDetailSewa.Name = "btnLihatInfoPenyewaDetailSewa";
             this.btnLihatInfoPenyewaDetailSewa.Size = new System.Drawing.Size(162, 25);
             this.btnLihatInfoPenyewaDetailSewa.TabIndex = 2;
@@ -108,7 +108,7 @@
             // 
             // btnResetDetailSewa
             // 
-            this.btnResetDetailSewa.Location = new System.Drawing.Point(321, 518);
+            this.btnResetDetailSewa.Location = new System.Drawing.Point(262, 542);
             this.btnResetDetailSewa.Name = "btnResetDetailSewa";
             this.btnResetDetailSewa.Size = new System.Drawing.Size(93, 25);
             this.btnResetDetailSewa.TabIndex = 1;
@@ -117,7 +117,7 @@
             // 
             // btnSimpanDetailSewa
             // 
-            this.btnSimpanDetailSewa.Location = new System.Drawing.Point(321, 550);
+            this.btnSimpanDetailSewa.Location = new System.Drawing.Point(262, 574);
             this.btnSimpanDetailSewa.Name = "btnSimpanDetailSewa";
             this.btnSimpanDetailSewa.Size = new System.Drawing.Size(93, 25);
             this.btnSimpanDetailSewa.TabIndex = 0;
@@ -127,7 +127,7 @@
             // 
             // btnLihatInfoMobilDetailSewa
             // 
-            this.btnLihatInfoMobilDetailSewa.Location = new System.Drawing.Point(530, 518);
+            this.btnLihatInfoMobilDetailSewa.Location = new System.Drawing.Point(471, 542);
             this.btnLihatInfoMobilDetailSewa.Name = "btnLihatInfoMobilDetailSewa";
             this.btnLihatInfoMobilDetailSewa.Size = new System.Drawing.Size(162, 25);
             this.btnLihatInfoMobilDetailSewa.TabIndex = 3;
@@ -401,7 +401,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 10);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(310, 157);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(251, 181);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 12;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
@@ -471,7 +471,7 @@
             this.sidebar.MaximumSize = new System.Drawing.Size(285, 631);
             this.sidebar.MinimumSize = new System.Drawing.Size(115, 631);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(285, 631);
+            this.sidebar.Size = new System.Drawing.Size(115, 631);
             this.sidebar.TabIndex = 27;
             // 
             // menuButton
@@ -496,29 +496,29 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.btnBeranda);
             this.panel1.Location = new System.Drawing.Point(3, 143);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(282, 88);
             this.panel1.TabIndex = 0;
             // 
-            // button6
+            // btnBeranda
             // 
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Transparent;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 5);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(279, 83);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "                Beranda";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnBeranda.FlatAppearance.BorderSize = 0;
+            this.btnBeranda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBeranda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBeranda.ForeColor = System.Drawing.Color.Transparent;
+            this.btnBeranda.Image = ((System.Drawing.Image)(resources.GetObject("btnBeranda.Image")));
+            this.btnBeranda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBeranda.Location = new System.Drawing.Point(0, 5);
+            this.btnBeranda.Name = "btnBeranda";
+            this.btnBeranda.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnBeranda.Size = new System.Drawing.Size(279, 83);
+            this.btnBeranda.TabIndex = 10;
+            this.btnBeranda.Text = "                Beranda";
+            this.btnBeranda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBeranda.UseVisualStyleBackColor = true;
+            this.btnBeranda.Click += new System.EventHandler(this.button6_Click);
             // 
             // button2
             // 
@@ -594,7 +594,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(245, -13);
+            this.pictureBox2.Location = new System.Drawing.Point(165, 11);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(162, 168);
@@ -685,7 +685,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnBeranda;
         private System.Windows.Forms.Timer sidebarTimer;
     }
 }

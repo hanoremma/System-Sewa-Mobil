@@ -168,7 +168,9 @@ namespace SistemSewaMobil
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            FormBeranda fp = new FormBeranda();
+            fp.Show();
+            this.Hide();
         }
 
         private void button4_Click_1(object sender, EventArgs e)

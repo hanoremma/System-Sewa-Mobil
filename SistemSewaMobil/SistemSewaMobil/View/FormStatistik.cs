@@ -94,5 +94,61 @@ namespace SistemSewaMobil.View
             fp.Show();
             this.Hide();
         }
+
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+            "Yakin ingin keluar?",
+            "Konfirmasi",
+            MessageBoxButtons.YesNo,
+             MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+      
+        private void menuButton_Click_1(object sender, EventArgs e)
+        {
+            sidebarTimer.Start();
+        }
+
+        private void btnExit_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+          "Yakin ingin keluar?",
+          "Konfirmasi",
+           MessageBoxButtons.YesNo,
+           MessageBoxIcon.Question
+          );
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void btnBeranda_Click(object sender, EventArgs e)
+        {
+            FormBeranda fp = new FormBeranda();
+            fp.Show();
+            this.Hide();
+        }
+
+        private void btnPenyewaan_Click(object sender, EventArgs e)
+        {
+            FormDetailSewa fp = new FormDetailSewa();
+            fp.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
