@@ -186,5 +186,29 @@ namespace SistemSewaMobil.Model.Repository
 
             return list;
         }
+        public List<Mobil> ReadMobilTersedia()
+        {
+            List<Mobil> list = new List<Mobil>();
+
+            string sql = @"SELECT * FROM Mobil
+                   WHERE statusKetersediaan = 'Tersedia'";
+
+            using (SqlCommand cmd = new SqlCommand(sql, _conn))
+            using (SqlDataReader dtr = cmd.ExecuteReader())
+            {
+                while (dtr.Read())
+                {
+                    list.Add(new Mobil
+                    {
+                        idMobil = dtr["idMobil"].ToString(),
+                        merkMobil = dtr["merkMobil"].ToString(),
+                        statusKetersediaan = dtr["statusKetersediaan"].ToString()
+                        // isi field lain jika perlu
+                    });
+                }
+            }
+
+            return list;
+        }
     }
 }

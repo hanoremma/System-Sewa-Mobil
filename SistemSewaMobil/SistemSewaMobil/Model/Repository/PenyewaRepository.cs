@@ -162,5 +162,46 @@ namespace SistemSewaMobil.Model.Repository
 
             return list;
         }
+        public string GetIdByNama(string nama)
+        {
+            string id = null;
+
+            string sql = "SELECT idPenyewa FROM penyewa WHERE namaPenyewa = @nama";
+
+            using (SqlCommand cmd = new SqlCommand(sql, _conn))
+            {
+                cmd.Parameters.AddWithValue("@nama", nama);
+
+                using (SqlDataReader dr = cmd.ExecuteReader())
+                {
+                    if (dr.Read())
+                        id = dr["idPenyewa"].ToString();  
+                }
+            }
+
+            return id;
+        }
+
+        public string InsertAndGetId(Penyewa p)
+        {
+            string newId = null;
+
+            string sql = @"
+        INSERT INTO penyewa (namaPenyewa, alamatPenyewa, noKtpPenyewa, noHpPenyewa)
+        OUTPUT INSERTED.idPenyewa
+        VALUES (@nama, @alamat, @ktp, @hp)";
+
+            using (SqlCommand cmd = new SqlCommand(sql, _conn))
+            {
+                cmd.Parameters.AddWithValue("@nama", p.namaPenyewa);
+                cmd.Parameters.AddWithValue("@alamat", p.alamatPenyewa);
+                cmd.Parameters.AddWithValue("@ktp", p.noKtpPenyewa);
+                cmd.Parameters.AddWithValue("@hp", p.noKtpPenyewa);
+
+                newId = cmd.ExecuteScalar().ToString();
+            }
+
+            return newId;
+        }
     }
 }

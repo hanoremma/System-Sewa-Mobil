@@ -22,15 +22,22 @@ namespace SistemSewaMobil.Model.Repository
         {
             int result = 0;
             // Perintah SQL Insert
-            string sql = @"INSERT INTO detailSewa (idPenyewa, idPetugas, idMobil, tglPinjam, tglKembali, statusPenyewaan) 
-                           VALUES (@idPenyewa, @idPetugas, @idMobil, @tglPinjam, @tglKembali, @statusPenyewaan)";
+            string sql = @"
+                INSERT INTO detailSewa (idPenyewa, idPetugas, idMobil, tglPinjam, tglKembali, statusPenyewaan)
+                VALUES (
+                    (SELECT idPenyewa FROM penyewa WHERE namaPenyewa = @namaPenyewa),
+                    @idPetugas,
+                    @idMobil,
+                    @tglPinjam,
+                    @tglKembali,
+                    @statusPenyewaan)";
 
             using (SqlCommand cmd = new SqlCommand(sql, _conn))
             {
                 // Assuming the object passed to the function is named 'mobil'
                 // Example: public int Create(Mobil mobil)
 
-                cmd.Parameters.AddWithValue("@idPenyewa", detailsewa.idPenyewa);
+                cmd.Parameters.AddWithValue("@namaPenyewa", detailsewa.namaPenyewa);
                 cmd.Parameters.AddWithValue("@idPetugas", detailsewa.idPetugas);
                 cmd.Parameters.AddWithValue("@idMobil", detailsewa.idMobil);
                 cmd.Parameters.AddWithValue("@tglPinjam", detailsewa.tglPinjam);
@@ -53,16 +60,17 @@ namespace SistemSewaMobil.Model.Repository
             int result = 0;
 
             string sql = @"UPDATE detailSewa SET
-                    idPenyewa = @idKategori,
-                    idPetugas = @idPetugas,
-                    idMobil = @idMobil,
-                    tglPinjam = @tglPinjam,
-                    tglKembali = @tglKembali,
-                    statusPenyewaan = @statusPenyewaan
-                     WHERE idDetailSewa = @idDetailSewa";   
+                        idPenyewa = @idPenyewa,
+                        idPetugas = @idPetugas,
+                        idMobil = @idMobil,
+                        tglPinjam = @tglPinjam,
+                        tglKembali = @tglKembali,
+                        statusPenyewaan = @statusPenyewaan
+                   WHERE idDetailSewa = @idDetailSewa";
 
             using (SqlCommand cmd = new SqlCommand(sql, _conn))
             {
+                cmd.Parameters.AddWithValue("@idDetailSewa", detailsewa.idDetailSewa);
                 cmd.Parameters.AddWithValue("@idPenyewa", detailsewa.idPenyewa);
                 cmd.Parameters.AddWithValue("@idPetugas", detailsewa.idPetugas);
                 cmd.Parameters.AddWithValue("@idMobil", detailsewa.idMobil);
@@ -89,7 +97,8 @@ namespace SistemSewaMobil.Model.Repository
 
             using (SqlCommand cmd = new SqlCommand(sql, _conn))
             {
-               // cmd.Parameters.AddWithValue("@idMobil", mobil.idMobil);
+                // cmd.Parameters.AddWithValue("@idMobil", mobil.idMobil);
+                cmd.Parameters.AddWithValue("@idDetailSewa", detailsewa.idDetailSewa);
 
                 try
                 {
@@ -160,7 +169,7 @@ namespace SistemSewaMobil.Model.Repository
 
             return list;
         }
-        public List<DetailSewa> ReadByNamaPenyewa(string nama)
+        public List<DetailSewa> ReadByNamaPenyewaDetailSewa(string namapenyewads)
         {
             List<DetailSewa> list = new List<DetailSewa>();
 
@@ -168,67 +177,90 @@ namespace SistemSewaMobil.Model.Repository
             {
                 string sql = @"
             SELECT 
-                ds.idDetailSewa,
-                p.idPenyewa,
-                p.namaPenyewa,
-                p.alamatPenyewa,
-                p.noKtpPenyewa,
-                p.noHpPenyewa,
-                pt.idPetugas,
-                pt.namaPetugas,
-                m.idMobil,
-                m.noPolisi,
-                m.merkMobil,
-                ds.tglPinjam,
-                ds.tglKembali,
-                ds.statusPenyewaan,
-                ds.totalBiaya
-            FROM detailSewa ds
-            JOIN penyewa p   ON ds.idPenyewa = p.idPenyewa
-            JOIN petugas pt  ON ds.idPetugas = pt.idPetugas
-            JOIN mobil m     ON ds.idMobil = m.idMobil
-            WHERE p.namaPenyewa LIKE @namaPenyewa
-            ORDER BY ds.tglPinjam DESC";
+                                ds.idDetailSewa,
+                                p.idPenyewa,
+                                p.namaPenyewa,
+                                p.alamatPenyewa,
+                                p.noKtpPenyewa,
+                                p.noHpPenyewa,
+                                pt.idPetugas,
+                                pt.namaPetugas,
+                                m.idMobil,
+                                m.noPolisi,
+                                m.merkMobil,
+                                ds.tglPinjam,
+                                ds.tglKembali,
+                                ds.statusPenyewaan,
+                                ds.totalBiaya
+
+                            FROM detailSewa ds
+                            JOIN penyewa p   ON ds.idPenyewa = p.idPenyewa
+                            JOIN petugas pt  ON ds.idPetugas = pt.idPetugas
+                            JOIN mobil m     ON ds.idMobil = m.idMobil
+                            WHERE p.namaPenyewa LIKE @namaPenyewa
+                            ORDER BY ds.tglPinjam DESC";
 
                 using (SqlCommand cmd = new SqlCommand(sql, _conn))
                 {
-                    cmd.Parameters.AddWithValue("@namaPenyewa", $"%{nama}%");
+                    cmd.Parameters.AddWithValue("@namaPenyewa", $"%{namapenyewads}%");
 
                     using (SqlDataReader dtr = cmd.ExecuteReader())
                     {
                         while (dtr.Read())
                         {
-                            list.Add(new DetailSewa
-                            {
-                                idDetailSewa = dtr["idDetailSewa"].ToString(),
-                                idPenyewa = dtr["idPenyewa"].ToString(),
-                                namaPenyewa = dtr["namaPenyewa"].ToString(),
-                                alamatPenyewa = dtr["alamatPenyewa"].ToString(),
-                                noKtpPenyewa = dtr["noKtpPenyewa"].ToString(),
-                                noHpPenyewa = dtr["noHpPenyewa"].ToString(),
+                            DetailSewa ds = new DetailSewa();
+                            ds.idDetailSewa = dtr["idDetailSewa"].ToString();
+                            ds.idPenyewa = dtr["idPenyewa"].ToString();
+                            ds.namaPenyewa = dtr["namaPenyewa"].ToString();
+                            ds.alamatPenyewa = dtr["alamatPenyewa"].ToString();
+                            ds.noKtpPenyewa = dtr["noKtpPenyewa"].ToString();
+                            ds.noHpPenyewa = dtr["noHpPenyewa"].ToString();
 
-                                idPetugas = dtr["idPetugas"].ToString(),
-                                namaPetugas = dtr["namaPetugas"].ToString(),
+                            ds.idPetugas = dtr["idPetugas"].ToString();
+                            ds.namaPetugas = dtr["namaPetugas"].ToString();
 
-                                idMobil = dtr["idMobil"].ToString(),
-                                merkMobil = dtr["merkMobil"].ToString(),
-                                noPolisi = dtr["noPolisi"].ToString(),
+                            ds.idMobil = dtr["idMobil"].ToString();
+                            ds.merkMobil = dtr["merkMobil"].ToString();
+                            ds.noPolisi = dtr["noPolisi"].ToString();
 
-                                tglPinjam = Convert.ToDateTime(dtr["tglPinjam"]),
-                                tglKembali = Convert.ToDateTime(dtr["tglKembali"]),
-                                statusPenyewaan = dtr["statusPenyewaan"].ToString(),
-                                totalBiaya = (int)Convert.ToDecimal(dtr["totalBiaya"])
-                            });
+                            ds.tglPinjam = Convert.ToDateTime(dtr["tglPinjam"]);
+                            ds.tglKembali = Convert.ToDateTime(dtr["tglKembali"]);
+                            ds.statusPenyewaan = dtr["statusPenyewaan"].ToString();
+                            ds.totalBiaya = (int)Convert.ToDecimal(dtr["totalBiaya"]);
+
+                            list.Add(ds);
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.Print("ReadByNamaPenyewa Error: {0}", ex.Message);
+                System.Diagnostics.Debug.Print("ReadByNamaPenyewaDetailSewa Error: {0}", ex.Message);
             }
 
             return list;
+        }
+        public bool IsMobilTersedia(string idMobil, DateTime tglPinjam, DateTime tglKembali)
+        {
+            string sql = @"
+        SELECT COUNT(*) 
+        FROM DetailSewa
+        WHERE idMobil = @idMobil
+          AND statusPenyewaan <> 'Dibatalkan'
+          AND (
+                @tglPinjam <= tglKembali
+                AND @tglKembali >= tglPinjam
+              )";
+
+            using (SqlCommand cmd = new SqlCommand(sql, _conn))
+            {
+                cmd.Parameters.AddWithValue("@idMobil", idMobil);
+                cmd.Parameters.AddWithValue("@tglPinjam", tglPinjam);
+                cmd.Parameters.AddWithValue("@tglKembali", tglKembali);
+
+                int count = (int)cmd.ExecuteScalar();
+                return count == 0; // true = tersedia
+            }
         }
     }
 }

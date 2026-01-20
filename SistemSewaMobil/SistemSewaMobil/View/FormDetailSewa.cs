@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SistemSewaMobil.Controller;
+using SistemSewaMobil.Model.Entity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,183 +9,226 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SistemSewaMobil.Model;
-using SistemSewaMobil.Model.Entity;
-using SistemSewaMobil.View;
 
-namespace SistemSewaMobil
+namespace SistemSewaMobil.View
 {
     public partial class FormDetailSewa : Form
     {
+        private List<DetailSewa> listDetailSewa = new List<DetailSewa>();
+        private DetailSewaController controller;
         public FormDetailSewa()
         {
             InitializeComponent();
-            InisialisasiListView();
+            controller = new DetailSewaController();
+            InisialisasiListDetailSewalView();
+            InisialisasiListPembayaranView();
+            LoadDetailSewaData();
         }
-        private void InisialisasiListView()
+        private void InisialisasiListDetailSewalView()
         {
-            /*infoMobilTerpilih.View = System.Windows.Forms.View.Details;
-            infoMobilTerpilih.FullRowSelect = true;
-            infoMobilTerpilih.GridLines = true;
+            lvwDaftarDS.View = System.Windows.Forms.View.Details; // FIX: Use fully qualified enum
+            lvwDaftarDS.FullRowSelect = true;
+            lvwDaftarDS.GridLines = true;
 
-            infoMobilTerpilih.Columns.Add("No.", 30, HorizontalAlignment.Center);
-            infoMobilTerpilih.Columns.Add("Merk Mobil", 120, HorizontalAlignment.Center);
-            infoMobilTerpilih.Columns.Add("Kategori", 100, HorizontalAlignment.Left);
-            infoMobilTerpilih.Columns.Add("No Polisi", 100, HorizontalAlignment.Center);
-            infoMobilTerpilih.Columns.Add("Tahun", 50, HorizontalAlignment.Center);
-            infoMobilTerpilih.Columns.Add("Status sedia", 70, HorizontalAlignment.Center);
-            infoMobilTerpilih.Columns.Add("Harga Sewa/hari", 100, HorizontalAlignment.Center);*/
+            lvwDaftarDS.Columns.Add("No.", 30, HorizontalAlignment.Center);
+            lvwDaftarDS.Columns.Add("Id Detail Sewa", 100, HorizontalAlignment.Left);
+            lvwDaftarDS.Columns.Add("Nama", 100, HorizontalAlignment.Left);
+            lvwDaftarDS.Columns.Add("Alamat", 100, HorizontalAlignment.Center);
+            lvwDaftarDS.Columns.Add("No KTP", 120, HorizontalAlignment.Center);
+            lvwDaftarDS.Columns.Add("No HP", 50, HorizontalAlignment.Center);
+            lvwDaftarDS.Columns.Add("Petugas", 70, HorizontalAlignment.Center);
+            lvwDaftarDS.Columns.Add("No Polisi", 70, HorizontalAlignment.Center);
+            lvwDaftarDS.Columns.Add("Merk Mobil", 70, HorizontalAlignment.Center);
+            lvwDaftarDS.Columns.Add("Tanggal Pinjam", 70, HorizontalAlignment.Center);
+            lvwDaftarDS.Columns.Add("Tanggal Kembali", 70, HorizontalAlignment.Center);
+            lvwDaftarDS.Columns.Add("Status Penyewaan", 70, HorizontalAlignment.Center);
+            lvwDaftarDS.Columns.Add("Total Biaya", 70, HorizontalAlignment.Center);
         }
-
-        private void comboBoxMobil_SelectedIndexChanged(object sender, EventArgs e)
+        private void InisialisasiListPembayaranView()
         {
-            Mobil mobilDipilih = (Mobil)cmbMobilYangDisewaDetailSewa.SelectedItem;
+            lvwDaftarDS.View = System.Windows.Forms.View.Details; // FIX: Use fully qualified enum
+            lvwDaftarDS.FullRowSelect = true;
+            lvwDaftarDS.GridLines = true;
 
-            /*infoMobilTerpilih.Items.Clear(); // Hapus isi ListView sebelum diisi ulang
-
-            ListViewItem item = new ListViewItem(mobilDipilih.idMobil);
-            item.SubItems.Add(mobilDipilih.noPolisi);
-            item.SubItems.Add(mobilDipilih.merkMobil);
-            item.SubItems.Add(mobilDipilih.tahunMobil);
-            item.SubItems.Add(mobilDipilih.statusKetersediaan);
-            item.SubItems.Add(mobilDipilih.hargaSewa.ToString());
-
-            infoMobilTerpilih.Items.Add(item);*/
+            lvwDaftarDS.Columns.Add("ID Pembayaran", 100, HorizontalAlignment.Left);
+            lvwDaftarDS.Columns.Add("Tanggal Pembayaran", 150, HorizontalAlignment.Center);
+            lvwDaftarDS.Columns.Add("Metode Pembayaran", 150, HorizontalAlignment.Center);
+            lvwDaftarDS.Columns.Add("Biaya Servis", 150, HorizontalAlignment.Center);
+            lvwDaftarDS.Columns.Add("Biaya Diskon", 150, HorizontalAlignment.Center);
+            lvwDaftarDS.Columns.Add("Total Pembayaran", 150, HorizontalAlignment.Center);
+            lvwDaftarDS.Columns.Add("Status Pembayaran", 150, HorizontalAlignment.Center);
         }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void LoadDetailSewaData()
         {
-            FormPenyewa menuInfo = new FormPenyewa();
-            menuInfo.Show();
-        }
+            lvwDaftarDS.Items.Clear();
+            listDetailSewa = controller.GetAllDetailSewa();
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            FormMobil menuInfo = new FormMobil();
-            menuInfo.Show();
-        }
+            // This method should load data into the infoMobil ListView
+            // Implementation depends on how data is stored/retrieved
 
-        private void dataMobilTersediaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormMobil menuInfo = new FormMobil();
-            menuInfo.Show();
-        }
-
-        private void Form1_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        bool sidebarExpand;
-        private void sidebarTimer_Tick(object sender, EventArgs e)
-        {
-            int step = 10;
-
-            if (sidebarExpand)
+            foreach (var detailsewa in listDetailSewa)
             {
-                sidebar.Width -= step;
-                if (sidebar.Width <= sidebar.MinimumSize.Width)
+                var noUrut = lvwDaftarDS.Items.Count + 1;
+                var item = new ListViewItem(noUrut.ToString());
+                item.SubItems.Add(detailsewa.idDetailSewa);
+                item.SubItems.Add(detailsewa.namaPenyewa);
+                item.SubItems.Add(detailsewa.alamatPenyewa);
+                item.SubItems.Add(detailsewa.noKtpPenyewa);
+                item.SubItems.Add(detailsewa.noHpPenyewa);
+                item.SubItems.Add(detailsewa.namaPetugas);
+                item.SubItems.Add(detailsewa.noPolisi);
+                item.SubItems.Add(detailsewa.merkMobil);
+                item.SubItems.Add(detailsewa.tglPinjam.ToString("dd-MM-yyyy"));
+                item.SubItems.Add(detailsewa.tglKembali.ToString("dd-MM-yyyy"));
+                item.SubItems.Add(detailsewa.statusPenyewaan);
+                item.SubItems.Add(detailsewa.totalBiaya.ToString("Rp.")); // Format as currency
+                lvwDaftarDS.Items.Add(item);
+            }
+        }
+        private void OnCreateEventHandler(DetailSewa detailsewa)
+        {
+            listDetailSewa.Add(detailsewa);
+            int noUrut = lvwDaftarDS.Items.Count + 1;
+
+            ListViewItem item = new ListViewItem(noUrut.ToString());
+            item.SubItems.Add(detailsewa.idDetailSewa);
+            item.SubItems.Add(detailsewa.namaPenyewa);
+            item.SubItems.Add(detailsewa.alamatPenyewa);
+            item.SubItems.Add(detailsewa.noKtpPenyewa);
+            item.SubItems.Add(detailsewa.noHpPenyewa);
+            item.SubItems.Add(detailsewa.namaPetugas);
+            item.SubItems.Add(detailsewa.noPolisi);
+            item.SubItems.Add(detailsewa.merkMobil);
+            item.SubItems.Add(detailsewa.tglPinjam.ToString("dd-MM-yyyy"));
+            item.SubItems.Add(detailsewa.tglKembali.ToString("dd-MM-yyyy"));
+            item.SubItems.Add(detailsewa.statusPenyewaan);
+            item.SubItems.Add(detailsewa.totalBiaya.ToString("Rp.")); // Format as currency
+            lvwDaftarDS.Items.Add(item);
+        }
+        private void OnUpdateEventHandler(DetailSewa detailsewa)
+        {
+            int index = lvwDaftarDS.SelectedIndices[0];
+
+            ListViewItem itemRow = lvwDaftarDS.Items[index];
+            itemRow.SubItems[2].Text = detailsewa.namaPenyewa;
+            itemRow.SubItems[3].Text = detailsewa.alamatPenyewa;
+            itemRow.SubItems[4].Text = detailsewa.noKtpPenyewa;
+            itemRow.SubItems[5].Text = detailsewa.noHpPenyewa;
+            itemRow.SubItems[6].Text = detailsewa.namaPetugas;
+            itemRow.SubItems[7].Text = detailsewa.noPolisi;
+            itemRow.SubItems[8].Text = detailsewa.merkMobil;
+            itemRow.SubItems[9].Text = detailsewa.tglPinjam.ToString("dd-MM-yyyy");
+            itemRow.SubItems[10].Text = detailsewa.tglKembali.ToString("dd-MM-yyyy");
+            itemRow.SubItems[11].Text = detailsewa.statusPenyewaan;
+            itemRow.SubItems[12].Text = detailsewa.totalBiaya.ToString("Rp.");
+        }
+
+        private void btnTambahDS_Click(object sender, EventArgs e)
+        {
+            FormEntryDetailSewa formEntryDetailSewa = new FormEntryDetailSewa("Tambah Data Mobil", controller);
+            formEntryDetailSewa.OnCreate += OnCreateEventHandler;
+            if (formEntryDetailSewa.ShowDialog() == DialogResult.OK)
+            {
+                LoadDetailSewaData();
+            }
+        }
+
+        private void btnUpdateDS_Click(object sender, EventArgs e)
+        {
+            if (lvwDaftarDS.SelectedItems.Count == 0)
+            {
+                MessageBox.Show(
+                    "Silakan pilih data yang akan diubah.",
+                    "Peringatan",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
+            // ambil index baris yang dipilih
+            int index = lvwDaftarDS.SelectedIndices[0];
+
+            // ambil data dari listMobil
+            DetailSewa detailsewa = listDetailSewa[index];
+
+            // buka form edit
+            FormEntryDetailSewa formDetailSewa =
+                new FormEntryDetailSewa("Edit Data detail sewa", detailsewa, controller);
+
+            formDetailSewa.OnUpdate += OnUpdateEventHandler;
+
+            if (formDetailSewa.ShowDialog() == DialogResult.OK)
+            {
+                LoadDetailSewaData();
+            }
+        }
+
+        private void btnHapusDS_Click(object sender, EventArgs e)
+        {
+            if (lvwDaftarDS.SelectedItems.Count > 0)
+            {
+                var konfirmasi = MessageBox.Show("Apakah data ingin dihapus?", "Konfirmasi",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation
+                );
+                if (konfirmasi == DialogResult.Yes)
                 {
-                    sidebarExpand = false;
-                    sidebarTimer.Stop();
+                    DetailSewa detailsewa = listDetailSewa[lvwDaftarDS.SelectedIndices[0]];
+                    var result = controller.Delete(detailsewa);
+                    if (result > 0) LoadDetailSewaData();
                 }
             }
             else
             {
-                sidebar.Width += step;
-                if (sidebar.Width >= sidebar.MaximumSize.Width)
-                {
-                    sidebarExpand = true;
-                    sidebarTimer.Stop();
-                }
+                MessageBox.Show(
+                    "Silakan pilih data detail sewa yang akan dihapus.",
+                    "Peringatan",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation
+                );
             }
-
         }
 
-        private void menuButton_Click(object sender, EventArgs e)
+        private void btnCariDS_Click(object sender, EventArgs e)
         {
-            sidebarTimer.Start();
-        }
-
-        private void lbljam_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show(
-            "Yakin ingin keluar?",
-            "Konfirmasi",
-             MessageBoxButtons.YesNo,
-             MessageBoxIcon.Question
-            );
-
-            if (result == DialogResult.Yes)
+            string keyword = txtCariDS.Text.Trim();
+            if (string.IsNullOrEmpty(keyword))
             {
-                Application.Exit();
+                LoadDetailSewaData();
+                return;
+            }
+            lvwDaftarDS.Items.Clear();
+            listDetailSewa = controller.ReadByNamaPenyewaDetailSewa(keyword);
+
+            foreach (var detailsewa in listDetailSewa)
+            {
+                var noUrut = lvwDaftarDS.Items.Count + 1;
+                var item = new ListViewItem(noUrut.ToString());
+                item.SubItems.Add(detailsewa.idDetailSewa);
+                item.SubItems.Add(detailsewa.namaPenyewa);
+                item.SubItems.Add(detailsewa.alamatPenyewa);
+                item.SubItems.Add(detailsewa.noKtpPenyewa);
+                item.SubItems.Add(detailsewa.noHpPenyewa);
+                item.SubItems.Add(detailsewa.namaPetugas);
+                item.SubItems.Add(detailsewa.noPolisi);
+                item.SubItems.Add(detailsewa.merkMobil);
+                item.SubItems.Add(detailsewa.tglPinjam.ToString("dd-MM-yyyy"));
+                item.SubItems.Add(detailsewa.tglKembali.ToString("dd-MM-yyyy"));
+                item.SubItems.Add(detailsewa.statusPenyewaan);
+                item.SubItems.Add(detailsewa.totalBiaya.ToString("Rp.")); // Format as currency
+                lvwDaftarDS.Items.Add(item);
+            }
+            if (listDetailSewa.Count == 0)
+            {
+                MessageBox.Show("Data detail sewa dengan nama " + keyword + " tidak ditemukan.", "Informasi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadDetailSewaData();
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void btnSelesaiDS_Click(object sender, EventArgs e)
         {
-            pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.Parent = panel1; // atau Form
-
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void jam_Tick(object sender, EventArgs e)
-        {
-            lbljam.Text = DateTime.Now.ToString("HH:mm:ss");
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            FormBeranda fp = new FormBeranda();
-            fp.Show();
-            this.Hide();
-        }
-
-     
-        private void button2_Click(object sender, EventArgs e)
-        {
-            FormDetailSewa fp = new FormDetailSewa();
-            fp.Show();
-            this.Hide();
-        }
-
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }

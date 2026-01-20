@@ -319,14 +319,14 @@
             // 
             // txtCariPenyewa
             // 
-            this.txtCariPenyewa.Location = new System.Drawing.Point(129, 135);
+            this.txtCariPenyewa.Location = new System.Drawing.Point(132, 135);
             this.txtCariPenyewa.Name = "txtCariPenyewa";
             this.txtCariPenyewa.Size = new System.Drawing.Size(458, 20);
             this.txtCariPenyewa.TabIndex = 27;
             // 
             // btnCariPenyewa
             // 
-            this.btnCariPenyewa.Location = new System.Drawing.Point(592, 132);
+            this.btnCariPenyewa.Location = new System.Drawing.Point(596, 135);
             this.btnCariPenyewa.Name = "btnCariPenyewa";
             this.btnCariPenyewa.Size = new System.Drawing.Size(69, 20);
             this.btnCariPenyewa.TabIndex = 28;

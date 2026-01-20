@@ -102,5 +102,22 @@ namespace SistemSewaMobil.Controller
 
             return list;
         }
+        public string GetIdPenyewaByNama(string nama)
+        {
+            using (DbContext context = new DbContext())
+            {
+                PenyewaRepository repo = new PenyewaRepository(context);
+                return repo.GetIdByNama(nama);
+            }
+        }
+
+        public string CreateAndGetId(Penyewa p)
+        {
+            using (DbContext context = new DbContext())
+            {
+                PenyewaRepository repo = new PenyewaRepository(context);
+                return repo.InsertAndGetId(p);
+            }
+        }
     }
 }

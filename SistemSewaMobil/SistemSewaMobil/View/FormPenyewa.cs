@@ -92,7 +92,7 @@ namespace SistemSewaMobil
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormDetailSewa menuInfo = new FormDetailSewa();
+            FormEntryDetailSewa menuInfo = new FormEntryDetailSewa();
             menuInfo.Show();
         }
 

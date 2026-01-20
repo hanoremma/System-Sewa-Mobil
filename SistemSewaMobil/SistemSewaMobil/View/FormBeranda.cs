@@ -141,7 +141,7 @@ namespace SistemSewaMobil.View
 
         private void btnPenyewaan_Click(object sender, EventArgs e)
         {
-            FormDetailSewa fp = new FormDetailSewa();
+            FormEntryDetailSewa fp = new FormEntryDetailSewa();
             fp.Show();
             this.Hide();
         }
