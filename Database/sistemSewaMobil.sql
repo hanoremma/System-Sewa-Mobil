@@ -544,3 +544,41 @@ JOIN penyewa p   ON ds.idPenyewa = p.idPenyewa
 JOIN petugas pt  ON ds.idPetugas = pt.idPetugas
 JOIN mobil m     ON ds.idMobil = m.idMobil
 ORDER BY ds.tglPinjam DESC;
+
+SELECT 
+    ds.idDetailSewa,
+    p.idPenyewa,
+    p.namaPenyewa,
+    p.alamatPenyewa,
+    p.noKtpPenyewa,
+    p.noHpPenyewa,
+    pt.idPetugas,
+    pt.namaPetugas,
+    m.idMobil,
+    m.noPolisi,
+    m.merkMobil,
+    ds.tglPinjam,
+    ds.tglKembali,
+    ds.statusPenyewaan,
+    ds.totalBiaya,
+    pb.idPembayaran,
+    pb.tglPembayaran,
+    pb.metodePembayaran,
+    pb.biayaServis,
+    pb.diskon,
+    pb.totalPembayaran,
+    pb.statusPembayaran
+
+FROM detailSewa ds
+JOIN penyewa  p  ON ds.idPenyewa  = p.idPenyewa
+JOIN petugas  pt ON ds.idPetugas  = pt.idPetugas
+JOIN mobil    m  ON ds.idMobil    = m.idMobil
+
+LEFT JOIN pembayaran pb 
+       ON pb.idDetailSewa = ds.idDetailSewa
+
+ORDER BY ds.tglPinjam DESC;
+
+SELECT ISNULL(SUM(totalPembayaran), 0)
+                FROM pembayaran
+                WHERE statusPembayaran = 'Lunas'
