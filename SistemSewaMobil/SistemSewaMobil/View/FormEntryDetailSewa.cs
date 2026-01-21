@@ -442,5 +442,11 @@ namespace SistemSewaMobil
             FormPembayaran menuInfo = new FormPembayaran();
             menuInfo.Show();
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            FormPembayaran menuInfo = new FormPembayaran();
+            menuInfo.Show();
+        }
     }
 }

@@ -150,7 +150,9 @@ namespace SistemSewaMobil.View
 
         private void btnPembayaran_Click(object sender, EventArgs e)
         {
-
+            FormPembayaran fp = new FormPembayaran();
+            fp.Show();
+            this.Hide();
         }
     }
 }

@@ -353,6 +353,63 @@ namespace SistemSewaMobil.View
             FormEntryDetailSewa menuInfo = new FormEntryDetailSewa();
             menuInfo.Show();
         }
+
+        private void btnBeranda_Click(object sender, EventArgs e)
+        {
+            FormBeranda menuInfo = new FormBeranda();
+            menuInfo.Show();
+        }
+
+        private void btnPenyewa_Click(object sender, EventArgs e)
+        {
+            FormEntryDetailSewa menuInfo = new FormEntryDetailSewa();
+            menuInfo.Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+            "Yakin ingin keluar?",
+            "Konfirmasi",
+            MessageBoxButtons.YesNo,
+             MessageBoxIcon.Question
+             );
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void menuButton_Click(object sender, EventArgs e)
+        {
+            sidebarTimer.Start();
+        }
+
+        bool sidebarExpand;
+        private void sidebarTimer_Tick(object sender, EventArgs e)
+        {
+            int step = 10;
+
+            if (sidebarExpand)
+            {
+                sidebar.Width -= step;
+                if (sidebar.Width <= sidebar.MinimumSize.Width)
+                {
+                    sidebarExpand = false;
+                    sidebarTimer.Stop();
+                }
+            }
+            else
+            {
+                sidebar.Width += step;
+                if (sidebar.Width >= sidebar.MaximumSize.Width)
+                {
+                    sidebarExpand = true;
+                    sidebarTimer.Stop();
+                }
+            }
+        }
     }
 
 }

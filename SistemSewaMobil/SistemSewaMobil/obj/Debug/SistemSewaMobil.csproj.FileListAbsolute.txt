@@ -54,7 +54,6 @@ E:\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.V
 E:\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.View.FormEntryPetugas.resources
 E:\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.View.FormKategori.resources
 E:\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.View.FormLogin.resources
-E:\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.FormDetailSewa.resources
 E:\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.FormPenyewa.resources
 E:\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.FormMobil.resources
 E:\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.Properties.Resources.resources
@@ -78,3 +77,6 @@ C:\Users\emmah\Music\VS2022 - Github\System-Sewa-Mobil\SistemSewaMobil\SistemSew
 C:\Users\emmah\Music\VS2022 - Github\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.View.FormDetailSewa.resources
 C:\Users\emmah\Music\VS2022 - Github\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.FormEntryDetailSewa.resources
 C:\Users\emmah\Music\VS2022 - Github\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.View.FormPembayaran.resources
+E:\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.View.FormDetailSewa.resources
+E:\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.FormEntryDetailSewa.resources
+E:\System-Sewa-Mobil\SistemSewaMobil\SistemSewaMobil\obj\Debug\SistemSewaMobil.View.FormPembayaran.resources

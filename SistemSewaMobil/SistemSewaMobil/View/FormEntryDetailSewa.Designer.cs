@@ -589,6 +589,7 @@
             this.button3.Text = "                Pembayaran\r\n";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // btnExit
             // 
@@ -663,6 +664,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormEntryDetailSewa";
             this.Text = "Main";
             this.splitContainer1.Panel1.ResumeLayout(false);

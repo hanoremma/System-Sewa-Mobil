@@ -287,6 +287,7 @@
             this.Controls.Add(this.btnMobil);
             this.Controls.Add(this.btnPenyewa);
             this.Controls.Add(this.pictureBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormBeranda";
             this.Text = "FormBeranda";
             this.Load += new System.EventHandler(this.FormStatistik_Load);

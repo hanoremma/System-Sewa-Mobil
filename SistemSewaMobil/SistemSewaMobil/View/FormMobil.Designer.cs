@@ -344,6 +344,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMobil";
             this.Text = "Mobil";
             this.Load += new System.EventHandler(this.infoMobilTersedia_Load);

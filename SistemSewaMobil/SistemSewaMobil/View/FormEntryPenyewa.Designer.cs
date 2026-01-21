@@ -112,7 +112,7 @@
             // txtIdEntryPenyewa
             // 
             this.txtIdEntryPenyewa.Location = new System.Drawing.Point(171, 128);
-            this.txtIdEntryPenyewa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdEntryPenyewa.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdEntryPenyewa.Name = "txtIdEntryPenyewa";
             this.txtIdEntryPenyewa.Size = new System.Drawing.Size(123, 20);
             this.txtIdEntryPenyewa.TabIndex = 5;
@@ -120,7 +120,7 @@
             // txtNamaEntryPenyewa
             // 
             this.txtNamaEntryPenyewa.Location = new System.Drawing.Point(171, 158);
-            this.txtNamaEntryPenyewa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNamaEntryPenyewa.Margin = new System.Windows.Forms.Padding(2);
             this.txtNamaEntryPenyewa.Name = "txtNamaEntryPenyewa";
             this.txtNamaEntryPenyewa.Size = new System.Drawing.Size(123, 20);
             this.txtNamaEntryPenyewa.TabIndex = 6;
@@ -128,7 +128,7 @@
             // txtNoKtpEntryPenyewa
             // 
             this.txtNoKtpEntryPenyewa.Location = new System.Drawing.Point(171, 219);
-            this.txtNoKtpEntryPenyewa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNoKtpEntryPenyewa.Margin = new System.Windows.Forms.Padding(2);
             this.txtNoKtpEntryPenyewa.Name = "txtNoKtpEntryPenyewa";
             this.txtNoKtpEntryPenyewa.Size = new System.Drawing.Size(123, 20);
             this.txtNoKtpEntryPenyewa.TabIndex = 8;
@@ -136,7 +136,7 @@
             // txtAlamatEntryPenyewa
             // 
             this.txtAlamatEntryPenyewa.Location = new System.Drawing.Point(171, 188);
-            this.txtAlamatEntryPenyewa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAlamatEntryPenyewa.Margin = new System.Windows.Forms.Padding(2);
             this.txtAlamatEntryPenyewa.Name = "txtAlamatEntryPenyewa";
             this.txtAlamatEntryPenyewa.Size = new System.Drawing.Size(123, 20);
             this.txtAlamatEntryPenyewa.TabIndex = 7;
@@ -144,7 +144,7 @@
             // txtNoHpEntryPenyewa
             // 
             this.txtNoHpEntryPenyewa.Location = new System.Drawing.Point(171, 253);
-            this.txtNoHpEntryPenyewa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNoHpEntryPenyewa.Margin = new System.Windows.Forms.Padding(2);
             this.txtNoHpEntryPenyewa.Name = "txtNoHpEntryPenyewa";
             this.txtNoHpEntryPenyewa.Size = new System.Drawing.Size(123, 20);
             this.txtNoHpEntryPenyewa.TabIndex = 9;
@@ -153,7 +153,7 @@
             // 
             this.btnSimpanEntryPenyewa.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSimpanEntryPenyewa.Location = new System.Drawing.Point(94, 306);
-            this.btnSimpanEntryPenyewa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSimpanEntryPenyewa.Margin = new System.Windows.Forms.Padding(2);
             this.btnSimpanEntryPenyewa.Name = "btnSimpanEntryPenyewa";
             this.btnSimpanEntryPenyewa.Size = new System.Drawing.Size(95, 28);
             this.btnSimpanEntryPenyewa.TabIndex = 10;
@@ -165,7 +165,7 @@
             // 
             this.btnSelesaiEntryPenyewa.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSelesaiEntryPenyewa.Location = new System.Drawing.Point(207, 306);
-            this.btnSelesaiEntryPenyewa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSelesaiEntryPenyewa.Margin = new System.Windows.Forms.Padding(2);
             this.btnSelesaiEntryPenyewa.Name = "btnSelesaiEntryPenyewa";
             this.btnSelesaiEntryPenyewa.Size = new System.Drawing.Size(95, 28);
             this.btnSelesaiEntryPenyewa.TabIndex = 11;
@@ -177,11 +177,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("DejaVu Sans Mono", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
             this.label6.Location = new System.Drawing.Point(110, 50);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(192, 24);
+            this.label6.Size = new System.Drawing.Size(166, 25);
             this.label6.TabIndex = 33;
             this.label6.Text = "Input Penyewa";
             // 
@@ -204,7 +204,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormEntryPenyewa";
             this.Text = "FormEntryPenyewa";
             this.ResumeLayout(false);
