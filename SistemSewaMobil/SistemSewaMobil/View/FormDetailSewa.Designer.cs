@@ -97,7 +97,10 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 757F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
+<<<<<<< HEAD
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+=======
+>>>>>>> 9288c873a7126979e35e763287bb3034acf59764
             this.tableLayoutPanel2.Controls.Add(this.btnTambahDS, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdateDS, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnHapusDS, 2, 0);
@@ -106,6 +109,10 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+<<<<<<< HEAD
+=======
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+>>>>>>> 9288c873a7126979e35e763287bb3034acf59764
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1018, 55);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
@@ -172,9 +179,15 @@
             // 
             // button1
             // 
+<<<<<<< HEAD
             this.button1.Location = new System.Drawing.Point(946, 80);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 32);
+=======
+            this.button1.Location = new System.Drawing.Point(946, 86);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(80, 32);
+>>>>>>> 9288c873a7126979e35e763287bb3034acf59764
             this.button1.TabIndex = 34;
             this.button1.Text = "Refresh";
             this.button1.UseVisualStyleBackColor = true;

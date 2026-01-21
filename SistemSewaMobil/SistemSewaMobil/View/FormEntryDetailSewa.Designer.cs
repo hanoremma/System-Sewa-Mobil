@@ -253,6 +253,10 @@
             this.cmbMobilYangDisewaDetailSewa.Name = "cmbMobilYangDisewaDetailSewa";
             this.cmbMobilYangDisewaDetailSewa.Size = new System.Drawing.Size(224, 21);
             this.cmbMobilYangDisewaDetailSewa.TabIndex = 21;
+<<<<<<< HEAD
+=======
+            this.cmbMobilYangDisewaDetailSewa.SelectedIndexChanged += new System.EventHandler(this.cmbMobilYangDisewaDetailSewa_SelectedIndexChanged);
+>>>>>>> 9288c873a7126979e35e763287bb3034acf59764
             // 
             // label9
             // 

@@ -446,5 +446,10 @@ namespace SistemSewaMobil
             fp.Show();
             this.Hide();
         }
+
+        private void cmbMobilYangDisewaDetailSewa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            HitungTotalBiayaPreview();
+        }
     }
 }

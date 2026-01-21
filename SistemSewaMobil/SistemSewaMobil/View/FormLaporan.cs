@@ -102,6 +102,7 @@ namespace SistemSewaMobil.View
 
         private void btnSelesai_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             FormBeranda fp = new FormBeranda();
             fp.Show();
             this.Hide();
@@ -110,6 +111,9 @@ namespace SistemSewaMobil.View
         private void txtTotal_TextChanged(object sender, EventArgs e)
         {
 
+=======
+            this.Close();
+>>>>>>> 9288c873a7126979e35e763287bb3034acf59764
         }
     }
 }
