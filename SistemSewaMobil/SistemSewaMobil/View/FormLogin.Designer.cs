@@ -47,7 +47,7 @@
             // txtUsernameLogin
             // 
             this.txtUsernameLogin.Location = new System.Drawing.Point(148, 267);
-            this.txtUsernameLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsernameLogin.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsernameLogin.Name = "txtUsernameLogin";
             this.txtUsernameLogin.Size = new System.Drawing.Size(212, 20);
             this.txtUsernameLogin.TabIndex = 0;
@@ -57,7 +57,7 @@
             // 
             this.txtPasswordLogin.BackColor = System.Drawing.Color.White;
             this.txtPasswordLogin.Location = new System.Drawing.Point(148, 336);
-            this.txtPasswordLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPasswordLogin.Margin = new System.Windows.Forms.Padding(2);
             this.txtPasswordLogin.Name = "txtPasswordLogin";
             this.txtPasswordLogin.PasswordChar = '*';
             this.txtPasswordLogin.Size = new System.Drawing.Size(212, 20);
@@ -81,7 +81,7 @@
             // 
             this.btnLogin.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Location = new System.Drawing.Point(148, 384);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(86, 32);
             this.btnLogin.TabIndex = 5;
@@ -107,7 +107,7 @@
             // 
             this.btnExit.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(274, 384);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(86, 32);
             this.btnExit.TabIndex = 8;
@@ -141,7 +141,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(114, -42);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(306, 266);
             this.pictureBox1.TabIndex = 10;
@@ -150,7 +150,7 @@
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(148, 290);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(211, 1);
             this.panel1.TabIndex = 11;
@@ -158,7 +158,7 @@
             // panel2
             // 
             this.panel2.Location = new System.Drawing.Point(148, 358);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(211, 1);
             this.panel2.TabIndex = 12;
@@ -181,8 +181,9 @@
             this.Controls.Add(this.txtUsernameLogin);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.FormLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

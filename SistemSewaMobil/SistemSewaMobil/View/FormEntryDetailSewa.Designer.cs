@@ -98,6 +98,7 @@
             this.label1.Size = new System.Drawing.Size(536, 69);
             this.label1.TabIndex = 0;
             this.label1.Text = "Daftar Penyewaan\r\n";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnLihatInfoPenyewaDetailSewa
             // 
@@ -142,8 +143,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.textBoxIDPenyewa);
-            this.splitContainer1.Size = new System.Drawing.Size(224, 22);
-            this.splitContainer1.SplitterDistance = 115;
+            this.splitContainer1.Size = new System.Drawing.Size(224, 21);
+            this.splitContainer1.SplitterDistance = 114;
             this.splitContainer1.TabIndex = 24;
             // 
             // radioButton1
@@ -252,7 +253,6 @@
             this.cmbMobilYangDisewaDetailSewa.Name = "cmbMobilYangDisewaDetailSewa";
             this.cmbMobilYangDisewaDetailSewa.Size = new System.Drawing.Size(224, 21);
             this.cmbMobilYangDisewaDetailSewa.TabIndex = 21;
-            this.cmbMobilYangDisewaDetailSewa.SelectedIndexChanged += new System.EventHandler(this.comboBoxMobil_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -615,7 +615,7 @@
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Location = new System.Drawing.Point(165, 11);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(162, 168);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -653,7 +653,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1251, 631);
+            this.ClientSize = new System.Drawing.Size(1252, 631);
             this.Controls.Add(this.btnPembayaran);
             this.Controls.Add(this.btnDetailSewa);
             this.Controls.Add(this.sidebar);
@@ -664,8 +664,8 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormEntryDetailSewa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
@@ -734,4 +734,3 @@
         private System.Windows.Forms.Button btnPembayaran;
     }
 }
-

@@ -44,6 +44,7 @@
             this.btnPembayaran = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.splitter1 = new System.Windows.Forms.Splitter();
+            this.btnRiwayat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -76,13 +77,13 @@
             this.btnPenyewa.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnPenyewa.Image = ((System.Drawing.Image)(resources.GetObject("btnPenyewa.Image")));
             this.btnPenyewa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPenyewa.Location = new System.Drawing.Point(73, 249);
+            this.btnPenyewa.Location = new System.Drawing.Point(59, 222);
             this.btnPenyewa.Margin = new System.Windows.Forms.Padding(0);
             this.btnPenyewa.Name = "btnPenyewa";
             this.btnPenyewa.Padding = new System.Windows.Forms.Padding(90, 0, 10, 27);
             this.btnPenyewa.Size = new System.Drawing.Size(520, 105);
             this.btnPenyewa.TabIndex = 35;
-            this.btnPenyewa.Text = "                            Info Penyewaan\r\n";
+            this.btnPenyewa.Text = "                            Info Penyewa\r\n";
             this.btnPenyewa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPenyewa.UseVisualStyleBackColor = false;
             this.btnPenyewa.Click += new System.EventHandler(this.btnPenyewa_Click);
@@ -97,7 +98,7 @@
             this.btnMobil.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnMobil.Image = ((System.Drawing.Image)(resources.GetObject("btnMobil.Image")));
             this.btnMobil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMobil.Location = new System.Drawing.Point(622, 237);
+            this.btnMobil.Location = new System.Drawing.Point(635, 222);
             this.btnMobil.Margin = new System.Windows.Forms.Padding(0);
             this.btnMobil.Name = "btnMobil";
             this.btnMobil.Padding = new System.Windows.Forms.Padding(90, 0, 10, 27);
@@ -118,7 +119,7 @@
             this.btnKategori.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnKategori.Image = ((System.Drawing.Image)(resources.GetObject("btnKategori.Image")));
             this.btnKategori.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKategori.Location = new System.Drawing.Point(118, 433);
+            this.btnKategori.Location = new System.Drawing.Point(118, 369);
             this.btnKategori.Margin = new System.Windows.Forms.Padding(0);
             this.btnKategori.Name = "btnKategori";
             this.btnKategori.Padding = new System.Windows.Forms.Padding(40, 0, 10, 0);
@@ -140,7 +141,7 @@
             this.btnPetugas.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnPetugas.Image = ((System.Drawing.Image)(resources.GetObject("btnPetugas.Image")));
             this.btnPetugas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPetugas.Location = new System.Drawing.Point(606, 433);
+            this.btnPetugas.Location = new System.Drawing.Point(623, 369);
             this.btnPetugas.Margin = new System.Windows.Forms.Padding(0);
             this.btnPetugas.Name = "btnPetugas";
             this.btnPetugas.Padding = new System.Windows.Forms.Padding(90, 0, 10, 27);
@@ -275,12 +276,35 @@
             this.splitter1.TabIndex = 10;
             this.splitter1.TabStop = false;
             // 
+            // btnRiwayat
+            // 
+            this.btnRiwayat.BackColor = System.Drawing.Color.Transparent;
+            this.btnRiwayat.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnRiwayat.FlatAppearance.BorderSize = 0;
+            this.btnRiwayat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRiwayat.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRiwayat.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnRiwayat.Image = ((System.Drawing.Image)(resources.GetObject("btnRiwayat.Image")));
+            this.btnRiwayat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRiwayat.Location = new System.Drawing.Point(432, 504);
+            this.btnRiwayat.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRiwayat.Name = "btnRiwayat";
+            this.btnRiwayat.Padding = new System.Windows.Forms.Padding(40, 0, 10, 0);
+            this.btnRiwayat.Size = new System.Drawing.Size(520, 105);
+            this.btnRiwayat.TabIndex = 40;
+            this.btnRiwayat.Text = " Info Riwayat \r\n\r\n";
+            this.btnRiwayat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnRiwayat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRiwayat.UseVisualStyleBackColor = false;
+            this.btnRiwayat.Click += new System.EventHandler(this.btnRiwayat_Click);
+            // 
             // FormBeranda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1251, 631);
+            this.Controls.Add(this.btnRiwayat);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.btnPetugas);
             this.Controls.Add(this.btnKategori);
@@ -289,6 +313,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormBeranda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormBeranda";
             this.Load += new System.EventHandler(this.FormStatistik_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -313,5 +338,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnPenyewaan;
         private System.Windows.Forms.Splitter splitter1;
+        private System.Windows.Forms.Button btnRiwayat;
     }
 }

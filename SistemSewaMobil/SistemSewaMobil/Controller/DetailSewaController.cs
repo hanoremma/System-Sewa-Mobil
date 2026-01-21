@@ -147,12 +147,12 @@ namespace SistemSewaMobil.Controller
             }
             return list;
         }
-        public bool CekKetersediaanMobil(string idMobil, DateTime tglPinjam, DateTime tglKembali)
+        public bool CekKetersediaanMobil(string idMobil, DateTime tglPinjam, DateTime tglKembali, string idDetailSewa = null)
         {
             using (DbContext context = new DbContext())
             {
                 DetailSewaRepository repo = new DetailSewaRepository(context);
-                return repo.IsMobilTersedia(idMobil, tglPinjam, tglKembali);
+                return repo.IsMobilTersedia(idMobil, tglPinjam, tglKembali, idDetailSewa);
             }
         }
 

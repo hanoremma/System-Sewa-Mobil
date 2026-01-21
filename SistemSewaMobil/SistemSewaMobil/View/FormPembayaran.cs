@@ -350,20 +350,21 @@ namespace SistemSewaMobil.View
 
         private void button5_Click(object sender, EventArgs e)
         {
-            FormEntryDetailSewa menuInfo = new FormEntryDetailSewa();
-            menuInfo.Show();
+           
         }
 
         private void btnBeranda_Click(object sender, EventArgs e)
         {
-            FormBeranda menuInfo = new FormBeranda();
-            menuInfo.Show();
+            FormBeranda fp = new FormBeranda();
+            fp.Show();
+            this.Hide();
         }
 
         private void btnPenyewa_Click(object sender, EventArgs e)
         {
-            FormEntryDetailSewa menuInfo = new FormEntryDetailSewa();
-            menuInfo.Show();
+            FormEntryDetailSewa fp = new FormEntryDetailSewa();
+            fp.Show();
+            this.Hide();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

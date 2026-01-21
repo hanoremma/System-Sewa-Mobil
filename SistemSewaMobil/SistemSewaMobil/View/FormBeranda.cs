@@ -154,5 +154,12 @@ namespace SistemSewaMobil.View
             fp.Show();
             this.Hide();
         }
+
+        private void btnRiwayat_Click(object sender, EventArgs e)
+        {
+            FormLaporan fp = new FormLaporan();
+            fp.Show();
+            this.Hide();
+        }
     }
 }
