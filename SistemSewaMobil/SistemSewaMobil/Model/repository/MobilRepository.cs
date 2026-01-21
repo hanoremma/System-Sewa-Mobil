@@ -190,21 +190,25 @@ namespace SistemSewaMobil.Model.Repository
         {
             List<Mobil> list = new List<Mobil>();
 
-            string sql = @"SELECT * FROM Mobil
-                   WHERE statusKetersediaan = 'Tersedia'";
+            string sql = @"
+        SELECT idMobil, merkMobil, hargaSewa, statusKetersediaan
+        FROM mobil
+        WHERE statusKetersediaan = 'Tersedia'";
 
             using (SqlCommand cmd = new SqlCommand(sql, _conn))
             using (SqlDataReader dtr = cmd.ExecuteReader())
             {
                 while (dtr.Read())
                 {
-                    list.Add(new Mobil
+                    Mobil mobil = new Mobil
                     {
                         idMobil = dtr["idMobil"].ToString(),
                         merkMobil = dtr["merkMobil"].ToString(),
+                        hargaSewa = Convert.ToInt32(dtr["hargaSewa"]),
                         statusKetersediaan = dtr["statusKetersediaan"].ToString()
-                        // isi field lain jika perlu
-                    });
+                    };
+
+                    list.Add(mobil);
                 }
             }
 

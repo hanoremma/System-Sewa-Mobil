@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Controller\DetailSewaController.cs" />
     <Compile Include="Controller\KategoriController.cs" />
+    <Compile Include="Controller\LaporanController.cs" />
     <Compile Include="Controller\MobilController.cs" />
     <Compile Include="Controller\PembayaranController.cs" />
     <Compile Include="Controller\PenyewaController.cs" />
@@ -102,6 +103,12 @@
     </Compile>
     <Compile Include="View\FormKategori.Designer.cs">
       <DependentUpon>FormKategori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormLaporan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormLaporan.Designer.cs">
+      <DependentUpon>FormLaporan.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
@@ -164,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormKategori.resx">
       <DependentUpon>FormKategori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormLaporan.resx">
+      <DependentUpon>FormLaporan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

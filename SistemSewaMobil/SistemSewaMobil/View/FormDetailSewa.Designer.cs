@@ -39,6 +39,7 @@
             this.btnSelesaiDS = new System.Windows.Forms.Button();
             this.lvwDaftarDS = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -93,7 +94,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 84F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 757F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
             this.tableLayoutPanel2.Controls.Add(this.btnTambahDS, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdateDS, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnHapusDS, 2, 0);
@@ -101,7 +102,8 @@
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 433);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1018, 55);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
@@ -166,11 +168,22 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "Informasi Penyewa";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(946, 86);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(80, 32);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "Refresh";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormDetailSewa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1120, 681);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCariDS);
             this.Controls.Add(this.txtCariDS);
             this.Controls.Add(this.label2);
@@ -198,5 +211,6 @@
         private System.Windows.Forms.Button btnSelesaiDS;
         private System.Windows.Forms.ListView lvwDaftarDS;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

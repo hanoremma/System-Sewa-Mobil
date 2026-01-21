@@ -240,25 +240,27 @@ namespace SistemSewaMobil.Model.Repository
 
             return list;
         }
-        public bool IsMobilTersedia(string idMobil, DateTime tglPinjam, DateTime tglKembali)
+        public bool IsMobilTersedia(string idMobil, DateTime tglPinjam, DateTime tglKembali, string idDetailSewa = null)
         {
             string sql = @"
-        SELECT COUNT(*) 
+        SELECT COUNT(*)
         FROM DetailSewa
         WHERE idMobil = @idMobil
           AND statusPenyewaan <> 'Dibatalkan'
           AND (
                 @tglPinjam <= tglKembali
                 AND @tglKembali >= tglPinjam
-              )";
+              )
+          AND (@idDetailSewa IS NULL OR idDetailSewa <> @idDetailSewa)";
 
             using (SqlCommand cmd = new SqlCommand(sql, _conn))
             {
                 cmd.Parameters.AddWithValue("@idMobil", idMobil);
                 cmd.Parameters.AddWithValue("@tglPinjam", tglPinjam);
                 cmd.Parameters.AddWithValue("@tglKembali", tglKembali);
+                cmd.Parameters.AddWithValue("@idDetailSewa", (object)idDetailSewa ?? DBNull.Value);
 
-                int count = (int)cmd.ExecuteScalar();
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
                 return count == 0; // true = tersedia
             }
         }

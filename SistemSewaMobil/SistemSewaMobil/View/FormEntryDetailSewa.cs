@@ -56,18 +56,26 @@ namespace SistemSewaMobil
         }
         private void HitungTotalBiayaPreview()
         {
-            Mobil mobilTerpilih = cmbMobilYangDisewaDetailSewa.SelectedItem as Mobil;
+            if (cmbMobilYangDisewaDetailSewa.SelectedItem == null)
+                return;
 
-            if (mobilTerpilih == null) return;
-
-            Mobil mobil = cmbMobilYangDisewaDetailSewa.SelectedItem as Mobil;
-            if (mobil == null) return;
+            Mobil mobil = (Mobil)cmbMobilYangDisewaDetailSewa.SelectedItem;
 
             DateTime pinjam = dtPinjam.Value.Date;
             DateTime kembali = dtKembali.Value.Date;
 
+
+            if (kembali <= pinjam)
+            {
+                txtTotalDetailSewa.Text = "0";
+                return;
+            }
+
             int hari = (kembali - pinjam).Days;
-            //if (hari > 0) hari = 1;
+
+            // minimal 1 hari sewa
+            if (hari < 1)
+                hari = 1;
 
             int total = hari * mobil.hargaSewa;
 
@@ -76,15 +84,13 @@ namespace SistemSewaMobil
         public event CreateUpdateDetailSewaEventHandler OnCreate;
 
         public event CreateUpdateDetailSewaEventHandler OnUpdate;
-        // deklarasi objek controller 
+
         private DetailSewaController controller;
 
-        // deklarasi field untuk menyimpan status entry data (input baru atau update) 
         private bool isNewData = true;
-        // deklarasi field untuk meyimpan objek mahasiswa 
+
         private DetailSewa detailsewa;
         private string _idPenyewa;
-        // constructor default 
 
         private PenyewaController penyewaController = new PenyewaController();
 
@@ -94,8 +100,7 @@ namespace SistemSewaMobil
             this.controller = controller;
             isNewData = true;
         }
-        public FormEntryDetailSewa(string title, DetailSewa obj, DetailSewaController controller)
-    : this()
+        public FormEntryDetailSewa(string title, DetailSewa obj, DetailSewaController controller) : this()
         {
             this.Text = title;
             this.controller = controller;
@@ -123,7 +128,6 @@ namespace SistemSewaMobil
         {
             try
             {
-                // ===== VALIDASI =====
                 if (string.IsNullOrWhiteSpace(txtIdPenyewaDetailSewa.Text))
                 {
                     MessageBox.Show("ID Penyewa belum diisi");
@@ -148,7 +152,8 @@ namespace SistemSewaMobil
                     MessageBox.Show("Status penyewaan belum dipilih");
                     return;
                 }
-                bool tersedia = controller.CekKetersediaanMobil(cmbMobilYangDisewaDetailSewa.SelectedValue.ToString(),dtPinjam.Value,dtKembali.Value);
+                bool tersedia = controller.CekKetersediaanMobil(cmbMobilYangDisewaDetailSewa.SelectedValue.ToString(), dtPinjam.Value, dtKembali.Value, isNewData ? null : txtIdPenyewaDetailSewa.Text);
+
                 if (!tersedia)
                 {
                     MessageBox.Show(
@@ -162,7 +167,6 @@ namespace SistemSewaMobil
 
                 string idPenyewa = textBoxIDPenyewa.Text;
 
-                // JIKA ID PENYEWA KOSONG → INSERT PENYEWA BARU
                 if (string.IsNullOrEmpty(idPenyewa))
                 {
                     Penyewa p = new Penyewa
@@ -175,13 +179,9 @@ namespace SistemSewaMobil
 
                     idPenyewa = penyewaController.CreateAndGetId(p);
 
-                    // isi otomatis textbox ID
                     textBoxIDPenyewa.Text = idPenyewa;
                 }
 
-
-
-                // ===== ENTITY =====
                 DetailSewa detailsewa = new DetailSewa
                 {
                     // ID (WAJIB UNTUK DATABASE)
@@ -225,7 +225,6 @@ namespace SistemSewaMobil
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information
                     );
-
                     LoadFormDetailSewa();
                 }
                 else
@@ -285,10 +284,6 @@ namespace SistemSewaMobil
         }
 
 
-        private void comboBoxMobil_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            HitungTotalBiayaPreview();
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -416,15 +411,6 @@ namespace SistemSewaMobil
             {
                 textBoxIDPenyewa.Text = "";
             }
-
-            //if (!string.IsNullOrEmpty(alamatPenyewa))
-            //{
-            //    txtAlamatDetailSewa.Text = alamatPenyewa;
-            //}
-            //else
-            //{
-            //    textBoxIDPenyewa.Text = "";
-            //}
         }
 
         private void dtPinjam_ValueChanged(object sender, EventArgs e)
@@ -441,6 +427,11 @@ namespace SistemSewaMobil
         {
             FormPembayaran menuInfo = new FormPembayaran();
             menuInfo.Show();
+        }
+
+        private void cmbMobilYangDisewaDetailSewa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            HitungTotalBiayaPreview();
         }
     }
 }
